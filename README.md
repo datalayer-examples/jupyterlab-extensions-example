@@ -2,37 +2,9 @@
 
 # JupyterLab Extension Examples
 
-> A collections of extensions examples to better understand the options to extend JupyterLab.
+> A collection of extensions examples to better understand the options to extend JupyterLab.
 
 Please [read the documentation](https://github.com/datalayer-examples/jupyterlab-extensions-example/blob/main/docs/index.md) to install, use and know more on the internals of these extensions.
-
-## TODO
-
-- [ ] Update the Launcher page to launch the extensions.
-- [ ] Strip down the variables.css to only the needed css?
-- [ ] Bring more fancy ui like in https://github.com/timkpaine/jupyterlab_miami_nights: Search tool + neon billboard + Collapser + neon light + Scrollbar + FM-84's "Atlas" (compatible with webKit browsers) + A surprise in the presentation mode (Top menu --> View --> Presention mode)
-
-## Credits
-
-This repository contains souce code taken from following repositories under MIT or BSD-3-Clause license:
-
-- https://github.com/deshaw/jupyterlab-execute-time
-- https://github.com/ibqn/jupyterlab-codecellbtn
-- https://github.com/jtpio/jupyterlab-cell-flash
-- https://github.com/jtpio/jupyterlab-python-file
-- https://github.com/jtpio/jupyterlab-theme-toggle
-- https://github.com/jtpio/jupyterlab-topbar
-- https://github.com/jupyterlab/extension-examples
-- https://github.com/nersc/jupyterlab-recents
-- https://github.com/voila-dashboards/voila
-- https://github.com/yuvipanda/jupyterlab-nbmetadata
-- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/jupyterlab/benchmarks
-- https://github.com/jupyterlab/jupyterlab-mp4
-- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/jupyterlab/benchmarks
-- https://github.com/jtpio/jupyter-resource-usage
-- https://github.com/jtpio/jupyterlab-system-monitor
 
 <hr/>
 
@@ -179,3 +151,33 @@ More information are provided within the [ui-tests](./ui-tests/README.md) README
 ### Packaging the extension
 
 See [RELEASE](RELEASE.md)
+
+<hr/>
+
+## Credits
+
+## ⚖️ License
+
+This repository contains source code taken from following repositories under MIT or BSD-3-Clause license, listed here for copyright.
+
+- https://github.com/deshaw/jupyterlab-execute-time
+- https://github.com/ibqn/jupyterlab-codecellbtn
+- https://github.com/jtpio/jupyterlab-cell-flash
+- https://github.com/jtpio/jupyterlab-python-file
+- https://github.com/jtpio/jupyterlab-theme-toggle
+- https://github.com/jtpio/jupyterlab-topbar
+- https://github.com/jupyterlab/extension-examples
+- https://github.com/nersc/jupyterlab-recents
+- https://github.com/voila-dashboards/voila
+- https://github.com/yuvipanda/jupyterlab-nbmetadata
+- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
+- https://github.com/jupyterlab/benchmarks
+- https://github.com/jupyterlab/jupyterlab-mp4
+- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
+- https://github.com/jupyterlab/benchmarks
+- https://github.com/jtpio/jupyter-resource-usage
+- https://github.com/jtpio/jupyterlab-system-monitor
+
+Copyright (c) 2022 Datalayer, Inc.
+
+Released under the terms of the BSD-3 license (see [LICENSE](./LICENSE)).
