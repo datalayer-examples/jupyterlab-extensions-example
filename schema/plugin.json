@@ -1,0 +1,17 @@
+{
+  "jupyter.lab.setting-icon-class": "jp-PreviewIcon",
+  "jupyter.lab.setting-icon-label": "Preview",
+  "jupyter.lab.shortcuts": [],
+  "title": "JupyterLab Extensions Example",
+  "description": "JupyterLab Extensions Example settings.",
+  "type": "object",
+  "properties": {
+    "renderOnSave": {
+      "title": "Render Preview on Save",
+      "description": "Render the preview automatically after saving the notebook",
+      "default": false,
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

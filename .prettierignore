@@ -1,0 +1,8 @@
+node_modules
+**/node_modules
+**/lib
+**/package.json
+jupyterlabextensions
+
+# TODO enable prettier on source.
+src/**
