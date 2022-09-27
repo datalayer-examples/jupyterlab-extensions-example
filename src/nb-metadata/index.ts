@@ -13,7 +13,7 @@ import {
   IEditorServices,
   JSONEditor,
   IEditorFactoryService
-} from "@jupyterlab/codeeditor";
+} from '@jupyterlab/codeeditor';
 
 import { INotebookTracker } from '@jupyterlab/notebook';
 
@@ -43,11 +43,11 @@ class MetadataEditorWidget extends Widget {
     this.editor = new JSONEditor({
         editorFactory: editorFactoryService.newDocumentEditor,
     });
-    this.editor.title.label = "Notebook Metadata"
+    this.editor.title.label = 'Notebook Metadata';
     // FIXME: JSON serialization seems to use 4space indent, so this doesn't actually work.
     this.editor.editor.setOption('tabSize', 2);
     this.editor.editor.setOption('lineWrap', 'off');
-    let layout = new PanelLayout()
+    const layout = new PanelLayout()
     layout.insertWidget(0, this.editor);
     this.layout = layout;
     this.notebookTracker.currentChanged.connect(() => { this.update() });
@@ -55,8 +55,8 @@ class MetadataEditorWidget extends Widget {
 
   onUpdateRequest(msg: Message) {
     const notebook = this.notebookTracker.currentWidget;
-    if (notebook != null && notebook.isAttached) {
-        let metadata = notebook.content.model.metadata;
+    if (notebook !== null && notebook.isAttached) {
+        const metadata = notebook.content.model.metadata;
         this.editor.source = metadata; 
         this.editor.title.label =  'Notebook Metadata (' + notebook.title.label + ')'      
     }
@@ -65,7 +65,7 @@ class MetadataEditorWidget extends Widget {
 }
 
 const nbMetadata: JupyterFrontEndPlugin<void> = {
-  id: '@datalayer-examples/jupyterlab_nbmetadata',
+  id: 'jupyterlabextensions:nbmetadata',
   autoStart: true,
   requires: [
     ICommandPalette, 
@@ -83,14 +83,14 @@ const nbMetadata: JupyterFrontEndPlugin<void> = {
     const widget = new MetadataEditorWidget(notebookTracker, editorServices.factoryService);
     const command = 'nbmetadata:edit';
     app.commands.addCommand(command, {
-      label: "Notebook Metadata Editor",
+      label: 'Notebook Metadata Editor',
       execute: () => {
         widget.update();
         app.shell.activateById(widget.id);
       },
     })
     palette.addItem({command, category: 'Notebook Operations'});
-    let tracker = new WidgetTracker<Widget>({ namespace: 'nbmetadata-editor' });
+    const tracker = new WidgetTracker<Widget>({ namespace: 'nbmetadata-editor' });
     if (!tracker.has(widget)) {
       tracker.add(widget);
     }

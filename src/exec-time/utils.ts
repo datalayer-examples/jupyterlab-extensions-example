@@ -1,6 +1,6 @@
 import { differenceInMilliseconds, format } from 'date-fns';
 
-export const getTimeString = (date: Date) => {
+export const getTimeString = (date: Date): string => {
   return format(date, 'yyy-MM-dd HH:mm:ss');
 };
 
@@ -8,7 +8,7 @@ export const getTimeString = (date: Date) => {
  * Human format based on loosely on ideas from:
  * https://github.com/ipython-contrib/jupyter_contrib_nbextensions/blob/master/src/jupyter_contrib_nbextensions/nbextensions/execute_time/ExecuteTime.js#L194
  */
-export const getTimeDiff = (end: Date, start: Date) => {
+export const getTimeDiff = (end: Date, start: Date): string => {
 
   const MS_IN_SEC = 1000;
   const MS_IN_MIN = 60 * MS_IN_SEC;

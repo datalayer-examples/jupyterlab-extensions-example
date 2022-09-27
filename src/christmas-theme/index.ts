@@ -6,10 +6,10 @@ import {
 import { IThemeManager } from '@jupyterlab/apputils';
 
 /**
- * Initialization data for the jupyterlabextensions extension.
+ * Initialization data for the christmas theme extension.
  */
 const christmasTheme: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlabextensions',
+  id: 'jupyterlabextensions:theme:christmas-tree',
   requires: [IThemeManager],
   autoStart: true,
   activate: (app: JupyterFrontEnd, themeManager: IThemeManager) => {

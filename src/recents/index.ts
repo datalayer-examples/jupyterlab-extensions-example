@@ -41,7 +41,7 @@ namespace types {
 }
 
 namespace utils {
-  export function mergePaths(root: string, path: string) {
+  export function mergePaths(root: string, path: string): string {
     if (root.endsWith('/')) {
       root = root.slice(0, -1);
     }
@@ -146,7 +146,7 @@ class RecentsManager {
         try {
           await this.contentsManager.get(r.path, { content: false });
           return null;
-        } catch (e) {
+        } catch (e: any) {
           if (e.response.status === 404) {
             return r.path;
           }

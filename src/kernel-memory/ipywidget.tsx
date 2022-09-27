@@ -1,16 +1,16 @@
 import React from 'react';
-import { render } from "react-dom";
-import { DOMWidgetModel, DOMWidgetView, ISerializers } from "@jupyter-widgets/base";
+import { render } from 'react-dom';
+import { DOMWidgetModel, DOMWidgetView, ISerializers } from '@jupyter-widgets/base';
 import { ResourceUsage } from './view/index'
 import { MemoryViewComponent } from './view/memoryView'
-import { MODULE_NAME, MODULE_VERSION } from "./version";
+import { MODULE_NAME, MODULE_VERSION } from './version';
 
 const DEFAULT_REFRESH_RATE = 2147483646;
 const DEFAULT_MEMORY_LABEL = 'Mem: ';
 // const DEFAULT_CPU_LABEL = 'CPU: ';
  
 export class KernelMemoryUsageModel extends DOMWidgetModel {
-  defaults() {
+  defaults(): Backbone.ObjectHash {
     return {
       ...super.defaults(),
       _model_name: KernelMemoryUsageModel.model_name,
@@ -21,7 +21,7 @@ export class KernelMemoryUsageModel extends DOMWidgetModel {
       _view_module_version: KernelMemoryUsageModel.view_module_version,
       _current: 0,
       limit: 0,
-      label: "Mem:",
+      label: 'Mem:',
       _percentage: null as any,
       _values: [] as any,
     };
@@ -31,10 +31,10 @@ export class KernelMemoryUsageModel extends DOMWidgetModel {
     ...DOMWidgetModel.serializers
   };
 
-  static model_name = "KernelMemoryUsageModel";
+  static model_name = 'KernelMemoryUsageModel';
   static model_module = MODULE_NAME;
   static model_module_version = MODULE_VERSION;
-  static view_name = "KernelMemoryUsageView"; // Set to null if no view
+  static view_name = 'KernelMemoryUsageView'; // Set to null if no view
   static view_module = MODULE_NAME; // Set to null if no view
   static view_module_version = MODULE_VERSION;
 }
@@ -52,8 +52,8 @@ class MemoryComponent extends React.Component<{model : any}, IMemoryComponentSta
   constructor(props: any) {
     super(props);
     this.state = {
-      label: "",
-      text: "",
+      label: '',
+      text: '',
       values: [],
       percentage: null
     };
@@ -102,7 +102,7 @@ class MemoryComponent extends React.Component<{model : any}, IMemoryComponentSta
 }
 
 export class KernelMemoryUsageView extends DOMWidgetView {
-  initialize() {
+  initialize(): void {
     render(<MemoryComponent model={this.model}/>, this.el)
   }
 }

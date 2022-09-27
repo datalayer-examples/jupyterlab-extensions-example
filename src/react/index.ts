@@ -43,7 +43,7 @@ const react: JupyterFrontEndPlugin<void> = {
 
       const { commands, shell } = app;
       const menu = new Menu({ commands });  
-      menu.title.label = 'Datalayer Examples';
+      menu.title.label = 'Examples';
       mainMenu.addMenu(menu, { rank: 80 });
 
       const sleep = (ms: number) => {
@@ -97,7 +97,7 @@ const react: JupyterFrontEndPlugin<void> = {
           app.shell.add(widget, 'main');
         }
       });
-      palette.addItem({ command: CommandIDs.react , category: 'Datalayer Examples' });
+      palette.addItem({ command: CommandIDs.react , category: 'Examples' });
       menu.addItem({ command: CommandIDs.react });
 
      // Lumino.
@@ -107,13 +107,14 @@ const react: JupyterFrontEndPlugin<void> = {
       execute: () => {
         promiseWait('Sleep Lumino with Promise').then((s) => console.log(s, new Date()));
         asyncWait('Sleep Lumino with Async');
-        for (let i=0; i < 100; i++) fetchGitHub()
-        console.log('--- Lumino');
+        for (let i=0; i < 100; i++) {
+          fetchGitHub();
+        }
         const widget = new LuminoCounter();
         shell.add(widget, 'main');
       }
     });
-    palette.addItem({ command: CommandIDs.lumino, category: 'Datalayer Examples' });
+    palette.addItem({ command: CommandIDs.lumino, category: 'Examples' });
     menu.addItem({ command: CommandIDs.lumino });
 
   }

@@ -6,6 +6,3 @@ tests
 
 **/__tests__
 ui-tests
-
-# TODO enable eslint on source.
-src/**

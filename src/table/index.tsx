@@ -1,8 +1,11 @@
-import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
-import { ReactWidget } from '@jupyterlab/apputils';
 import React from 'react';
-// @ts-ignore
+
+import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
+
+import { ReactWidget } from '@jupyterlab/apputils';
+
 import { Table, Cell, Column } from 'fixed-data-table-2';
+
 import 'fixed-data-table-2/dist/fixed-data-table.css';
 
 /**
@@ -36,16 +39,14 @@ export class OutputWidget extends ReactWidget implements IRenderMime.IRenderer {
    * Render table into this widget's node.
    */
   renderModel(model: IRenderMime.IMimeModel): Promise<void> {
-    
-    let data = model.data[this._mimeType] as string;
+    const data = model.data[this._mimeType] as string;
     const rows = data.split('\n').map(row => row.split(';'));
     this.node.textContent = rows.join('|');
     this.rows = rows;
-    
     return Promise.resolve();
   }
 
-  render() {
+  render(): JSX.Element {
     const colCount = this.rows.length > 0 ? this.rows[0].length : 0;
     if (colCount === 0) {
       return <div>No data found!</div>;
@@ -62,16 +63,16 @@ export class OutputWidget extends ReactWidget implements IRenderMime.IRenderer {
             ...props
           }: {
             rowIndex: number;
-            columnKey: number;
-          }) => <Cell {...props}>{this.rows[rowIndex][columnKey]}</Cell>}
+            columnKey?: string;
+          }) => <Cell {...props}>{this.rows[rowIndex][Number(columnKey)]}</Cell>}
           width={100}
         />
       );
     }
 
     return (
-      // @ts-ignore: "content-visibility" property not available (yet)
-      <div style={{"content-visibility": "auto", "contain-intrinsic-size": "400px"}}>
+      /* , containIntrinsicSize: '400px' */ 
+      <div style={{contentVisibility: 'auto'}}>
         <Table
           rowHeight={50}
           rowsCount={this.rows.length}
@@ -101,7 +102,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
  * Extension definition.
  */
 const table: IRenderMime.IExtension = {
-  id: '@datalayer-examples/jupyterlab-rendermime-extensions:plugin',
+  id: 'jupyterlabextensions:rendermime-extensions:plugin',
   rendererFactory,
   rank: 0,
   dataType: 'string',

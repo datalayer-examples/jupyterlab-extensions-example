@@ -22,7 +22,7 @@ namespace CommandIDs {
 }
 
 const pythonFile: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab-python-file',
+  id: 'jupyterlabextensions:python-file',
   autoStart: true,
   optional: [IFileBrowserFactory, ILauncher, IMainMenu, ICommandPalette],
   activate: (

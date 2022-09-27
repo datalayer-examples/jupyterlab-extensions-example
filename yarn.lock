@@ -2224,6 +2224,13 @@
   resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.51.tgz#cfd70924a25a3fd32b218e5e420e6897e1ac4f40"
   integrity sha512-CuPgU6f3eT/XgKKPqKd/gLZV1Xmvf1a2R5POBOGQa6uv82xpls89HU5zKeVoyR8XzHd1RGNOlQlvUe3CFkjWNQ==
 
+"@types/fixed-data-table-2@0.8.8":
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/@types/fixed-data-table-2/-/fixed-data-table-2-0.8.8.tgz#ae6e7f4fbc70fbc75308fa1070356a1174887f63"
+  integrity sha512-qyl8BVKEnGzbOLN3f2bfS4zLLEMsgsHohWtaXmyztfaOh7ZMinpXhJ+xVBh/QyxBzuHy9icwYp0fqaw2TEUe0Q==
+  dependencies:
+    "@types/react" "*"
+
 "@types/glob@^7.1.1":
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/@types/glob/-/glob-7.2.0.tgz#bc1b5bf3aa92f25bd5dd39f35c57361bdce5b2eb"

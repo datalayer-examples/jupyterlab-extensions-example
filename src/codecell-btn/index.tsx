@@ -1,10 +1,24 @@
 import React from 'react';
+
 import { ReactWidget } from '@jupyterlab/apputils';
-import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
-import { INotebookTracker, NotebookPanel, NotebookActions } from '@jupyterlab/notebook';
+
+import {
+  JupyterFrontEnd,
+  JupyterFrontEndPlugin
+} from '@jupyterlab/application';
+
+import {
+  INotebookTracker,
+  NotebookPanel,
+  NotebookActions
+} from '@jupyterlab/notebook';
+
 import { ICellFooter, Cell } from '@jupyterlab/cells';
+
 import { ReadonlyPartialJSONObject } from '@lumino/coreutils';
+
 import { CommandRegistry } from '@lumino/commands';
+
 import { IEditorServices } from '@jupyterlab/codeeditor';
 
 /**
@@ -27,7 +41,7 @@ export class CellFooterWithButton extends ReactWidget implements ICellFooter {
     this.commands = commands;
     this.addClass(CELL_FOOTER_CLASS);
   }
-  render() {
+  render(): JSX.Element {
     return (
       <div className={CELL_FOOTER_DIV_CLASS}>
         <button
@@ -67,7 +81,7 @@ export class ContentFactoryWithFooterButton extends NotebookPanel.ContentFactory
  * The footer button extension for the code cell.
  */
 export const footerButtonExtension: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab-cellcodebtn',
+  id: 'jupyterlabextensions:cell-code-btn',
   autoStart: true,
   requires: [INotebookTracker],
   activate(
@@ -111,7 +125,7 @@ export const footerButtonExtension: JupyterFrontEndPlugin<void> = {
  * The notebook cell factory.
  */
 export const cellFactory: JupyterFrontEndPlugin<NotebookPanel.IContentFactory> = {
-  id: 'jupyterlab-cellcodebtn:factory',
+  id: 'jupyterlabextensions:cellcodebtn:factory',
   requires: [IEditorServices],
   provides: NotebookPanel.IContentFactory,
   autoStart: true,

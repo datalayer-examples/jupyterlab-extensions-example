@@ -5,7 +5,7 @@ import {
 import { requestAPI } from './../handler'
 
 const server: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlabextensions/server-extension',
+  id: 'jupyterlabextensions:server-extension',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
     requestAPI<any>('get_example')

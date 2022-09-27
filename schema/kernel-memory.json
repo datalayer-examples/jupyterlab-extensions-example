@@ -2,6 +2,12 @@
     "title": "Kernel Memory",
     "description": "Kernel Memory",
     "properties": {
+        "memor": {
+            "title": "Memory",
+            "description": "Memory",
+            "default": 1000,
+            "type": "number"
+          }
     },
     "additionalProperties": false,
     "type": "object"

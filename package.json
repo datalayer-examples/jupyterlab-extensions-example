@@ -83,6 +83,7 @@
     "@jupyter-widgets/base": "6.0.1",
     "@jupyterlab/builder": "^3.1.0",
     "@jupyterlab/testutils": "^3.1.0",
+    "@types/fixed-data-table-2": "0.8.8",
     "@types/jest": "^26.0.0",
     "@types/react-sparklines": "1.7.2",
     "@types/node": "18.7.18",

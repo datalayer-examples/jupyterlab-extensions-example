@@ -1,4 +1,5 @@
 import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
+
 import { Widget } from '@lumino/widgets';
 
 /**
@@ -35,7 +36,7 @@ export class VideoWidget extends Widget implements IRenderMime.IRenderer {
    * Render mp4 into this widget's node.
    */
   renderModel(model: IRenderMime.IMimeModel): Promise<void> {
-    let data = model.data[this._mimeType] as string;
+    const data = model.data[this._mimeType] as string;
     this._video.src = `data:${MIME_TYPE};base64,${data}`;
     return Promise.resolve();
   }
@@ -55,7 +56,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
  * Extension definition.
  */
 const mp4: IRenderMime.IExtension = {
-  id: 'jupyterlab-mp4:plugin',
+  id: 'jupyterlabextensions:mp4:plugin',
   rendererFactory,
   rank: 0,
   dataType: 'string',

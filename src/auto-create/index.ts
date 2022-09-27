@@ -1,17 +1,17 @@
 import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin
-} from "@jupyterlab/application";
+} from '@jupyterlab/application';
 
 import { IDocumentManager } from '@jupyterlab/docmanager';
 
-import { INotebookTracker } from "@jupyterlab/notebook";
+import { INotebookTracker } from '@jupyterlab/notebook';
 
 /**
  * Initialization for the autoCreate extension.
  */
 const autoCreate: JupyterFrontEndPlugin<void> = {
-  id: "@datalayer-examples/auto-create",
+  id: 'jupyterlabextensions:auto-create',
   autoStart: true,
   requires: [INotebookTracker, IDocumentManager],
   activate: (

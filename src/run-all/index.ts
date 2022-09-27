@@ -1,22 +1,18 @@
 import {
-  IDisposable
-} from '@lumino/disposable';
-
-import {
-  JupyterFrontEnd, JupyterFrontEndPlugin
+  JupyterFrontEnd,
+  JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
 import {
-  ToolbarButton
-} from '@jupyterlab/apputils';
-
-import {
-  DocumentRegistry
-} from '@jupyterlab/docregistry';
-
-import {
-  NotebookPanel, INotebookModel
+  NotebookPanel,
+  INotebookModel
 } from '@jupyterlab/notebook';
+
+import { IDisposable } from '@lumino/disposable';
+
+import { ToolbarButton } from '@jupyterlab/apputils';
+
+import { DocumentRegistry } from '@jupyterlab/docregistry';
 
 class RunAllCellsButtonExtension 
   implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel> {
@@ -48,10 +44,10 @@ class RunAllCellsButtonExtension
 }
 
 const runAll: JupyterFrontEndPlugin<void> = {
-  id: 'runall-extension',
+  id: 'jupyterlabextensions:runall:extension',
   autoStart: true,
   activate: (app: JupyterFrontEnd): void => {
-    let runAllExtension = new RunAllCellsButtonExtension(app);
+    const runAllExtension = new RunAllCellsButtonExtension(app);
     app.docRegistry.addWidgetExtension('notebook', runAllExtension);
     app.contextMenu.addItem({
       selector: '.jp-Notebook',

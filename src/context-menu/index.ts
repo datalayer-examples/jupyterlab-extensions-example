@@ -9,10 +9,10 @@ import { showDialog, Dialog } from '@jupyterlab/apputils';
 
 import { buildIcon, runIcon } from '@jupyterlab/ui-components';
 
-const COMMAND_ID = '@datalayer-examples/context-menu:open';
+const COMMAND_ID = 'jupyterlabextensions/context-menu:open';
 
 const contextMenu: JupyterFrontEndPlugin<void> = {
-  id: '@datalayer-examples/context-menu',
+  id: 'jupyterlabextensions:context-menu',
   autoStart: true,
   requires: [IFileBrowserFactory],
   optional: [],

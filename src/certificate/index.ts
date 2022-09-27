@@ -1,5 +1,7 @@
 import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
+
 import { JSONObject } from '@lumino/coreutils';
+
 import { Widget } from '@lumino/widgets';
 
 /**
@@ -30,10 +32,10 @@ export class OutputWidget extends Widget implements IRenderMime.IRenderer {
    */
   renderModel(model: IRenderMime.IMimeModel): Promise<void> {
 
-    let data = model.data[this._mimeType] as JSONObject;
+    const data = model.data[this._mimeType] as JSONObject;
 //    this.node.textContent = JSON.stringify(data);
-    let given = data['given'];
-    let event = data['event'];
+    const given = data['given'];
+    const event = data['event'];
     this.node.innerHTML = `
       <div class="certificate">
         <div class="paper">
@@ -66,7 +68,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
  * Extension definition.
  */
 const certificate: IRenderMime.IExtension = {
-  id: '@datalayer-examples/jlab3-rendermime-certificate:plugin',
+  id: 'jupyterlabextensions:rendermime-certificate:plugin',
   rendererFactory,
   rank: 0,
   dataType: 'json',

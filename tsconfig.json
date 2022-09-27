@@ -23,5 +23,7 @@
       "node"
     ]
   },
-  "include": ["src/**/*"]
+  "include": [
+    "src/**/*"
+  ]
 }

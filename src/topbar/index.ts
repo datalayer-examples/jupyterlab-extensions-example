@@ -22,7 +22,7 @@ namespace CommandIDs {
  * Initialization data for the jupyterlab-topbar extension.
  */
 const topBar: JupyterFrontEndPlugin<ITopBar> = {
-  id: 'jupyterlab-topbar-extension:plugin',
+  id: 'jupyterlabextensions:topbar-extension:plugin',
   autoStart: true,
   optional: [IMainMenu, ICommandPalette, ISettingRegistry],
   provides: ITopBar,

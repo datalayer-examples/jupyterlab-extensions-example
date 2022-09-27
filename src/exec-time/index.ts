@@ -33,7 +33,7 @@ class ExecuteTimeWidgetExtension implements DocumentRegistry.WidgetExtension {
  * Initialization data for the extension.
  */
 const execTime: JupyterFrontEndPlugin<void> = {
-  id: 'exec-time',
+  id: 'jupyterlabextensions:exec-time',
   autoStart: true,
   requires: [INotebookTracker, ISettingRegistry],
   activate: (

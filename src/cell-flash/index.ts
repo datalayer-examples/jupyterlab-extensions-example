@@ -13,7 +13,7 @@ const PLUGIN_ID = 'jupyterlabextensions';
  * Initialization data for the jupyterlab-cell-flash extension.
  */
 const cellFlash: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab-cell-flash:plugin',
+  id: 'jupyterlabextensions:cell-flash',
   autoStart: true,
   optional: [ISettingRegistry],
   activate: async (app: JupyterFrontEnd, settingRegistry: ISettingRegistry) => {
