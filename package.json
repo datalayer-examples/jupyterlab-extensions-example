@@ -121,7 +121,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "jupyterlab": { 
+  "jupyterlab": {
     "discovery": {
         "server": {
           "managers": [

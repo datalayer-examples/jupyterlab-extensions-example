@@ -17,7 +17,9 @@ import runAll from './run-all';
 import themeToggle from './themetoggle';
 import server from './server';
 import topBar from './topbar';
+
 import '../style/index.css';
+
 export default [
     architecture,
     autoCreate,
