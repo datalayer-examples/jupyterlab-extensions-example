@@ -17,6 +17,8 @@ import runAll from './run-all';
 import themeToggle from './themetoggle';
 import server from './server';
 import topBar from './topbar';
+import kernelMessaging from './kernel-messaging';
+import kernelOutput from './kernel-output';
 
 import '../style/index.css';
 
@@ -32,6 +34,8 @@ export default [
     nbMetadata,
     pythonFile,
     kernelMemory,
+    kernelMessaging,
+    kernelOutput,
     ipyresusePlugin,
     preview,
     react,
