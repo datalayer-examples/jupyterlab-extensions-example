@@ -3,7 +3,7 @@ import {
   JupyterFrontEndPlugin,
 } from '@jupyterlab/application';
 
-import { ICommandPalette, InputDialog } from '@jupyterlab/apputils';
+import { MainAreaWidget, ICommandPalette, InputDialog } from '@jupyterlab/apputils';
 
 import { ILauncher } from '@jupyterlab/launcher';
 
@@ -63,11 +63,12 @@ function activate(
    */
   async function createPanel(): Promise<ExamplePanel> {
     panel = new ExamplePanel(manager, rendermime, translator);
-    shell.add(panel, 'main');
+    const widget = new MainAreaWidget<ExamplePanel>({ content: panel });
+    shell.add(widget, 'main');
     return panel;
   }
 
-  // add commands to registry
+  // add commands to registry.
   commands.addCommand(CommandIDs.create, {
     label: trans.__('Open the Kernel Output Panel'),
     caption: trans.__('Open the Kernel Output Panel'),

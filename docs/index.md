@@ -2,8 +2,9 @@
 
 - [Environment](./environment.md)
 - [Develop](./develop.md)
-- [Extensions](./extensions.md)
+- [Extension Examples](./extension-examples.md)
 - [Build](./build.md)
+- [Lint](./build.md)
 - [Tests](./tests.md)
 - [Publish](./publish.md)
 - [Release](./release.md)

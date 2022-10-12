@@ -6,6 +6,10 @@
 
 Please [read the documentation](https://github.com/datalayer-examples/jupyterlab-extensions-example/blob/main/docs/index.md) to install, use and know more on the internals of these extensions.
 
+<div align="center" style="text-align: center">
+  <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-highlight.png" />
+</div>
+
 <hr/>
 
 This repository has been bootstrapped with the JupyterLab extension cookiecutter.

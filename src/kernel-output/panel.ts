@@ -18,7 +18,7 @@ import {
 
 import { Message } from '@lumino/messaging';
 
-import { StackedPanel } from '@lumino/widgets';
+import { BoxPanel } from '@lumino/widgets';
 
 /**
  * The class name added to the example panel.
@@ -28,7 +28,7 @@ const PANEL_CLASS = 'jp-RovaPanel';
 /**
  * A panel with the ability to add other children.
  */
-export class ExamplePanel extends StackedPanel {
+export class ExamplePanel extends BoxPanel {
   constructor(
     manager: ServiceManager.IManager,
     rendermime: IRenderMimeRegistry,

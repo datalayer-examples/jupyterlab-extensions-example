@@ -14,21 +14,21 @@ import { ServiceManager } from '@jupyterlab/services';
 
 import { Message } from '@lumino/messaging';
 
-import { StackedPanel } from '@lumino/widgets';
+import { BoxPanel } from '@lumino/widgets';
 
 import { KernelView } from './widget';
 
 import { KernelModel } from './model';
 
 /**
- * The class name added to the panels.
+ * The class name added to the panel.
  */
 const PANEL_CLASS = 'jp-RovaPanel';
 
 /**
  * A panel which has the ability to add other children.
  */
-export class ExamplePanel extends StackedPanel {
+export class ExamplePanel extends BoxPanel {
   constructor(manager: ServiceManager.IManager, translator?: ITranslator) {
     super();
     this._translator = translator || nullTranslator;
