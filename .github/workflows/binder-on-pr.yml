@@ -3,11 +3,8 @@ name: Binder Badge
 on:
   pull_request_target:
     types: [opened]
-
 permissions:
   pull-requests: write
-
-
 jobs:
   binder:
     runs-on: ubuntu-latest
@@ -28,4 +25,3 @@ jobs:
         env:
           PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
           PR_HEAD_USERREPO: ${{ github.event.pull_request.head.repo.full_name }}
-
