@@ -5,10 +5,8 @@
 #   conda activate jupyterlabextensions-demo
 #
 name: jupyterlabextensions-demo
-
 channels:
   - conda-forge
-
 dependencies:
   # runtime dependencies
   - python >=3.8,<3.9.0a0
