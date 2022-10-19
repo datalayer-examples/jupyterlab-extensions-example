@@ -8,8 +8,6 @@ import * as widgetExports from './ipywidget';
 
 import { MODULE_NAME, MODULE_VERSION } from './version';
 
-import './../../style/system-monitor.css';
-
 /**
  * The ipyresuse plugin.
  */

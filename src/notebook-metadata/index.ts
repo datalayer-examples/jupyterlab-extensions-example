@@ -98,7 +98,7 @@ const extension: JupyterFrontEndPlugin<void> = {
       tracker.add(widget);
     }
     if (!widget.isAttached) {
-      app.shell.add(widget, 'right');
+      app.shell.add(widget, 'right', { rank: 1000 });
     }
     restorer.restore(tracker, {
       command,

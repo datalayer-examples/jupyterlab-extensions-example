@@ -11,8 +11,6 @@ import { ITopBar } from '../topbar/topbar';
 
 import { MemoryView, ResourceUsage } from './view'
 
-import './../../style/system-monitor.css';
-
 /**
  * The default refresh rate.
  */

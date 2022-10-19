@@ -1,11 +1,17 @@
 import React from 'react';
+
 import { render } from 'react-dom';
+
 import { DOMWidgetModel, DOMWidgetView, ISerializers } from '@jupyter-widgets/base';
+
 import { ResourceUsage } from './view/index'
+
 import { MemoryViewComponent } from './view/memoryView'
+
 import { MODULE_NAME, MODULE_VERSION } from './version';
 
 const DEFAULT_REFRESH_RATE = 2147483646;
+
 const DEFAULT_MEMORY_LABEL = 'Mem: ';
 // const DEFAULT_CPU_LABEL = 'CPU: ';
  
