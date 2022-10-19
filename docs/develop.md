@@ -9,7 +9,7 @@ git clone https://github.com/datalayer-examples/jupyterlab-extensions-example &&
 
 ```bash
 # Build the extension and link for dev in shell 1.
-pip install -e .
+pip install -e .[test]
 jupyter labextension develop --overwrite
 ```
 
