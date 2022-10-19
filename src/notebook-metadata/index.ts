@@ -15,13 +15,15 @@ import {
   IEditorFactoryService
 } from '@jupyterlab/codeeditor';
 
-import { INotebookTracker } from '@jupyterlab/notebook';
-
 import { JSONExt } from '@lumino/coreutils';
 
 import { Message } from '@lumino/messaging';
 
 import { PanelLayout, Widget } from '@lumino/widgets';
+
+import { INotebookTracker } from '@jupyterlab/notebook';
+
+import { codeIcon } from '@jupyterlab/ui-components';
 
 class MetadataEditorWidget extends Widget {
   readonly containerDiv: HTMLDivElement
@@ -34,6 +36,7 @@ class MetadataEditorWidget extends Widget {
     this.notebookTracker = notebookTracker;
     this.id = 'notebook-metadata-editor';
     this.title.label = 'Notebook Metadata';
+    this.title.icon = codeIcon;
     this.title.closable = true;
     this.addClass('jp-MetadataEditorWidget')
     this.containerDiv = document.createElement('div');
@@ -64,7 +67,7 @@ class MetadataEditorWidget extends Widget {
   }
 }
 
-const nbMetadata: JupyterFrontEndPlugin<void> = {
+const extension: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:nbmetadata',
   autoStart: true,
   requires: [
@@ -105,4 +108,4 @@ const nbMetadata: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default nbMetadata;
+export default extension;

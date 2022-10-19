@@ -5,24 +5,20 @@ import {
 
 import { IDocumentManager } from '@jupyterlab/docmanager';
 
-import { INotebookTracker } from '@jupyterlab/notebook';
-
 /**
  * Initialization for the autoCreate extension.
  */
-const autoCreate: JupyterFrontEndPlugin<void> = {
+const extension: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:auto-create',
   autoStart: true,
-  requires: [INotebookTracker, IDocumentManager],
+  requires: [IDocumentManager],
   activate: (
     app: JupyterFrontEnd,
-    notebookTracker: INotebookTracker,
     docManager: IDocumentManager,
   ) => {
     const notebook = docManager.createNew('tmp.ipynb', 'notebook')
     app.shell.add(notebook, 'main')
   }
+}
 
-};
-
-export default autoCreate;
+export default extension;

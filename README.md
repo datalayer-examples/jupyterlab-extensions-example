@@ -1,8 +1,8 @@
 [![Datalayer](https://assets.datalayer.design/datalayer-25.svg)](https://datalayer.io)
 
-# JupyterLab Extension Examples
+# JupyterLab Extensions Example
 
-> A collection of extensions examples to better understand the options to extend JupyterLab.
+> Extensions example to better understand the options to extend JupyterLab.
 
 Please [read the documentation](https://github.com/datalayer-examples/jupyterlab-extensions-example/blob/main/docs/index.md) to install, use and know more on the internals of these extensions.
 
@@ -166,21 +166,23 @@ This repository contains source code taken from following repositories under MIT
 
 - https://github.com/deshaw/jupyterlab-execute-time
 - https://github.com/ibqn/jupyterlab-codecellbtn
+- https://github.com/jtpio/jupyter-resource-usage
 - https://github.com/jtpio/jupyterlab-cell-flash
 - https://github.com/jtpio/jupyterlab-python-file
+- https://github.com/jtpio/jupyterlab-system-monitor
 - https://github.com/jtpio/jupyterlab-theme-toggle
 - https://github.com/jtpio/jupyterlab-topbar
+- https://github.com/jupyterlab/benchmarks
+- https://github.com/jupyterlab/benchmarks
 - https://github.com/jupyterlab/extension-examples
+- https://github.com/jupyterlab/jupyterlab-mp4
+- https://github.com/jupyterlab/jupyterlab_xkcd
+- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
+- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
+- https://github.com/jupyterlab-contrib/jupyterlab-plugin-graph
 - https://github.com/nersc/jupyterlab-recents
 - https://github.com/voila-dashboards/voila
 - https://github.com/yuvipanda/jupyterlab-nbmetadata
-- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/jupyterlab/benchmarks
-- https://github.com/jupyterlab/jupyterlab-mp4
-- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/jupyterlab/benchmarks
-- https://github.com/jtpio/jupyter-resource-usage
-- https://github.com/jtpio/jupyterlab-system-monitor
 
 Copyright (c) 2022 Datalayer, Inc.
 
