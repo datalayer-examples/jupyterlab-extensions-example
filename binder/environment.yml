@@ -2,9 +2,9 @@
 # this environment may also be used locally on Linux/MacOS/Windows, e.g.
 #
 #   conda env update --file binder/environment.yml
-#   conda activate jupyterlabextensions-demo
+#   conda activate jupyterlabextension
 #
-name: jupyterlabextensions-demo
+name: jupyterlabextensions
 channels:
   - conda-forge
 dependencies:

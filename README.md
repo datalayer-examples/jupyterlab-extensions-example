@@ -4,11 +4,11 @@
 
 > Extensions example to better understand the options to extend JupyterLab.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/datalayer-examples/jupyterlab-extensions-example/main?urlpath=lab) [![Github Actions Status](https://github.com/datalayer-examples/jupyterlab-extensions-example/workflows/Build/badge.svg)](https://github.com/datalayer-examples/jupyterlab-extensions-example/actions/workflows/build.yml)
+
 <div align="center" style="text-align: center">
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-highlight.png" />
 </div>
-
-<hr/>
 
 Follow the documentation to use and know more on the internals of these extensions.
 

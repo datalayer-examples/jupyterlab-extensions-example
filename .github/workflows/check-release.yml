@@ -43,7 +43,7 @@ jobs:
             ${{ runner.os }}-linkcheck-
       - name: Upgrade packaging dependencies
         run: |
-          pip install --upgrade pip setuptools wheel jupyter-packaging~=0.10 --user
+          pip install --upgrade pip setuptools==65.5.0 wheel==0.37.1 jupyter-packaging==0.12.3 --user
       - name: Install Dependencies
         run: |
           pip install .
