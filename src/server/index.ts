@@ -2,7 +2,7 @@ import {
   JupyterFrontEnd, JupyterFrontEndPlugin
 } from '@jupyterlab/application';
 
-import { requestAPI } from './../handler'
+import { requestAPI } from './handler'
 
 const server: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:server-extension',

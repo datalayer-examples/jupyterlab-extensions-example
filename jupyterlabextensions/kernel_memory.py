@@ -1,10 +1,10 @@
 import asyncio
-import time
 
 import psutil
 
-from ipywidgets import DOMWidget
 from traitlets import Int, Float, List, Unicode
+from ipywidgets import DOMWidget
+
 from ._frontend import module_name, module_version
 
 

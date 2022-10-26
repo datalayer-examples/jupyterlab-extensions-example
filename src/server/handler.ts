@@ -13,7 +13,7 @@ export async function requestAPI<T>(
   endPoint = '',
   init: RequestInit = {}
 ): Promise<T> {
-  // Make request to Jupyter API
+  // Make request to Jupyter API.
   const settings = ServerConnection.makeSettings();
   const requestUrl = URLExt.join(
     settings.baseUrl,
@@ -25,7 +25,7 @@ export async function requestAPI<T>(
   try {
     response = await ServerConnection.makeRequest(requestUrl, init, settings);
   } catch (error) {
-    throw new ServerConnection.NetworkError(error);
+    throw new ServerConnection.NetworkError(error as TypeError);
   }
 
   let data: any = await response.text();

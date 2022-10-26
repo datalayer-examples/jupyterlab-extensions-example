@@ -44,7 +44,7 @@ conda activate jupyterlabextensions && \
     --watch \
     --ServerApp.token= \
     --ServerApp.jpserver_extensions="{'jupyterlabextensions': True}" \
-    ./examples
+    ./content
 ```
 
 ```bash
@@ -58,5 +58,5 @@ conda activate jupyterlabextensions && \
     --ServerApp.token= \
     --ServerApp.jpserver_extensions="{'jupyterlabextensions': True}" \
     --extensions-in-dev-mode \
-    ./examples
+    ./content
 ```

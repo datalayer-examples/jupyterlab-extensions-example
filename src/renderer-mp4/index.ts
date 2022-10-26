@@ -16,7 +16,6 @@ const CLASS_NAME = 'mimerenderer-mp4';
  * A widget for rendering mp4.
  */
 export class VideoWidget extends Widget implements IRenderMime.IRenderer {
-
   private _video: HTMLVideoElement;
   private _mimeType: string;
 
