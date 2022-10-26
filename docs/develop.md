@@ -1,14 +1,18 @@
 # Develop
 
+## Pepare
+
 ```bash
 # If not yet done, clone this repository.
 git clone https://github.com/datalayer-examples/jupyterlab-extensions-example && \
-  cd jupyterlab-extensions-example &&
-  conda activate jupyterlabextensions
+  cd jupyterlab-extensions-example
+# Create your environment, see environment.md.
+# Activate your environment
+conda activate jupyterlabextensions
 ```
 
 ```bash
-# Build the extension and link for dev in shell 1.
+# Build the extension and link for development.
 pip install -e .[test]
 jupyter labextension develop --overwrite
 ```
@@ -27,13 +31,9 @@ jupyter labextension list
 ```
 
 ```bash
-pip list | grep jupyterlabextensions
-```
-
-```bash
 # Run and watch the extension in shell 1.
 # jupyter labextension watch
-yarn watch
+jlpm watch
 ```
 
 ```bash
@@ -59,4 +59,23 @@ conda activate jupyterlabextensions && \
     --ServerApp.jpserver_extensions="{'jupyterlabextensions': True}" \
     --extensions-in-dev-mode \
     ./content
+```
+
+## Troubleshoot
+
+If you are seeing the frontend extension, but it is not working, check that the server extension is enabled.
+
+```bash
+pip list | grep jupyterlabextensions
+```
+
+```bash
+jupyter server extension list
+```
+
+If the server extension is installed and enabled, but you are not seeing
+the frontend extension, check the frontend extension is installed:
+
+```bash
+jupyter labextension list
 ```

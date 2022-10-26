@@ -12,7 +12,7 @@ import kernelOutput from './kernel-output';
 import logo from './logo';
 import notebookAuto from './notebook-auto';
 import notebookMetadata from './notebook-metadata';
-import plugins from './plugins-graph';
+import pluginsGraph from './plugins-graph';
 import preview from './preview';
 import pythonFile from './python-file';
 import react from './react';
@@ -40,7 +40,7 @@ export default [
     logo,
     notebookAuto,
     notebookMetadata,
-    plugins,
+    pluginsGraph,
     preview,
     pythonFile,
     react,

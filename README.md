@@ -17,6 +17,7 @@ Follow the documentation to use and know more on the internals of these extensio
 - [Develop](./docs/develop.md)
 - [Extensions](./docs/extensions.md)
 - [Build](./docs/build.md)
+- [Install](./docs/install.md)
 - [Lint](./docs/lint.md)
 - [Tests](./docs/tests.md)
 - [Publish](./docs/publish.md)

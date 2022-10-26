@@ -1,7 +1,7 @@
-@import url('./apod.css');
-@import url('./cell-flash.css');
-@import url('./certificate.css');
-@import url('./codecell-btn.css');
+@import url('./extensions/apod.css');
+@import url('./extensions/cell-flash.css');
+@import url('./extensions/certificate.css');
+@import url('./extensions/codecell-btn.css');
 @import url('./exec-time.css');
 @import url('./kernel-messaging.css');
 @import url('./kernel-output.css');

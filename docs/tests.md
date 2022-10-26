@@ -2,15 +2,37 @@
 
 ## Unit Tests
 
-```bash
-yarn test
+This extension is using [Jest](https://jestjs.io/) for JavaScript code testing.
+
+To execute them, execute:
+
+```sh
+jlpm
+jlpm test
 ```
 
 ## Server Tests
 
-TBD
+This extension is using [Pytest](https://docs.pytest.org/) for Python code testing.
+
+Install test dependencies (needed only once):
+
+```sh
+pip install -e ".[test]"
+```
+
+To execute them, run:
+
+```sh
+pytest -vv -r ap --cov jupyterlabextensions
+```
 
 ## UI Integration Tests
+
+This extension uses [Playwright](https://playwright.dev/docs/intro/) for the integration tests (aka user level tests).
+More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
+
+More information are provided within the [ui-tests](./ui-tests/README.md) README.
 
 This ui-tests contains the integration tests of the extension.
 

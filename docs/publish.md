@@ -2,7 +2,7 @@
 
 ```bash
 cd jupyterlabextensions && \
-  yarn build:lib && \
+  jlpm build:lib && \
   npm publish --access public
 ```
 

@@ -1,6 +1,30 @@
 # Extensions
 
-## Architecture Extensions
+## Apod Left
+
+Apod left.
+
+## Apod Main
+
+Apod main.
+
+## Cell Flash
+
+Cell flash.
+
+## Code Cell Button
+
+Code cell button.
+
+## Context Menu
+
+Context menu.
+
+## Exec Time
+
+Exec time.
+
+## Internals
 
 This extension will print in the browser console the registered file types and model factories.
 
@@ -28,15 +52,91 @@ index.js:15 modelFactory TextModelFactory_isDisposed: falsecontentType: (...)fil
 index.js:15 modelFactory Base64ModelFactory_isDisposed: falsecontentType: (...)fileFormat: (...)isDisposed: (...)name: (...)[[Prototype]]: TextModelFactory
 ```
 
-TODO Explain.
+## IpyWidget Resource Usage
 
-## TODO Add more extensions
+IpyWidget resource usage.
+
+## Kernel Memory
+
+Kernel memory.
+
+## Kernel Messaging
+
+Kernel messaging.
+
+## Kernel Output
+
+Kernel output.
+
+## Logo
+
+Logo.
+
+## Notebook Auto
+
+Notebook auto.
+
+## Notebook Metadata
+
+Notebook metadata.
+
+## Plugins Graph
+
+Plugins graph.
+
+## Preview
+
+Preview
+
+## Python File
+
+Python file.
+
+## React.js
+
+React.js
+
+## Recents
+
+Recents.
+
+## Run All
+
+Run all.
+
+## Server
+
+Server
+
+## Theme Christmas
+
+Theme christmas.
+
+## Theme Toggle
+
+Theme toggle.
+
+## Top Bar
+
+Top bar.
+
+## Certificate Mimerenderer
+
+Certificate mimerenderer.
 
 ![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-certificate.png)
 
 ![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-table.png)
 
 ![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime.png)
+
+## Mp4 Mimerenderer
+
+Mp4 mimerenderer.
+
+## Table Mimerenderer
+
+Table mimerenderer.
 
 ## TODO
 

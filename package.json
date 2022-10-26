@@ -137,7 +137,7 @@
     "extension": "./lib/extensions.js",
     "mimeExtension": "./lib/mimerenderers.js",
     "schemaDir": "schema",
-    "themePath": "style/christmas-theme.css",
+    "themePath": "style/themes/christmas-theme.css",
     "outputDir": "jupyterlabextensions/labextension",
     "sharedPackages": {
       "jupyterlab-topbar": {
