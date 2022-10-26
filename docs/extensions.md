@@ -32,11 +32,11 @@ TODO Explain.
 
 ## TODO Add more extensions
 
-![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-certificate.png "")
+![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-certificate.png)
 
-![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-table.png "")
+![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-table.png)
 
-![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime.png "")
+![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime.png)
 
 ## TODO
 

@@ -30,7 +30,7 @@ class APODWidget extends Widget {
   constructor() {
     super();
 
-    this.addClass('my-apodWidget');
+    this.addClass('my-ApodWidget');
 
     // Add an image element to the panel
     this.img = document.createElement('img');

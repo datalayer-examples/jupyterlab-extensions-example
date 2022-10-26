@@ -18,12 +18,7 @@
     "strict": true,
     "strictNullChecks": false, // TODO Enable strictNullChecks
     "target": "es2017",
-    "types": [
-      "jest",
-      "node"
-    ]
+    "types": ["jest", "node"]
   },
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*"]
 }

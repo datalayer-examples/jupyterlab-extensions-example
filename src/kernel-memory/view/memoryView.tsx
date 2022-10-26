@@ -9,7 +9,7 @@ export const MemoryViewComponent = ({
 }: {
   model: ResourceUsage.Model;
   label: string;
-}) => {
+}): React.ReactElement => {
   const [text, ] = useState('');
   const [values, setValues] = useState([]);
 

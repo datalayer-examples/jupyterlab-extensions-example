@@ -1,5 +1,5 @@
 :root {
-  --jp-cell-flash-color: rgba(255, 255, 0, 0.5);
+  --jp-cell-flash-color: rgb(255 255 0 / 50%);
   --jp-cell-flash-duration: 0.5s;
 }
 
@@ -12,9 +12,11 @@
   from {
     background-color: var(--jp-cell-editor-background);
   }
+
   5% {
     background-color: var(--jp-cell-flash-color);
   }
+
   to {
     background-color: var(--jp-cell-editor-background);
   }

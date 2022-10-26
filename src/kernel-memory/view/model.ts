@@ -2,6 +2,7 @@ import { URLExt } from '@jupyterlab/coreutils';
 import { ServerConnection } from '@jupyterlab/services';
 import { Poll } from '@lumino/polling';
 import { ISignal, Signal } from '@lumino/signaling';
+import { KernelMemoryUsageModel } from './../ipywidget';
 
 /**
  * Number of values to keep in memory.
@@ -63,7 +64,7 @@ export namespace ResourceUsage {
       await this._poll.tick;
     }
 
-    update(model: any) {
+    update(model: KernelMemoryUsageModel): void {
       this._memoryAvailable = true;
       this._currentMemory = model.get('_percentage');
       this._values = model.get('_values');

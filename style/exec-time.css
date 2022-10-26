@@ -3,6 +3,7 @@
   from {
     background-color: #9fccff;
   }
+
   to {
     background-color: var(--jp-cell-editor-background);
   }

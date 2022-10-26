@@ -15,7 +15,7 @@ Follow the documentation to use and know more on the internals of these extensio
 - [About](./docs/about.md)
 - [Environment](./docs/environment.md)
 - [Develop](./docs/develop.md)
-- [Extension Examples](./docs/extension-examples.md)
+- [Extensions](./docs/extensions.md)
 - [Build](./docs/build.md)
 - [Lint](./docs/lint.md)
 - [Tests](./docs/tests.md)

@@ -33,7 +33,7 @@ class APODWidget extends Widget {
   constructor() {
     super();
 
-    this.addClass('my-apodWidget');
+    this.addClass('my-ApodWidget');
     const icon = new LabIcon({
       name: 'jupyterlab-xkcd:icon',
       svgstr: tachometer

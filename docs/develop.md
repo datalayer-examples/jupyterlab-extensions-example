@@ -4,7 +4,7 @@
 # If not yet done, clone this repository.
 git clone https://github.com/datalayer-examples/jupyterlab-extensions-example && \
   cd jupyterlab-extensions-example &&
-  conda activate jupyterlabextensions 
+  conda activate jupyterlabextensions
 ```
 
 ```bash

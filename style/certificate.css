@@ -1,7 +1,7 @@
 .mimerenderer-certificate > .certificate {
-  background-color: #07618B;
-  border-radius: 20px 20px 20px 20px;
-  box-shadow: 0px 5px 10px 0px;
+  background-color: #07618b;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 0;
   height: 250px;
   margin-left: 35%;
   margin-top: 10%;
@@ -10,8 +10,8 @@
 }
 
 .mimerenderer-certificate > .certificate > .paper {
-  background: #E0E0E0;
-  border-radius: 5px 5px 5px 5px;
+  background: #e0e0e0;
+  border-radius: 5px;
   height: 200px;
   left: 25px;
   position: absolute;
@@ -20,7 +20,7 @@
 }
 
 .mimerenderer-certificate > .certificate > .paper > .title {
-  background:#E0E0E0;
+  background: #e0e0e0;
   font-weight: bold;
   height: 30px;
   margin-top: 20px;
@@ -30,22 +30,22 @@
 
 .mimerenderer-certificate > .certificate > .paper > .text {
   margin-top: 20px;
-  padding: 0px;
+  padding: 0;
   text-align: center;
   z-index: 200;
 }
 
 .mimerenderer-certificate > .certificate > .medal {
-  background: #C9992E;
+  background: #c9992e;
   border-radius: 50%;
   font-size: 2em;
   height: 20px;
   left: 30px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   position: absolute;
   top: 30px;
   width: 20px;
-  z-index:30;
+  z-index: 30;
 }
 
 .mimerenderer-certificate > .certificate > .ribbon {

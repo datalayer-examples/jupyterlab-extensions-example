@@ -2,45 +2,45 @@ import {
   JupyterFrontEnd,
   JupyterFrontEndPlugin,
   ILayoutRestorer
-} from "@jupyterlab/application";
+} from '@jupyterlab/application';
 
 import {
   ICommandPalette,
   WidgetTracker,
   ToolbarButton
-} from "@jupyterlab/apputils";
+} from '@jupyterlab/apputils';
 
-import { ISettingRegistry } from "@jupyterlab/settingregistry";
+import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
-import { DocumentRegistry } from "@jupyterlab/docregistry";
+import { DocumentRegistry } from '@jupyterlab/docregistry';
 
-import { IMainMenu } from "@jupyterlab/mainmenu";
+import { IMainMenu } from '@jupyterlab/mainmenu';
 
 import {
   INotebookTracker,
   NotebookPanel,
   INotebookModel
-} from "@jupyterlab/notebook";
+} from '@jupyterlab/notebook';
 
-import { CommandRegistry } from "@lumino/commands";
+import { CommandRegistry } from '@lumino/commands';
 
-import { ReadonlyJSONObject } from "@lumino/coreutils";
+import { ReadonlyJSONObject } from '@lumino/coreutils';
 
-import { IDisposable } from "@lumino/disposable";
+import { IDisposable } from '@lumino/disposable';
 
 import {
   PREVIEW_ICON_CLASS,
   Preview,
   IPreviewTracker,
   PreviewFactory
-} from "./preview";
+} from './preview';
 
 /**
  * The command IDs used by the plugin.
  */
 export namespace CommandIDs {
-  export const previewRender = "notebook:render-with-preview";
-  export const previewOpen = "notebook:open-with-preview";
+  export const previewRender = 'notebook:render-with-preview';
+  export const previewOpen = 'notebook:open-with-preview';
 }
 
 /**
@@ -64,14 +64,14 @@ class PreviewRenderButton
    */
   createNew(panel: NotebookPanel): IDisposable {
     const button = new ToolbarButton({
-      className: "previewRender",
-      tooltip: "Render with Preview",
+      className: 'previewRender',
+      tooltip: 'Render with Preview',
       iconClass: PREVIEW_ICON_CLASS,
       onClick: () => {
         this._commands.execute(CommandIDs.previewRender);
       }
     });
-    panel.toolbar.insertAfter("cellType", "previewRender", button);
+    panel.toolbar.insertAfter('cellType', 'previewRender', button);
     return button;
   }
 
@@ -81,7 +81,7 @@ class PreviewRenderButton
  * Initialization data for the jupyterlab-preview extension.
  */
 const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
-  id: "jupyterlabextensions:plugin",
+  id: 'jupyterlabextensions:plugin',
   autoStart: true,
   requires: [INotebookTracker],
   optional: [ICommandPalette, ILayoutRestorer, IMainMenu, ISettingRegistry],
@@ -99,12 +99,12 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
 
     // Create a widget tracker for Previews.
     const tracker = new WidgetTracker<Preview>({
-      namespace: "preview-preview"
+      namespace: 'preview-preview'
     });
 
     if (restorer) {
       restorer.restore(tracker, {
-        command: "docmanager:open",
+        command: 'docmanager:open',
         args: panel => ({
           path: panel.context.path,
           factory: previewFactory.name
@@ -116,7 +116,7 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
 
     function getCurrent(args: ReadonlyJSONObject): NotebookPanel | null {
       const widget = notebookTracker.currentWidget;
-      const activate = args["activate"] !== false;
+      const activate = args['activate'] !== false;
       if (activate && widget) {
         app.shell.activateById(widget.id);
       }
@@ -133,13 +133,13 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
     function getPreviewUrl(path: string): string {
 //      const baseUrl = PageConfig.getBaseUrl();
 //      return `${baseUrl}preview/render/${path}`;
-      return "/"
+      return '/'
     }
 
     const previewFactory = new PreviewFactory(getPreviewUrl, {
-      name: "preview",
-      fileTypes: ["notebook"],
-      modelName: "notebook"
+      name: 'preview',
+      fileTypes: ['notebook'],
+      modelName: 'notebook'
     });
 
     previewFactory.widgetCreated.connect((sender, widget) => {
@@ -152,7 +152,7 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
     });
 
     const updateSettings = (settings: ISettingRegistry.ISettings): void => {
-      previewFactory.defaultRenderOnSave = settings.get("renderOnSave")
+      previewFactory.defaultRenderOnSave = settings.get('renderOnSave')
         .composite as boolean;
     };
 
@@ -170,18 +170,18 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
     app.docRegistry.addWidgetFactory(previewFactory);
 
     commands.addCommand(CommandIDs.previewRender, {
-      label: "Render Notebook with Preview",
+      label: 'Render Notebook with Preview',
       execute: async args => {
         const current = getCurrent(args);
         let context: DocumentRegistry.IContext<INotebookModel>;
         if (current) {
           context = current.context;
           await context.save();
-          commands.execute("docmanager:open", {
+          commands.execute('docmanager:open', {
             path: context.path,
-            factory: "preview",
+            factory: 'preview',
             options: {
-              mode: "split-right"
+              mode: 'split-right'
             }
           });
         }
@@ -190,7 +190,7 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
     });
 
     commands.addCommand(CommandIDs.previewOpen, {
-      label: "Open with Preview in New Browser Tab",
+      label: 'Open with Preview in New Browser Tab',
       execute: async args => {
         const current = getCurrent(args);
         if (!current) {
@@ -204,7 +204,7 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
     });
 
     if (palette) {
-      const category = "Notebook Operations";
+      const category = 'Notebook Operations';
       [CommandIDs.previewRender, CommandIDs.previewOpen].forEach(command => {
         palette.addItem({ command, category });
       });
@@ -226,7 +226,7 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
 
     const previewButton = new PreviewRenderButton(commands);
 
-    docRegistry.addWidgetExtension("Notebook", previewButton);
+    docRegistry.addWidgetExtension('Notebook', previewButton);
 
     return tracker;
 
