@@ -1,22 +1,18 @@
 # Release
 
-The extension can be published to `PyPI` and `npm` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
+The extension can be published to `PyPI` and `NPM` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
 
 ## Manual release
 
 ### Python package
 
-This extension can be distributed as Python
-packages. All of the Python
-packaging instructions in the `pyproject.toml` file to wrap your extension in a
-Python package. Before generating a package, we first need to install `build`.
+This extension can be distributed as Python packages. All of the Python packaging instructions in the `pyproject.toml` file to wrap your extension in a Python package. Before generating a package, we first need to install `build`.
 
 ```bash
 pip install build twine hatch
 ```
 
-Bump the version using `hatch`. By default this will create a tag.
-See the docs on [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version#semver) for details.
+Bump the version using `hatch`. By default this will create a tag. See the docs on [hatch-nodejs-version](https://github.com/agoose77/hatch-nodejs-version#semver) for details.
 
 ```bash
 hatch version <new-version>
@@ -26,6 +22,8 @@ To create a Python source package (`.tar.gz`) and the binary package (`.whl`) in
 
 ```bash
 python -m build
+# Verify that the dist folder contains a whl and tar.gz files.
+ls dist/*
 ```
 
 > `python setup.py sdist bdist_wheel` is deprecated and will not work for this package.
@@ -41,6 +39,7 @@ twine upload dist/*
 To publish the frontend part of the extension as a NPM package, do:
 
 ```bash
+jlpm build:lib
 npm login
 npm publish --access public
 ```
@@ -66,3 +65,35 @@ Here is a summary of the steps to cut a new release:
 If the package is not on conda forge yet, check the documentation to learn how to add it: https://conda-forge.org/docs/maintainer/adding_pkgs.html
 
 Otherwise a bot should pick up the new version publish to PyPI, and open a new PR on the feedstock repository automatically.
+
+# Use a Published Release
+
+```bash
+conda deactivate && \
+  conda remove -y --all -n jupyterlabextensions-user
+# Create your conda environment.
+conda create -y \
+  -n jupyterlabextensions-user \
+  python=3.8 \
+  nodejs=14.5.0
+conda activate jupyterlabextensions-user
+pip install --pre jupyterlab==3.0.5
+```
+
+```bash
+pip install jupyterlab_widgets==1.0.0a6
+jupyter labextension list
+# Check the Extension Manager.
+jupyter lab
+```
+
+```bash
+pip search "jupyterlab extension"
+pip search "JupyterLab3"
+```
+
+```bash
+pip install jupyterlabextensions
+jupyter labextension list
+jupyter lab --notebook-dir=~/notebooks
+```

@@ -1,6 +1,6 @@
-# FAQ
+# Frequently Asked Questions
 
-## Disable an Extension
+## How to disable an extension?
 
 ```bash
 # Read https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#disabledextensions
@@ -12,14 +12,16 @@ cat $(dirname $(which jupyter))/../etc/jupyter/labconfig/page_config.json
 You can also deactivate a complete extension or a specific plugin with a definition in `package.json`.
 
 ```json
+   ...
   "jupyterlab": {
     "disabledExtensions": [
       "@jupyterlab/application-extension:logo"
     ],
   }
+  ...
 ```
 
-## Launch with a Theme
+## How to launch with a pre-chosen theme?
 
 ```bash
 # See https://jupyterlab.readthedocs.io/en/stable/user/directories.html#overridesjson

@@ -1,33 +1,5 @@
-# Tests
 
-## Unit Tests
-
-This extension is using [Jest](https://jestjs.io/) for JavaScript code testing.
-
-To execute them, execute:
-
-```sh
-jlpm
-jlpm test
-```
-
-## Server Tests
-
-This extension is using [Pytest](https://docs.pytest.org/) for Python code testing.
-
-Install test dependencies (needed only once):
-
-```sh
-pip install -e ".[test]"
-```
-
-To execute them, run:
-
-```sh
-pytest -vv -r ap --cov jupyterlabextensions
-```
-
-## UI Integration Tests
+## Integration Tests
 
 This extension uses [Playwright](https://playwright.dev/docs/intro/) for the integration tests (aka user level tests).
 More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
@@ -46,7 +18,7 @@ in [jupyter_server_test_config.py](./jupyter_server_test_config.py).
 
 The default configuration will produce video for failing tests and an HTML report.
 
-### Run the tests
+## Run the tests
 
 > All commands are assumed to be executed from the root directory
 
@@ -54,7 +26,7 @@ To run the tests, you need to:
 
 1. Compile the extension:
 
-```sh
+```bash
 jlpm install
 jlpm build:prod
 ```
@@ -63,7 +35,7 @@ jlpm build:prod
 
 2. Install test dependencies (needed only once):
 
-```sh
+```bash
 cd ./ui-tests
 jlpm install
 jlpm playwright install
@@ -72,7 +44,7 @@ cd ..
 
 3. Execute the [Playwright](https://playwright.dev/docs/intro) tests:
 
-```sh
+```bash
 cd ./ui-tests
 jlpm playwright test
 ```
@@ -82,7 +54,7 @@ will be opened in your browser at the end of the tests execution; see
 [Playwright documentation](https://playwright.dev/docs/test-reporters#html-reporter)
 for configuring that behavior.
 
-### Update the tests snapshots
+## Update the tests snapshots
 
 > All commands are assumed to be executed from the root directory
 
@@ -91,7 +63,7 @@ the reference snapshots stored in the repository. To do that, you need to:
 
 1. Compile the extension:
 
-```sh
+```bash
 jlpm install
 jlpm build:prod
 ```
@@ -100,7 +72,7 @@ jlpm build:prod
 
 2. Install test dependencies (needed only once):
 
-```sh
+```bash
 cd ./ui-tests
 jlpm install
 jlpm playwright install
@@ -109,7 +81,7 @@ cd ..
 
 3. Execute the [Playwright](https://playwright.dev/docs/intro) command:
 
-```sh
+```bash
 cd ./ui-tests
 jlpm playwright test -u
 ```
@@ -119,7 +91,7 @@ jlpm playwright test -u
 > type `please update playwright snapshots` to trigger the update by a bot on the CI.
 > Once the bot has computed new snapshots, it will commit them to the PR branch.
 
-### Create tests
+## Create tests
 
 > All commands are assumed to be executed from the root directory
 
@@ -127,7 +99,7 @@ To create tests, the easiest way is to use the code generator tool of playwright
 
 1. Compile the extension:
 
-```sh
+```bash
 jlpm install
 jlpm build:prod
 ```
@@ -136,7 +108,7 @@ jlpm build:prod
 
 2. Install test dependencies (needed only once):
 
-```sh
+```bash
 cd ./ui-tests
 jlpm install
 jlpm playwright install
@@ -145,12 +117,12 @@ cd ..
 
 3. Execute the [Playwright code generator](https://playwright.dev/docs/codegen):
 
-```sh
+```bash
 cd ./ui-tests
 jlpm playwright codegen localhost:8888
 ```
 
-### Debug tests
+## Debug tests
 
 > All commands are assumed to be executed from the root directory
 
@@ -158,7 +130,7 @@ To debug tests, a good way is to use the inspector tool of playwright:
 
 1. Compile the extension:
 
-```sh
+```bash
 jlpm install
 jlpm build:prod
 ```
@@ -167,7 +139,7 @@ jlpm build:prod
 
 2. Install test dependencies (needed only once):
 
-```sh
+```bash
 cd ./ui-tests
 jlpm install
 jlpm playwright install
@@ -176,7 +148,7 @@ cd ..
 
 3. Execute the Playwright tests in [debug mode](https://playwright.dev/docs/debug):
 
-```sh
+```bash
 cd ./ui-tests
 PWDEBUG=1 jlpm playwright test
 ```

@@ -10,21 +10,55 @@
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-highlight.png" />
 </div>
 
-Follow the documentation to use and know more on the internals of these extensions.
+The audience of this repository is JupyterLab extension developers and is a complement (not a replacement) to these other resources:
 
-- [About](./docs/about.md)
-- [Environment](./docs/environment.md)
+- The officiel [Read The Docs](https://jupyterlab.readthedocs.io/en/latest) documentation. The complete reading of that documentation is a prerequisite before digging more into the content present here.
+- The [extension examples](https://github.com/jupyterlab/extension-examples) repository. That repository contains many different extensions which cover each one specific feature, whereas this repository contains one extension that provides many features.
+
+Please also note the [examples folder](https://github.com/jupyterlab/jupyterlab/tree/master/examples) folder of the main JupyterLab repository contains other ways to use the JupyterLab packages, which are not the extensions we are adressing in this repository. We also do not address custom Lumino/JupyterLab `applications` are developed (examples of such custom `Application` be found in JupyterLab itself, Notebook 7, JupyerLite, JupyterLab Rise extension). To avoid dupclicate content, we try to sit in the top-right quadrant `HOW TO GUIDES`
+
+<img src="https://documentation.divio.com/_images/overview.png"/>
+
+*Source of the image: https://documentation.divio.com*
+
+This repository has been bootstrapped with the [JupyterLab extension cookiecutter](https://github.com/jupyterlab/extension-cookiecutter-ts) with the following command.
+
+```bash
+cookiecutter \
+  https://github.com/jupyterlab/extension-cookiecutter-ts \
+  --checkout 3.0
+```
+
+It is composed of a Python package named `jupyterlabextensions` for the server extension and a NPM package named `jupyterlabextensions` for the frontend extension.
+
+For now, it runs on JupyterLab >= 3.0 <4.0.0. An update to the major breaking-API 4.0.0 is planned depending on the version 4 release timeline.
+
+Follow the documentation to use and learn more on the internals of these extensions.
+
+- [Setup the environment](./docs/environment.md)
 - [Develop](./docs/develop.md)
 - [Extensions](./docs/extensions.md)
 - [Build](./docs/build.md)
 - [Install](./docs/install.md)
 - [Lint](./docs/lint.md)
-- [Tests](./docs/tests.md)
-- [Publish](./docs/publish.md)
+- [Test the JavaScript](./docs/test-js.md)
+- [Test the server](./docs/test-server.md)
+- [Integration test](./docs/test-integration.md)
 - [Release](./docs/release.md)
-- [Continuous Integration](./docs/ci.md)
+- [Continuous integration](./docs/ci.md)
 - [Contribute](./docs/contribute.md)
 - [FAQ](./docs/faq.md)
+
+<hr/>
+
+## To Do
+
+- [ ] Fix CI
+- [ ] Add more unit tests
+- [ ] Add more integration tests
+- [ ] Release manually in PyPI
+- [ ] Release manually in NPM
+- [ ] Release with jupyter-releaser
 
 <hr/>
 
