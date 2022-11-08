@@ -1,24 +1,28 @@
 # Develop
 
-## Pepare
+## Development install
+
+Activate your environment.
 
 ```bash
-# If not yet done, clone this repository.
-git clone https://github.com/datalayer-examples/jupyterlab-extensions-example && \
-  cd jupyterlab-extensions-example
-# Create your environment, see environment.md.
-# Activate your environment
 conda activate jupyterlabextensions
 ```
 
-```bash
-# Build the extension and link for development.
-pip install -e .[test]
-jupyter labextension develop --overwrite
-```
+Install package in development mode.
 
 ```bash
-# List extensions.
+pip install -e .[test]
+```
+
+Link your development version of the extension with JupyterLab.
+
+```bash
+jupyter labextension develop . --overwrite
+```
+
+List the JupyterLab extensions.
+
+```bash
 jupyter labextension list
 # JupyterLab v3.4.7
 # /Users/echarles/opt/miniconda3/envs/jupyterlabextensions/share/jupyter/labextensions
@@ -30,14 +34,34 @@ jupyter labextension list
 #     @jupyterlab/application-extension:logo
 ```
 
+Server extension can be manually installed in develop mode.
+
 ```bash
-# Run and watch the extension in shell 1.
-# jupyter labextension watch
+jupyter server extension enable jupyterlabextensions
+# Enabling: jupyterlabextensions
+# - Writing config: /Users/echarles/opt/miniconda3/envs/jupyterlabextensions/etc/jupyter
+#     - Validating jupyterlabextensions...
+#       jupyterlabextensions 0.1.0 OK
+#     - Extension successfully enabled.
+```
+
+Rebuild extension Typescript source after making changes in `shell 1`.
+
+```bash
+jlpm build
+```
+
+You can watch the source directory and run JupyterLab at the same time in different terminals to watch for changes in the extension's source and automatically rebuild the extension. With the watch command running, every saved change will immediately be built locally and available in your running JupyterLab. Refresh JupyterLab to load the change in your browser (you may need to wait several seconds for the extension to be rebuilt).
+
+Run and watch the extension in shell 1.
+
+```bash
 jlpm watch
 ```
 
+You are now ready to run and watch jupyterlab in `shell 2`.
+
 ```bash
-# Run and watch jupyterlab in shell 2.
 # Look at the remote entry javascript, a webpack5 feature.
 conda activate jupyterlabextensions && \
   jupyter lab \
@@ -47,8 +71,15 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
+You are now ready to run and watch jupyterlab in `shell 2`.
+
 ```bash
-# If you have build jupyterlab from source.
+open http://localhost:8888/lab
+```
+
+If you have build jupyterlab from source.
+
+```bash
 # Run and watch jupyterlab in shell 2.
 # Look at the remote entry javascript, a webpack5 feature.
 conda activate jupyterlabextensions && \
@@ -60,6 +91,22 @@ conda activate jupyterlabextensions && \
     --extensions-in-dev-mode \
     ./content
 ```
+
+Note: You will need NodeJS to build the extension package.
+
+The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm` below.
+
+### Development uninstall
+
+```bash
+# Server extension must be manually disabled in develop mode
+jupyter server extension disable jupyterlabextensions
+pip uninstall jupyterlabextensions
+```
+
+In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
+command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
+folder is located. Then you can remove the symlink named `jupyterlabextensions` within that folder.
 
 ## Troubleshoot
 

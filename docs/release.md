@@ -1,12 +1,12 @@
 # Release
 
-The extension can be published to `PyPI` and `NPM` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
+The extension can be published to `PyPI` and `NPM` (1) manually or (2) using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
 
 ## Manual release
 
 ### Python package
 
-This extension can be distributed as Python packages. All of the Python packaging instructions in the `pyproject.toml` file to wrap your extension in a Python package. Before generating a package, we first need to install `build`.
+This extension can be distributed as Python `PyPI` packages. All of the Python packaging instructions in the `pyproject.toml` file to wrap your extension in a Python package. Before generating a package, we first need to install `build`.
 
 ```bash
 pip install build twine hatch
@@ -36,7 +36,7 @@ twine upload dist/*
 
 ### NPM package
 
-To publish the frontend part of the extension as a NPM package, do:
+To publish the frontend part of the extension as a `NPM` package, do:
 
 ```bash
 jlpm build:lib
@@ -81,7 +81,7 @@ pip install --pre jupyterlab==3.0.5
 ```
 
 ```bash
-pip install jupyterlab_widgets==1.0.0a6
+pip install ipywidgets
 jupyter labextension list
 # Check the Extension Manager.
 jupyter lab
@@ -89,11 +89,12 @@ jupyter lab
 
 ```bash
 pip search "jupyterlab extension"
-pip search "JupyterLab3"
+# pip search "JupyterLab3"
 ```
 
 ```bash
 pip install jupyterlabextensions
 jupyter labextension list
-jupyter lab --notebook-dir=~/notebooks
+# Check the Extension Manager.
+jupyter lab
 ```
