@@ -1,12 +1,30 @@
 {
+  "jupyter.lab.setting-icon-class": "jp-BuildIcon",
+  "jupyter.lab.setting-icon-label": "System Monitor",
   "title": "Kernel Memory",
   "description": "Kernel Memory",
   "properties": {
-    "memor": {
-      "title": "Memory",
-      "description": "Memory",
-      "default": 1000,
+    "refreshRate": {
+      "title": "Refresh Rate (ms)",
+      "description": "Refresh Rate to sync metrics data",
+      "default": 5000,
       "type": "number"
+    },
+    "memory": {
+      "title": "Memory Settings",
+      "description": "Settings for the memory indicator",
+      "default": {
+        "label": "Mem: "
+      },
+      "type": "object"
+    },
+    "cpu": {
+      "title": "CPU Settings",
+      "description": "Settings for the CPU indicator",
+      "default": {
+        "label": "CPU: "
+      },
+      "type": "object"
     }
   },
   "additionalProperties": false,

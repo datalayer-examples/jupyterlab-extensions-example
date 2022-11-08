@@ -19,7 +19,7 @@ Please also note the [examples folder](https://github.com/jupyterlab/jupyterlab/
 
 <img src="https://documentation.divio.com/_images/overview.png"/>
 
-*Source of the image: https://documentation.divio.com*
+_Source of the image: https://documentation.divio.com_
 
 This repository has been bootstrapped with the [JupyterLab extension cookiecutter](https://github.com/jupyterlab/extension-cookiecutter-ts) with the following command.
 

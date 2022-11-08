@@ -21,8 +21,8 @@ namespace CommandIDs {
 /**
  * Initialization data for the jupyterlab-topbar extension.
  */
-const topBar: JupyterFrontEndPlugin<ITopBar> = {
-  id: 'jupyterlabextensions:topbar-extension:plugin',
+const extension: JupyterFrontEndPlugin<ITopBar> = {
+  id: 'jupyterlabextensions:top-bar',
   autoStart: true,
   optional: [IMainMenu, ICommandPalette, ISettingRegistry],
   provides: ITopBar,
@@ -69,7 +69,7 @@ const topBar: JupyterFrontEndPlugin<ITopBar> = {
         settingRegistry.set(topBar.id, 'order', orderedNames);
       });
 
-      Promise.all([settingRegistry.load(topBar.id), app.restored])
+      Promise.all([settingRegistry.load(extension.id), app.restored])
         .then(([settings]) => {
           updateSettings(settings);
           settings.changed.connect((settings) => {
@@ -89,4 +89,4 @@ const topBar: JupyterFrontEndPlugin<ITopBar> = {
 
 }
 
-export default topBar;
+export default extension;

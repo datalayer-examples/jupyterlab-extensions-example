@@ -1,7 +1,4 @@
 {
-  "jupyter.lab.setting-icon-class": "jp-PreviewIcon",
-  "jupyter.lab.setting-icon-label": "Preview",
-  "jupyter.lab.shortcuts": [],
   "title": "JupyterLab Extensions Example",
   "description": "JupyterLab Extensions Example settings.",
   "type": "object",
@@ -13,5 +10,8 @@
       "type": "boolean"
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "jupyter.lab.setting-icon-class": "jp-PreviewIcon",
+  "jupyter.lab.setting-icon-label": "Preview",
+  "jupyter.lab.shortcuts": []
 }

@@ -7,18 +7,16 @@ import { NotebookActions } from '@jupyterlab/notebook';
 
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
-const PLUGIN_ID = 'jupyterlabextensions:cell-flash';
-
 /**
  * Initialization data for the jupyterlab-cell-flash extension.
  */
-const cellFlash: JupyterFrontEndPlugin<void> = {
+const extension: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:cell-flash',
   autoStart: true,
   optional: [ISettingRegistry],
   activate: async (app: JupyterFrontEnd, settingRegistry: ISettingRegistry) => {
     if (settingRegistry) {
-      const setting = await settingRegistry.load(`${PLUGIN_ID}:settings`);
+      const setting = await settingRegistry.load(extension.id);
       const root = document.documentElement;
       const updateSettings = (): void => {
         const color = setting.get('color').composite as string;
@@ -48,4 +46,4 @@ const cellFlash: JupyterFrontEndPlugin<void> = {
   }
 };
 
-export default cellFlash;
+export default extension;

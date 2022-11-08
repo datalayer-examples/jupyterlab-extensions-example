@@ -21,7 +21,7 @@ import runAll from './run-all';
 import server from './server';
 import themeChristmas from './theme-christmas';
 import themeToggle from './theme-toggle';
-import topBar from './topbar';
+import extension from './topbar';
 
 import '../style/index.css';
 
@@ -49,5 +49,5 @@ export default [
     server,
     themeChristmas,
     themeToggle,
-    topBar,
+    extension,
 ];

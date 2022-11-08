@@ -1,0 +1,5 @@
+{
+  "title": "JupyterLab Extensions Example",
+  "description": "JupyterLab Extensions Example settings.",
+  "additionalProperties": false
+}

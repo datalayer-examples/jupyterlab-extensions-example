@@ -16,8 +16,10 @@ const extension: JupyterFrontEndPlugin<void> = {
     app: JupyterFrontEnd,
     docManager: IDocumentManager,
   ) => {
-    const notebook = docManager.createNew('tmp.ipynb', 'notebook')
-    app.shell.add(notebook, 'main')
+    const notebook = docManager.createNew('tmp.ipynb', 'notebook');
+    if (notebook) {
+      app.shell.add(notebook, 'main');
+    }
   }
 }
 
