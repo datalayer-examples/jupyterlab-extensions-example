@@ -1,4 +1,4 @@
-# Extensions
+# Application Plugins
 
 ## Apod Left
 
@@ -108,10 +108,6 @@ Run all.
 
 Server
 
-## Theme Christmas
-
-Theme christmas.
-
 ## Theme Toggle
 
 Theme toggle.
@@ -119,27 +115,3 @@ Theme toggle.
 ## Top Bar
 
 Top bar.
-
-## Certificate Mimerenderer
-
-Certificate mimerenderer.
-
-![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-certificate.png)
-
-![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime-table.png)
-
-![](https://raw.githubusercontent.com/datalayer-examples/jupyterlab-extensions-example/main/img/jupyterlab-rendermime.png)
-
-## Mp4 Mimerenderer
-
-Mp4 mimerenderer.
-
-## Table Mimerenderer
-
-Table mimerenderer.
-
-## TODO
-
-- [ ] Update the Launcher page to launch the extensions
-- [ ] Strip down the variables.css to only the needed css?
-- [ ] Bring more fancy ui like in https://github.com/timkpaine/jupyterlab_miami_nights: Search tool + neon billboard + Collapser + neon light + Scrollbar + FM-84's "Atlas" (compatible with webKit browsers) + A surprise in the presentation mode (Top menu --> View --> Presention mode)

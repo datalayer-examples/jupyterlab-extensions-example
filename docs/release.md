@@ -66,7 +66,7 @@ If the package is not on conda forge yet, check the documentation to learn how t
 
 Otherwise a bot should pick up the new version publish to PyPI, and open a new PR on the feedstock repository automatically.
 
-# Use a Published Release
+## Use a Published Release
 
 ```bash
 conda deactivate && \
@@ -97,4 +97,10 @@ pip install jupyterlabextensions
 jupyter labextension list
 # Check the Extension Manager.
 jupyter lab
+```
+
+To remove the extension, execute:
+
+```bash
+pip uninstall jupyterlabextensions
 ```

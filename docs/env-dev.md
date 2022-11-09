@@ -1,6 +1,6 @@
-# Develop
+# The Developoment Environement
 
-## Development install
+## Development Install
 
 Activate your environment.
 
@@ -94,7 +94,7 @@ conda activate jupyterlabextensions && \
 
 You will need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
 
-### Development uninstall
+### Development Uninstall
 
 ```bash
 # Server extension must be manually disabled in develop mode
