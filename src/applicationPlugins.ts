@@ -19,35 +19,31 @@ import react from './react';
 import recents from './recents';
 import runAll from './run-all';
 import server from './server';
-import themeChristmas from './theme-christmas';
 import themeToggle from './theme-toggle';
-import extension from './topbar';
-
-import '../style/index.css';
+import topBar from './topbar';
 
 export default [
-    ...codeCellButton,
-    apodLeft,
-    apodMain,
-    cellFlash,
-    contextMenu,
-    execTime,
-    internals,
-    ipywidgetResourceUsagePlugin,
-    kernelMemory,
-    kernelMessaging,
-    kernelOutput,
-    logo,
-    notebookAuto,
-    notebookMetadata,
-    pluginsGraph,
-    preview,
-    pythonFile,
-    react,
-    recents,
-    runAll,
-    server,
-    themeChristmas,
-    themeToggle,
-    extension,
+  ...codeCellButton,
+  apodLeft,
+  apodMain,
+  cellFlash,
+  contextMenu,
+  execTime,
+  internals,
+  ipywidgetResourceUsagePlugin,
+  kernelMemory,
+  kernelMessaging,
+  kernelOutput,
+  logo,
+  notebookAuto,
+  notebookMetadata,
+  pluginsGraph,
+  preview,
+  pythonFile,
+  react,
+  recents,
+  runAll,
+  server,
+  themeToggle,
+  topBar,
 ];

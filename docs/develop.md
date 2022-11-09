@@ -8,7 +8,7 @@ Activate your environment.
 conda activate jupyterlabextensions
 ```
 
-Install package in development mode.
+Install the python package in development mode.
 
 ```bash
 pip install -e .[test]
@@ -71,7 +71,7 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
-You are now ready to run and watch jupyterlab in `shell 2`.
+Open JupyterLab in your browser.
 
 ```bash
 open http://localhost:8888/lab
@@ -92,9 +92,7 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
-Note: You will need NodeJS to build the extension package.
-
-The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm` below.
+You will need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com/) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
 
 ### Development uninstall
 

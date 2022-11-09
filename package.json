@@ -134,10 +134,10 @@
           }
         }
     },
-    "extension": "./lib/extensions.js",
-    "mimeExtension": "./lib/mimerenderers.js",
+    "extension": "./lib/extension.js",
+    "mimeExtension": "./lib/mimeExtension.js",
     "schemaDir": "schema",
-    "themePath": "style/themes/christmas-theme.css",
+    "themePath": "style/themes/theme-christmas.css",
     "outputDir": "jupyterlabextensions/labextension",
     "sharedPackages": {
       "jupyterlab-topbar": {

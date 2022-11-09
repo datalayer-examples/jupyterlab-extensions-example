@@ -26,7 +26,7 @@ namespace CommandIDs {
 /**
  * Initialization data for the jupyterlabextensions:react extension.
  */
-const react: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:react',
   autoStart: true,
   requires: [ICommandPalette, IMainMenu],
@@ -121,4 +121,4 @@ const react: JupyterFrontEndPlugin<void> = {
 
 };
 
-export default react;
+export default plugin;

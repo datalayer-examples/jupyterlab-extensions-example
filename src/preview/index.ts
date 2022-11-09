@@ -80,8 +80,8 @@ class PreviewRenderButton
 /**
  * Initialization data for the jupyterlab-preview extension.
  */
-const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
-  id: 'jupyterlabextensions:plugin',
+const plugin: JupyterFrontEndPlugin<IPreviewTracker> = {
+  id: 'jupyterlabextensions:preview',
   autoStart: true,
   requires: [INotebookTracker],
   optional: [ICommandPalette, ILayoutRestorer, IMainMenu, ISettingRegistry],
@@ -157,7 +157,7 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
     };
 
     if (settingRegistry) {
-      Promise.all([settingRegistry.load(preview.id), app.restored])
+      Promise.all([settingRegistry.load(plugin.id), app.restored])
         .then(([settings]) => {
           updateSettings(settings);
           settings.changed.connect(updateSettings);    
@@ -234,4 +234,4 @@ const preview: JupyterFrontEndPlugin<IPreviewTracker> = {
 
 };
 
-export default preview;
+export default plugin;

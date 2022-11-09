@@ -1,3 +1,2 @@
-export * from './extensions';
-
-export * from './mimerenderers';
+export * from './extension';
+export * from './mimeExtension';
