@@ -1,9 +1,9 @@
-import certificate from './renderer-certificate';
-import mp4 from './renderer-mp4';
-import table from './renderer-table';
+import certificateRenderer from './renderer-certificate';
+import mp4Renderer from './renderer-mp4';
+import tableRenderer from './renderer-table';
 
 export default [
-  certificate,
-  mp4,
-  table,
+  certificateRenderer,
+  mp4Renderer,
+  tableRenderer,
 ];

@@ -35,7 +35,7 @@ Follow the documentation to use and learn more on the internals of this extensio
 
 - [Setup the base environment](./docs/env-base.md)
 - [Setup the development environment](./docs/env-dev.md)
-- [What is an extension](./docs/extension.md)
+- [What is an extension?](./docs/extension.md)
 - [Application plugins](./docs/plugins-application.md)
 - [Theme plugins](./docs/plugins-theme.md)
 - [Mime renderer plugins](./docs/plugins-mime-renderer.md)
