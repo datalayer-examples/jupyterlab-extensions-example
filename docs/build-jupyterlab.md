@@ -6,16 +6,16 @@ By default, the `jlpm build` command generates the source maps for this extensio
 jupyter lab build --minimize=False
 ```
 
-Use the following commands to completely rebuild JupyterLab and link the extension Javascript.
+Use the following commands to completely rebuild JupyterLab and link the extension Javascript with sourcemaps generation.
 
 ```bash
-# Generate sourcemaps.
 jupyter labextension build --development=True .
 jupyter lab build --minimize=False
 ```
 
+The following options will not generate sourcemaps.
+
 ```bash
-# Do not generate sourcemaps.
 jupyter labextension build .
 jupyter lab build
 ```

@@ -1,6 +1,6 @@
 # Release
 
-The extension can be published to `PyPI` and `NPM` (1) manually or (2) using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
+The extension can be published to `PyPI` and `NPM.js` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
 
 ## Manual release
 
@@ -44,7 +44,7 @@ npm login
 npm publish --access public
 ```
 
-## Automated releases with the Jupyter Releaser
+## Automated Releases with the Jupyter Releaser
 
 The extension repository should already be compatible with the Jupyter Releaser.
 

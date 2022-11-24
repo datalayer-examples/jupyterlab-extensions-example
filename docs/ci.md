@@ -1,11 +1,19 @@
 # Continuous Integration
 
-The workflows are available on https://github.com/datalayer-examples/jupyterlab-extensions-example/tree/main/.github/workflows.
+The CI workflows are listed on https://github.com/datalayer-examples/jupyterlab-extensions-example/tree/main/.github/workflows.
 
-## binder-on-pr
+## Binder on Pull Request
 
-## build
+Binder on Pull Request.
 
-## check-release
+## Build
 
-## update-integration-tests
+Build.
+
+## Check Release
+
+Check Release.
+
+## Update Integration Tests
+
+Update Integration Tests.

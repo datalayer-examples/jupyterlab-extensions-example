@@ -82,7 +82,9 @@ Notebook metadata.
 
 ## Plugins Graph
 
-Plugins graph.
+<div align="center" style="text-align: center">
+  <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-plugins-graph.png" />
+</div>
 
 ## Preview
 

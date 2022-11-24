@@ -10,12 +10,17 @@
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-highlight.png" />
 </div>
 
+<div align="center" style="text-align: center">
+  <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-christmas-theme.png" />
+</div>
+
 The audience of this repository is JupyterLab extension developers and is a complement (not a replacement) to these other resources:
 
 - The official [Read The Docs](https://jupyterlab.readthedocs.io/en/latest) documentation. The complete reading of that documentation is a prerequisite before digging more into the content present here. A special attention should be given to the [Develop Extension](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html) section.
 - The [extension examples](https://github.com/jupyterlab/extension-examples) repository. That repository contains many different extensions which cover each one specific feature, whereas this repository contains one extension that provides many features.
+- The [astrononmy picture of the day extension](https://github.com/jupyterlab/jupyterlab_apod) documented on [this page](https://jupyterlab.readthedocs.io/en/stable/extension/extension_tutorial.html).
 
-Please also note the [examples folder](https://github.com/jupyterlab/jupyterlab/tree/master/examples) of the main JupyterLab repository contains other ways to use the JupyterLab packages, which are not the extensions we are adressing in this repository. We also do not address custom Lumino/JupyterLab `applications` are developed (examples of such custom `Application` be found in JupyterLab itself, Notebook 7, JupyerLite, JupyterLab Rise extension). To avoid dupclicate content, we try to sit in the top-right quadrant `HOW TO GUIDES`
+Please also note the [examples folder](https://github.com/jupyterlab/jupyterlab/tree/master/examples) of the main JupyterLab repository contains other ways to use the JupyterLab packages, which are not the extensions we are adressing in this repository. We also do not address custom Lumino/JupyterLab `applications` are developed (examples of such custom `Application` be found in JupyterLab itself, Notebook 7, JupyerLite, JupyterLab Rise extension). To avoid dupclicate content, we try to sit in the top-right quadrant `HOW TO GUIDES`.
 
 <img src="https://documentation.divio.com/_images/overview.png"/>
 
@@ -80,6 +85,7 @@ This repository contains source code taken from following repositories under MIT
 - https://github.com/jtpio/jupyterlab-system-monitor
 - https://github.com/jtpio/jupyterlab-theme-toggle
 - https://github.com/jtpio/jupyterlab-topbar
+- https://github.com/jupyterlab-contrib/jupyterlab-plugin-graph
 - https://github.com/jupyterlab/benchmarks
 - https://github.com/jupyterlab/benchmarks
 - https://github.com/jupyterlab/extension-examples
@@ -87,7 +93,6 @@ This repository contains source code taken from following repositories under MIT
 - https://github.com/jupyterlab/jupyterlab_xkcd
 - https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
 - https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/jupyterlab-contrib/jupyterlab-plugin-graph
 - https://github.com/nersc/jupyterlab-recents
 - https://github.com/voila-dashboards/voila
 - https://github.com/yuvipanda/jupyterlab-nbmetadata

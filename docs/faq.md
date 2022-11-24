@@ -23,8 +23,9 @@ You can also deactivate a complete extension or a specific plugin with a definit
 
 ## How to launch with a pre-chosen theme?
 
+See https://jupyterlab.readthedocs.io/en/stable/user/directories.html#overridesjson
+
 ```bash
-# See https://jupyterlab.readthedocs.io/en/stable/user/directories.html#overridesjson
 cat << EOF >>~/.jupyter/lab/user-settings/overrides.json
 {
   "@jupyterlab/apputils-extension:themes": {
@@ -34,8 +35,9 @@ cat << EOF >>~/.jupyter/lab/user-settings/overrides.json
 EOF
 ```
 
+Optionally.
+
 ```bash
-# Optionally.
 mkdir -p ~/.jupyter/lab/user-settings/\@jupyterlab/apputils-extension && \
   CONF="{ \"theme\": \"JupyterLab Christmas\" }" && \
   cat > ~/.jupyter/lab/user-settings/\@jupyterlab/apputils-extension/themes.jupyterlab-settings  <<EOF
@@ -43,7 +45,8 @@ ${CONF}
 EOF
 ```
 
+JupyterLab will start with the defined theme.
+
 ```bash
-# JupyterLab will start with the defined theme.
 jupyter lab
 ```

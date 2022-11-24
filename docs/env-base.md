@@ -44,7 +44,7 @@ git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b 3.4.x && \
   cd ..
 ```
 
-Install IpyWidgets.
+Install IpyWidgets, this is needed by some of the extension examples.
 
 ```bash
 pip install ipywidgets==8.0.2
