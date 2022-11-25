@@ -46,9 +46,25 @@ npm publish --access public
 
 ## Automated Releases with the Jupyter Releaser
 
-The extension repository should already be compatible with the Jupyter Releaser.
+The extension repository should already be compatible with the Jupyter Releaser. Check out the [workflow documentation](https://github.com/jupyter-server/jupyter_releaser#typical-workflow) for more information. 
 
-Check out the [workflow documentation](https://github.com/jupyter-server/jupyter_releaser#typical-workflow) for more information.
+Check out also the definitions in `package.json``
+
+```json
+  ...
+  "jupyter-releaser": {
+    "hooks": {
+      "before-build-npm": [
+        "python -m pip install jupyterlab~=3.1",
+        "jlpm"
+      ],
+      "before-build-python": [
+        "jlpm clean:all"
+      ]
+    }
+  }
+  ...
+```
 
 Here is a summary of the steps to cut a new release:
 

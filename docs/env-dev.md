@@ -44,6 +44,7 @@ jupyter server extension enable jupyterlabextensions
 #       jupyterlabextensions 0.1.0 OK
 #     - Extension successfully enabled.
 ```
+
 You will need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
 
 After these prelimarny steps, you can now effectively develop your extensions. For that, rebuild the extension Typescript source after making changes in `shell 1`.
@@ -75,7 +76,7 @@ Open JupyterLab in your browser.
 open http://localhost:8888/lab
 ```
 
-If you have built jupyterlab from source. Run and watch jupyterlab in `shell 2` and look at the remote entry javascript, a webpack5 feature.
+If you have built jupyterlab from source, run and watch jupyterlab in `shell 2` and look at the remote entry javascript, a webpack5 feature.
 
 ```bash
 conda activate jupyterlabextensions && \

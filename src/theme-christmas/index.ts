@@ -8,14 +8,14 @@ import { IThemeManager } from '@jupyterlab/apputils';
 /**
  * Initialization for the christmas theme extension.
  */
-const christmasTheme: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlabextensions:theme:christmas-tree',
+const theme: JupyterFrontEndPlugin<void> = {
+  id: 'jupyterlabextensions:theme:christmas',
   requires: [IThemeManager],
   autoStart: true,
   activate: (app: JupyterFrontEnd, themeManager: IThemeManager) => {
     const style = 'jupyterlabextensions/index.css';
     themeManager.register({
-      name: 'JupyterLab Christmas',
+      name: 'Christmas',
       isLight: true,
       load: () => themeManager.loadCSS(style),
       unload: () => Promise.resolve(undefined)
@@ -23,4 +23,4 @@ const christmasTheme: JupyterFrontEndPlugin<void> = {
   }
 };
 
-export default christmasTheme;
+export default theme;
