@@ -59,14 +59,15 @@ Follow the documentation to use and learn more on the internals of this extensio
 
 - [ ] Add more integration tests
 - [ ] Add more unit tests
-- [ ] Bring more theme like https://github.com/timkpaine/jupyterlab_miami_nights: Search tool + neon billboard + Collapser + neon light + Scrollbar + FM-84's "Atlas" (compatible with webKit browsers) + A surprise in the presentation mode (Top menu --> View --> Presention mode)
+- [ ] Add bokeh plot example
+- [ ] Bring more theme like [jupyterlab_miami_nights](https://github.com/timkpaine/jupyterlab_miami_nights)
 - [ ] Fix CI
 - [ ] Optimize the variables.css file of the Christmas theme.
 - [ ] Release manually in NPM
 - [ ] Release manually in PyPI - Resolve The name 'jupyterlabextensions' is too similar to an existing project. See https://pypi.org/help/#project-name for more information.
 - [ ] Release with jupyter-releaser
 - [ ] Update the Launcher page to launch the extensions
-- [ ] Strip down the christmas theme variables.css to only the needed css?
+- [ ] Strip down the christmas theme variables.css to only the needed css?
 
 <hr/>
 
