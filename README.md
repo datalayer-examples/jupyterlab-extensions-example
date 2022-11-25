@@ -74,26 +74,4 @@ Follow the documentation to use and learn more on the internals of this extensio
 
 Copyright (c) 2022 Datalayer, Inc.
 
-Released under the terms of the BSD-3 license (see [LICENSE](./docs/LICENSE)).
-
-This repository contains source code taken from following repositories under MIT or BSD-3-Clause license, listed here for copyright.
-
-- https://github.com/deshaw/jupyterlab-execute-time
-- https://github.com/ibqn/jupyterlab-codecellbtn
-- https://github.com/jtpio/jupyter-resource-usage
-- https://github.com/jtpio/jupyterlab-cell-flash
-- https://github.com/jtpio/jupyterlab-python-file
-- https://github.com/jtpio/jupyterlab-system-monitor
-- https://github.com/jtpio/jupyterlab-theme-toggle
-- https://github.com/jtpio/jupyterlab-topbar
-- https://github.com/jupyterlab-contrib/jupyterlab-plugin-graph
-- https://github.com/jupyterlab/benchmarks
-- https://github.com/jupyterlab/benchmarks
-- https://github.com/jupyterlab/extension-examples
-- https://github.com/jupyterlab/jupyterlab-mp4
-- https://github.com/jupyterlab/jupyterlab_xkcd
-- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
-- https://github.com/nersc/jupyterlab-recents
-- https://github.com/voila-dashboards/voila
-- https://github.com/yuvipanda/jupyterlab-nbmetadata
+Released under the terms of the BSD-3 license (see [LICENSE](./LICENSE)).

@@ -27,3 +27,25 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This package contains source code taken from following repositories under MIT or BSD-3-Clause license, listed here for copyright.
+
+- https://github.com/deshaw/jupyterlab-execute-time
+- https://github.com/ibqn/jupyterlab-codecellbtn
+- https://github.com/jtpio/jupyter-resource-usage
+- https://github.com/jtpio/jupyterlab-cell-flash
+- https://github.com/jtpio/jupyterlab-python-file
+- https://github.com/jtpio/jupyterlab-system-monitor
+- https://github.com/jtpio/jupyterlab-theme-toggle
+- https://github.com/jtpio/jupyterlab-topbar
+- https://github.com/jupyterlab-contrib/jupyterlab-plugin-graph
+- https://github.com/jupyterlab/benchmarks
+- https://github.com/jupyterlab/benchmarks
+- https://github.com/jupyterlab/extension-examples
+- https://github.com/jupyterlab/jupyterlab-mp4
+- https://github.com/jupyterlab/jupyterlab_xkcd
+- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
+- https://github.com/jupyterlab/scipy2019-jupyterlab-tutorial
+- https://github.com/nersc/jupyterlab-recents
+- https://github.com/voila-dashboards/voila
+- https://github.com/yuvipanda/jupyterlab-nbmetadata
