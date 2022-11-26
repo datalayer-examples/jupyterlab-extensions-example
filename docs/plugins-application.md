@@ -1,12 +1,22 @@
 # Application Plugins
 
-## Apod Left
+Application plugins are the fundamental building block of JupyterLab functionality. Application plugins interact with JupyterLab and other plugins by requiring services provided by other plugins, and optionally providing their own service to the system.
 
-Apod left.
+Application plugins in core JupyterLab include the main menu system, the file browser, and the notebook, console, and file editor components.
 
 ## Apod Main
 
-Apod main.
+This example is taken from the [jupyterlab_apod](https://github.com/jupyterlab/jupyterlab_apod) example ([read more](https://jupyterlab.readthedocs.io/en/latest/)extension/extension_tutorial.html) and displays a random image from the NASA API (https://api.nasa.gov https://api.nasa.gov/planetary/apod.
+
+The image is shown in a main panel.
+
+![](https://jupyterlab.readthedocs.io/en/latest/_images/extension_tutorial_complete.png)
+
+## Apod Left
+
+Same feature as the `Apod Main` but displayed in a left side panel.
+
+TODO `Apod Left` should reuse code from / depend on `Apod Main`.
 
 ## Cell Flash
 

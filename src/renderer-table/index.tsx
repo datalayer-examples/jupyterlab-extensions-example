@@ -101,7 +101,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
 /**
  * Extension definition.
  */
-const table: IRenderMime.IExtension = {
+const renderer: IRenderMime.IExtension = {
   id: 'jupyterlabextensions:rendermime-extensions:plugin',
   rendererFactory,
   rank: 0,
@@ -121,4 +121,4 @@ const table: IRenderMime.IExtension = {
   }
 };
 
-export default table;
+export default renderer;

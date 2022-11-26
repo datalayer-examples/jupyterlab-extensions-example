@@ -67,7 +67,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
 /**
  * Extension definition.
  */
-const certificate: IRenderMime.IExtension = {
+const renderer: IRenderMime.IExtension = {
   id: 'jupyterlabextensions:rendermime-certificate:plugin',
   rendererFactory,
   rank: 0,
@@ -87,4 +87,4 @@ const certificate: IRenderMime.IExtension = {
   }
 };
 
-export default certificate;
+export default renderer;

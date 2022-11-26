@@ -54,7 +54,7 @@ export const rendererFactory: IRenderMime.IRendererFactory = {
 /**
  * Extension definition.
  */
-const mp4: IRenderMime.IExtension = {
+const renderer: IRenderMime.IExtension = {
   id: 'jupyterlabextensions:mp4:plugin',
   rendererFactory,
   rank: 0,
@@ -77,4 +77,4 @@ const mp4: IRenderMime.IExtension = {
   }
 };
 
-export default mp4;
+export default renderer;

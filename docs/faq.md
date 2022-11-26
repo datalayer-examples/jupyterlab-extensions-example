@@ -35,7 +35,7 @@ See https://jupyterlab.readthedocs.io/en/stable/user/directories.html#overridesj
 cat << EOF >>~/.jupyter/lab/user-settings/overrides.json
 {
   "@jupyterlab/apputils-extension:themes": {
-    "theme": "JupyterLab Christmas"
+    "theme": "Christmas"
   }
 }
 EOF

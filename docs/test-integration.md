@@ -1,4 +1,4 @@
-## Integration Tests
+# Integration Tests
 
 This extension uses [Playwright](https://playwright.dev/docs/intro) for the integration tests (aka user level tests).
 

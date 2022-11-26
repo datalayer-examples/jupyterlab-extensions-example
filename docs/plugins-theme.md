@@ -1,8 +1,10 @@
 # Theme Plugins
 
+Theme plugins provide a way to customize the appearance of JupyterLab by changing themeable values (i.e., CSS variable values) and providing additional fonts and graphics to JupyterLab. JupyterLab comes with light and dark theme plugins.
+
 ## Christmas Theme
 
-The `JupyterLab Christmas` is implemented in the `src/theme-christmas/index.ts` file. You typically require `IThemeManager` and invoke the `register` function with the needed CSS.
+The `Christmas` theme is implemented in the `src/theme-christmas/index.ts` file. You typically require `IThemeManager` and invoke the `register` function with the needed CSS.
 
 ```js
     const style = 'jupyterlabextensions/index.css';

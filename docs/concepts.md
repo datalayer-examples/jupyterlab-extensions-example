@@ -1,4 +1,4 @@
-# Extension
+# Concepts
 
 ## Definitions
 
@@ -13,6 +13,12 @@ So a single `extension` like the one implemented in this repository ships many `
 - [Application](./plugin-application) plugins.
 - [Theme](./plugin-theme) plugins.
 - [Mime renderer](./plugin-mime-renderer) plugins.
+
+## Plugins Injection
+
+`JupyterLab` is in fact a `Lumino Application`. The `Lumino Application` is responsible for the dependency injection.
+
+TODO Create a simple Lumino application.
 
 ## Source vs Prebuilt Extensions
 
@@ -56,3 +62,23 @@ When you implementation extensions, you need to specify important information in
   },
 ...
 ```
+
+## Widget Restorer
+
+TODO
+
+## Plugin Settings
+
+TODO
+
+Read also https://jupyterlab.readthedocs.io/en/latest/user/directories.html#jupyterlab-user-settings-directory
+
+## Panels
+
+You can add your widgets to the `main`, `left`, `right` and `top` panels.
+
+## Workspaces
+
+TODO
+
+Read also https://jupyterlab.readthedocs.io/en/latest/user/directories.html#jupyterlab-workspaces-directory
