@@ -1,8 +1,8 @@
 {
-  "jupyter.lab.setting-icon-class": "jp-SettingsIcon",
-  "jupyter.lab.setting-icon-label": "Theme Toggle",
   "title": "Theme Toggle",
   "description": "Toggle the JupyterLab theme",
+  "jupyter.lab.setting-icon-class": "jp-SettingsIcon",
+  "jupyter.lab.setting-icon-label": "Theme Toggle",
   "properties": {},
   "additionalProperties": false,
   "jupyter.lab.shortcuts": [

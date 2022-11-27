@@ -52,7 +52,7 @@ export default class ExecuteTimeWidget extends Widget {
     super();
     this._panel = panel;
     this.updateConnectedCell = this.updateConnectedCell.bind(this);
-    settingRegistry.load(`${PLUGIN_ID}:settings`).then(
+    settingRegistry.load(`${PLUGIN_ID}:exec-time`).then(
       (settings: ISettingRegistry.ISettings) => {
         this._updateSettings(settings);
         settings.changed.connect(this._updateSettings.bind(this));

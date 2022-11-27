@@ -1,5 +1,5 @@
 {
-  "title": "JupyterLab Extensions Example",
-  "description": "JupyterLab Extensions Example settings.",
+  "title": "Top Bar",
+  "description": "Top Bar settings.",
   "additionalProperties": false
 }

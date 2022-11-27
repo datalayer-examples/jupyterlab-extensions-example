@@ -1,6 +1,6 @@
 {
-  "title": "Kernel Messaging Example",
-  "description": "Kernel Messaging Example settings.",
+  "title": "Kernel Messaging",
+  "description": "Kernel Messaging settings.",
   "jupyter.lab.menus": {
     "main": [
       {

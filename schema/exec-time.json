@@ -1,5 +1,5 @@
 {
-  "title": "JupyterLab Extension Examples",
+  "title": "Exec Time",
   "description": "Settings for the JupyterLab Extension Examples",
   "type": "object",
   "additionalProperties": true,

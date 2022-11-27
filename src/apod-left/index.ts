@@ -24,7 +24,7 @@ interface IPodResponse {
   url: string;
 }
 
-import tachometer from './../../style/tachometer.svg';
+import apodSvg from './../../style/plugins/apod.svg';
 
 class APODWidget extends Widget {
   /**
@@ -36,7 +36,7 @@ class APODWidget extends Widget {
     this.addClass('my-ApodWidget');
     const icon = new LabIcon({
       name: 'jupyterlab-xkcd:icon',
-      svgstr: tachometer
+      svgstr: apodSvg
     });
     this.title.icon = icon;
 

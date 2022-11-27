@@ -1,8 +1,8 @@
 {
-  "jupyter.lab.setting-icon-class": "jp-BuildIcon",
-  "jupyter.lab.setting-icon-label": "System Monitor",
   "title": "Kernel Memory",
   "description": "Kernel Memory",
+  "jupyter.lab.setting-icon-class": "jp-BuildIcon",
+  "jupyter.lab.setting-icon-label": "System Monitor",
   "properties": {
     "refreshRate": {
       "title": "Refresh Rate (ms)",

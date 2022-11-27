@@ -32,11 +32,15 @@ Context menu.
 
 ## Exec Time
 
-Exec time.
+This extension displays execution timings under each cell.
+
+![](https://raw.githubusercontent.com/deshaw/jupyterlab-execute-time/master/docs/execute-time-screenshot.png)
+
+By default, if this extension is enabled, it should automatically change your settings to record timing in the notebook metadata when it is loaded. If this fails, you can do this manually via `Settings -> Advanced Settings Editor -> Notebook` {"recordTiming": true}. This is a notebook metadata setting and not a plugin setting. The plugin just displays that data.
 
 ## Internals
 
-This extension will print in the browser console the registered file types and model factories.
+The `Ìnternals` extension prints in the browser console the registered `file types` and `model factories`. This illustrates the explanations found in the documentation (https://jupyterlab.readthedocs.io/en/latest/extension/documents.html and https://jupyterlab.readthedocs.io/en/latest/extension/notebook.html).
 
 ```
 fileType ObjectcontentType: "file"displayName: "Text"extensions: ['.txt']fileFormat: "text"icon: LabIcon {_props: {…}, _svgReplaced: Signal, _svgElement: undefined, _svgInnerHTML: undefined, _svgReactAttrs: undefined, …}mimeTypes: ['text/plain']name: "text"[[Prototype]]: Object Array(1)0: "text/plain"length: 1[[Prototype]]: Array(0) undefined
@@ -91,6 +95,8 @@ Notebook auto.
 Notebook metadata.
 
 ## Plugins Graph
+
+Invoke the `Plugin Dependency Graph` via the command palette.
 
 <div align="center" style="text-align: center">
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-plugins-graph.png" />

@@ -1,6 +1,6 @@
 {
-  "title": "Kernel Output Example",
-  "description": "Kernel Output Example settings.",
+  "title": "Kernel Output",
+  "description": "Kernel Output settings.",
   "jupyter.lab.menus": {
     "main": [
       {
