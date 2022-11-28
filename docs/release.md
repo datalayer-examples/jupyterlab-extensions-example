@@ -1,5 +1,9 @@
 # Release
 
+- [ ] TODO Release manually in NPM
+- [ ] TODO Release manually in PyPI - Resolve The name 'jupyterlabextensions' is too similar to an existing project. See https://pypi.org/help/#project-name for more information.
+- [ ] TODO Release with jupyter-releaser
+
 The extension can be published to `PyPI` and `NPM.js` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
 
 ## Manual release
@@ -46,7 +50,7 @@ npm publish --access public
 
 ## Automated Releases with the Jupyter Releaser
 
-The extension repository should already be compatible with the Jupyter Releaser. Check out the [workflow documentation](https://github.com/jupyter-server/jupyter_releaser#typical-workflow) for more information. 
+The extension repository should already be compatible with the Jupyter Releaser. Check out the [workflow documentation](https://github.com/jupyter-server/jupyter_releaser#typical-workflow) for more information.
 
 Check out also the definitions in `package.json``
 

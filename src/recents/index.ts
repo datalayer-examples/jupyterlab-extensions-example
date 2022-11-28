@@ -215,7 +215,7 @@ class RecentsManager {
 
 }
 
-const recents: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: PluginIDs.recents,
   autoStart: true,
   requires: [IStateDB, IMainMenu, IDocumentManager],
@@ -317,4 +317,4 @@ const recents: JupyterFrontEndPlugin<void> = {
   },
 }
 
-export default recents;
+export default plugin;

@@ -9,12 +9,12 @@ import { Table, Cell, Column } from 'fixed-data-table-2';
 import 'fixed-data-table-2/dist/fixed-data-table.css';
 
 /**
- * The default mime type for the extension.
+ * The default mime type for the plugin.
  */
 const MIME_TYPE = 'text/csv';
 
 /**
- * The class name added to the extension.
+ * The class name added to the plugin.
  */
 const CLASS_NAME = 'mimerenderer-table';
 

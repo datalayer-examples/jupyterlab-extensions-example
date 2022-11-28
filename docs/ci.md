@@ -2,6 +2,8 @@
 
 The CI workflows are listed on https://github.com/datalayer-examples/jupyterlab-extensions-example/tree/main/.github/workflows.
 
+- [ ] TODO Fix CI
+
 ## Binder on Pull Request
 
 Binder on Pull Request.

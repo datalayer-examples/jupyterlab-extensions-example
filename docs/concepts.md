@@ -18,7 +18,7 @@ So a single `extension` like the one implemented in this repository ships many `
 
 `JupyterLab` is in fact a `Lumino Application`. The `Lumino Application` is responsible for the dependency injection.
 
-TODO Create a simple Lumino application.
+- [ ] TODO Create a simple Lumino application to showcase simple dependency injection.
 
 ## Source vs Prebuilt Extensions
 
@@ -51,8 +51,8 @@ When you implementation extensions, you need to specify important information in
     "outputDir": "jupyterlabextensions/labextension",
     "sharedPackages": {
       "jupyterlab-topbar": {
-        "requiredVersion": "0.6.0", 
-        "bundled": false, 
+        "requiredVersion": "0.6.0",
+        "bundled": false,
         "singleton": true
       }
     },
@@ -63,17 +63,17 @@ When you implementation extensions, you need to specify important information in
 ...
 ```
 
+## Lumino Signals and Messsages
+
+The Lumino [Signals](https://github.com/jupyterlab/lumino/tree/main/packages/signaling) and [Messages](https://github.com/jupyterlab/lumino/tree/main/packages/messaging) are important utilities. You can try the [JupyterLab example for Signals](https://github.com/jupyterlab/extension-examples/tree/master/signals) to know more.
+
 ## Widget Restorer
 
-TODO
-
-Read also https://jupyterlab.readthedocs.io/en/latest/extension/extension_tutorial.html#restore-panel-state-when-the-browser-refreshes
+Read https://jupyterlab.readthedocs.io/en/latest/extension/extension_tutorial.html#restore-panel-state-when-the-browser-refreshes.
 
 ## Plugin Settings
 
-TODO
-
-Read also https://jupyterlab.readthedocs.io/en/latest/user/directories.html#jupyterlab-user-settings-directory
+Read https://jupyterlab.readthedocs.io/en/latest/user/directories.html#jupyterlab-user-settings-directory.
 
 ## Panels
 
@@ -81,6 +81,4 @@ You can add your widgets to the `main`, `left`, `right` and `top` panels.
 
 ## Workspaces
 
-TODO
-
-Read also https://jupyterlab.readthedocs.io/en/latest/user/directories.html#jupyterlab-workspaces-directory
+Read https://jupyterlab.readthedocs.io/en/latest/user/directories.html#jupyterlab-workspaces-directory.

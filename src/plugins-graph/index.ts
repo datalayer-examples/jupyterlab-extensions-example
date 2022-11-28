@@ -14,7 +14,7 @@ import { GraphContainer } from './widget';
 /**
  * Initialization data for the jupyterlab-plugin-graph extension.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-plugin-graph',
   autoStart: true,
   optional: [ICommandPalette],
@@ -43,4 +43,4 @@ const extension: JupyterFrontEndPlugin<void> = {
   },
 };
 
-export default extension;
+export default plugin;

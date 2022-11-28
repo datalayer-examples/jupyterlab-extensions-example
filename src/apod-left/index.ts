@@ -125,13 +125,13 @@ function activate(
 }
 
 /**
- * Initialization data for the extension.
+ * Initialization data for the plugin.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab_apod_left',
   autoStart: true,
   requires: [ICommandPalette, ILayoutRestorer],
   activate: activate
 };
 
-export default extension;
+export default plugin;

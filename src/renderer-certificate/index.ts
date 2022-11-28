@@ -5,12 +5,12 @@ import { JSONObject } from '@lumino/coreutils';
 import { Widget } from '@lumino/widgets';
 
 /**
- * The default mime type for the extension.
+ * The default mime type for the plugin.
  */
 const MIME_TYPE = 'application/vnd.datalayer.certificate';
 
 /**
- * The class name added to the extension.
+ * The class name added to the plugin.
  */
 const CLASS_NAME = 'mimerenderer-certificate';
 

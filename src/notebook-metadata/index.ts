@@ -67,7 +67,7 @@ class MetadataEditorWidget extends Widget {
   }
 }
 
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:nbmetadata',
   autoStart: true,
   requires: [
@@ -108,4 +108,4 @@ const extension: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default extension;
+export default plugin;

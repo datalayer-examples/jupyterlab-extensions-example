@@ -4,7 +4,7 @@ import {
 
 import { requestAPI } from './handler'
 
-const server: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:server-extension',
   autoStart: true,
   activate: (app: JupyterFrontEnd) => {
@@ -20,4 +20,4 @@ const server: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default server;
+export default plugin;

@@ -21,7 +21,7 @@ namespace CommandIDs {
   export const createNew = 'fileeditor:create-new-python-file';
 }
 
-const pythonFile: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:python-file',
   autoStart: true,
   optional: [IFileBrowserFactory, ILauncher, IMainMenu, ICommandPalette],
@@ -86,4 +86,4 @@ const pythonFile: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default pythonFile;
+export default plugin;

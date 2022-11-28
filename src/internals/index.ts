@@ -7,7 +7,7 @@ import { IDocumentManager } from '@jupyterlab/docmanager';
 
 import { DocumentRegistry } from '@jupyterlab/docregistry';
 
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:internals:plugin',
   autoStart: true,
   requires: [ IDocumentManager],
@@ -43,4 +43,4 @@ const extension: JupyterFrontEndPlugin<void> = {
 
 };
 
-export default extension;
+export default plugin;

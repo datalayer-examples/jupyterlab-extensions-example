@@ -80,7 +80,7 @@ export class ContentFactoryWithFooterButton extends NotebookPanel.ContentFactory
 /**
  * The footer button extension for the code cell.
  */
-export const footerButtonExtension: JupyterFrontEndPlugin<void> = {
+export const footerButtonPlugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:cell-code-btn',
   autoStart: true,
   requires: [INotebookTracker],
@@ -124,13 +124,13 @@ export const footerButtonExtension: JupyterFrontEndPlugin<void> = {
 /**
  * The notebook cell factory.
  */
-export const cellFactory: JupyterFrontEndPlugin<NotebookPanel.IContentFactory> = {
+export const cellFactoryPlugin: JupyterFrontEndPlugin<NotebookPanel.IContentFactory> = {
   id: 'jupyterlabextensions:cellcodebtn:factory',
   requires: [IEditorServices],
   provides: NotebookPanel.IContentFactory,
   autoStart: true,
   activate: (app: JupyterFrontEnd, editorServices: IEditorServices) => {
-    console.log('JupyterLab extension jupyterlab-cellcodebtn overrides default nootebook content factory.');
+    console.log('JupyterLab extension jupyterlabextensions:cellcodebtn overrides default nootebook content factory.');
     const { commands } = app;
     const editorFactory = editorServices.factoryService.newInlineEditor;
     return new ContentFactoryWithFooterButton(commands, { editorFactory });
@@ -140,9 +140,9 @@ export const cellFactory: JupyterFrontEndPlugin<NotebookPanel.IContentFactory> =
 /**
  * Export this plugins as default.
  */
-const codeCellButton: Array<JupyterFrontEndPlugin<any>> = [
-  footerButtonExtension,
-  cellFactory
+const plugins: Array<JupyterFrontEndPlugin<any>> = [
+  footerButtonPlugin,
+  cellFactoryPlugin
 ];
 
-export default codeCellButton;
+export default plugins;

@@ -16,7 +16,7 @@ import LuminoCounter from './LuminoCounter';
 import CounterWidget from './ReactCounter';
 
 /**
- * The command IDs used by the extension.
+ * The command IDs used by the plugin.
  */
 namespace CommandIDs {
   export const lumino = 'jupyterlab-examples:open-lumino-tab';

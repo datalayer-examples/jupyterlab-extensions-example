@@ -19,9 +19,9 @@ namespace CommandIDs {
 }
 
 /**
- * Initialization data for the extension.
+ * Initialization data for the plugin.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'kernel-messaging',
   autoStart: true,
   optional: [ILauncher],
@@ -78,4 +78,4 @@ function activate(
   palette.addItem({ command: CommandIDs.create, category });
 }
 
-export default extension;
+export default plugin;

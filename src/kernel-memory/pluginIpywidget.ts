@@ -11,7 +11,7 @@ import { MODULE_NAME, MODULE_VERSION } from './version';
 /**
  * The ipyresuse plugin.
  */
-const ipyresusePlugin: IPlugin<Application<Widget>, void> = {
+const plugin: IPlugin<Application<Widget>, void> = {
   id: 'jupyterlabextensions:ipywidget:kernelmemory',
   requires: [IJupyterWidgetRegistry],
   activate: activateWidgetExtension,
@@ -29,4 +29,4 @@ function activateWidgetExtension(app: Application<Widget>, registry: IJupyterWid
   });
 }
 
-export default ipyresusePlugin;
+export default plugin;

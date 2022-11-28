@@ -12,8 +12,8 @@ For example, the following content
 
 ```json
 {
-    "given": "Datalayer", 
-    "event": "Yeah!"
+  "given": "Datalayer",
+  "event": "Yeah!"
 }
 ```
 
@@ -27,7 +27,7 @@ will be rendred as the following images.
 
 ## Mp4 Mime Renderer
 
-Any `.mp4` will be rendered with the native HTML `<video/>` tag. 
+Any `.mp4` will be rendered with the native HTML `<video/>` tag.
 
 ## Table Mime Renderer
 

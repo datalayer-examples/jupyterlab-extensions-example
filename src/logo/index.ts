@@ -8,11 +8,11 @@ import { circleIcon } from '@jupyterlab/ui-components';
 
 import { Widget } from '@lumino/widgets';
 
-const logo: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:logo',
   autoStart: true,
   requires: [ILabShell],
-  activate: (app: JupyterFrontEnd, shell: ILabShell) => {
+  activate: (_: JupyterFrontEnd, shell: ILabShell) => {
     console.log('JupyterLab extension jupyterlabextensions:logo is activated!');
     const logo = new Widget();
     circleIcon.element({
@@ -28,4 +28,4 @@ const logo: JupyterFrontEndPlugin<void> = {
   }
 };
 
-export default logo;
+export default plugin;

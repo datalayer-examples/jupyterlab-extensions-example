@@ -14,17 +14,23 @@ The image is shown in a main panel.
 
 ## Apod Left
 
-Same feature as the `Apod Main` but displayed in a left side panel.
+The `Apod Left` plugins implements the same feature as the `Apod Main` but is displayed in a left side panel.
 
-TODO `Apod Left` should reuse code from / depend on `Apod Main`.
+- [ ] TODO `Apod Left` should reuse code from and depend on `Apod Main`.
+
+## Bokeh Plot
+
+- [ ] TODO Add bokeh plot example
 
 ## Cell Flash
 
-Cell flash.
+The `Cell Flash` plugin highlights the cell with CSS each time it is executed.
+
+To achieve that effect, the plugin listens to the `executed` signal `NotebookActions.executed.connect((_, args) => {...}` and update the CSS of the HTML element `cell.editor.host`.
 
 ## Code Cell Button
 
-Code cell button.
+The `Code Cell Button` adds a `Run` button below each cell. A plugin that provides a new `NotebookPanel.IContentFactory` is needed and returns a new `ContentFactoryWithFooterButton` which overrids the `createCellFooter` method.
 
 ## Context Menu
 

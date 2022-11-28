@@ -31,7 +31,7 @@ interface IResourceSettings extends JSONObject {
 /**
  * Initialization data for the jupyterlab-system-monitor extension.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:kernel-memory',
   autoStart: true,
   requires: [ITopBar],
@@ -45,7 +45,7 @@ const extension: JupyterFrontEndPlugin<void> = {
     let memoryLabel = DEFAULT_MEMORY_LABEL;
 
     if (settingRegistry) {
-      const settings = await settingRegistry.load(extension.id);
+      const settings = await settingRegistry.load(plugin.id);
       refreshRate = settings.get('refreshRate').composite as number;
       const memorySettings = settings.get('memory')
         .composite as IResourceSettings;
@@ -56,6 +56,6 @@ const extension: JupyterFrontEndPlugin<void> = {
     const memory = MemoryView.createMemoryView(model, memoryLabel);
     topBar.addItem('memory', memory);
   },
-};
+}
 
-export default extension;
+export default plugin;

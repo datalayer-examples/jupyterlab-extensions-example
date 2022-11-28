@@ -36,40 +36,24 @@ cookiecutter \
 
 It is composed of a Python package named `jupyterlabextensions` for the server extension and a NPM package named `jupyterlabextensions` for the frontend extension. For now, it runs on JupyterLab >= 3.0 <4.0.0. An update to the major breaking-API 4.0.0 is planned depending on the version 4 release timeline.
 
+## Documentation
+
 Follow the documentation to use and learn more on the internals of this extension.
 
-- [Setup the base environment](./docs/env-base.md)
-- [Setup the development environment](./docs/env-dev.md)
+- [Setup the Base Environment](./docs/env-base.md)
+- [Setup the Development eEnvironment](./docs/env-dev.md)
 - [Concepts](./docs/concepts.md)
-- [Application plugins](./docs/plugins-application.md)
-- [Theme plugins](./docs/plugins-theme.md)
-- [Mime renderer plugins](./docs/plugins-mime-renderer.md)
-- [Lint the source](./docs/lint.md)
+- [Application Plugins](./docs/plugins-application.md)
+- [Theme Plugins](./docs/plugins-theme.md)
+- [Mime Renderer Plugins](./docs/plugins-mime-renderer.md)
+- [Lint the Source](./docs/lint.md)
 - [Test the JavaScript](./docs/test-js.md)
 - [Test the Server](./docs/test-server.md)
-- [Integration test](./docs/test-integration.md)
-- [Continuous integration](./docs/ci.md)
+- [Integration Tests](./docs/test-integration.md)
+- [Continuous Integration](./docs/ci.md)
 - [Build JupyterLab](./docs/build-jupyterlab.md)
 - [Release](./docs/release.md)
 - [FAQ](./docs/faq.md)
-
-<hr/>
-
-## To Do
-
-- [ ] Add more integration tests
-- [ ] Add more unit tests
-- [ ] Add bokeh plot example
-- [ ] Bring more theme like [jupyterlab_miami_nights](https://github.com/timkpaine/jupyterlab_miami_nights)
-- [ ] Fix CI
-- [ ] Optimize the variables.css file of the Christmas theme.
-- [ ] Release manually in NPM
-- [ ] Release manually in PyPI - Resolve The name 'jupyterlabextensions' is too similar to an existing project. See https://pypi.org/help/#project-name for more information.
-- [ ] Release with jupyter-releaser
-- [ ] Update the Launcher page to launch the extensions
-- [ ] Strip down the christmas theme variables.css to only the needed css?
-
-<hr/>
 
 ## ⚖️ License
 

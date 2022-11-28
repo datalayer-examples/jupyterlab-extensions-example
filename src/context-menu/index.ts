@@ -11,7 +11,7 @@ import { buildIcon, runIcon } from '@jupyterlab/ui-components';
 
 const COMMAND_ID = 'jupyterlabextensions/context-menu:open';
 
-const contextMenu: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:context-menu',
   autoStart: true,
   requires: [IFileBrowserFactory],
@@ -47,4 +47,4 @@ const contextMenu: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default contextMenu;
+export default plugin;

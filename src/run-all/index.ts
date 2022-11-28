@@ -43,7 +43,7 @@ class RunAllCellsButtonExtension
   }
 }
 
-const runAll: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:runall:extension',
   autoStart: true,
   activate: (app: JupyterFrontEnd): void => {
@@ -57,4 +57,4 @@ const runAll: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default runAll;
+export default plugin;

@@ -6,9 +6,9 @@ import {
 import { IDocumentManager } from '@jupyterlab/docmanager';
 
 /**
- * Initialization for the autoCreate extension.
+ * Initialization for the autoCreate plugin.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:auto-create',
   autoStart: true,
   requires: [IDocumentManager],
@@ -23,4 +23,4 @@ const extension: JupyterFrontEndPlugin<void> = {
   }
 }
 
-export default extension;
+export default plugin;

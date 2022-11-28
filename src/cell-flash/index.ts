@@ -10,13 +10,13 @@ import { ISettingRegistry } from '@jupyterlab/settingregistry';
 /**
  * Initialization data for the jupyterlab-cell-flash extension.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:cell-flash',
   autoStart: true,
   optional: [ISettingRegistry],
-  activate: async (app: JupyterFrontEnd, settingRegistry: ISettingRegistry) => {
+  activate: async (_: JupyterFrontEnd, settingRegistry: ISettingRegistry) => {
     if (settingRegistry) {
-      const setting = await settingRegistry.load(extension.id);
+      const setting = await settingRegistry.load(plugin.id);
       const root = document.documentElement;
       const updateSettings = (): void => {
         const color = setting.get('color').composite as string;
@@ -46,4 +46,4 @@ const extension: JupyterFrontEndPlugin<void> = {
   }
 };
 
-export default extension;
+export default plugin;

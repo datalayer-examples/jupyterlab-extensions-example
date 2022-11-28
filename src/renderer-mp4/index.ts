@@ -3,12 +3,12 @@ import { IRenderMime } from '@jupyterlab/rendermime-interfaces';
 import { Widget } from '@lumino/widgets';
 
 /**
- * The default mime type for the extension.
+ * The default mime type for the plugin.
  */
 const MIME_TYPE = 'video/mp4';
 
 /**
- * The class name added to the extension.
+ * The class name added to the plugin.
  */
 const CLASS_NAME = 'mimerenderer-mp4';
 

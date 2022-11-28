@@ -3,7 +3,7 @@ import apodMain from './apod-main';
 import cellFlash from './cell-flash';
 import codeCellButton from './code-cell-button';
 import contextMenu from './context-menu';
-import plugin from './exec-time';
+import execTime from './exec-time';
 import internals from './internals';
 import ipywidgetResourceUsagePlugin from './kernel-memory/pluginIpyWidget';
 import kernelMemory from './kernel-memory/plugin';
@@ -28,7 +28,7 @@ export default [
   apodMain,
   cellFlash,
   contextMenu,
-  plugin,
+  execTime,
   internals,
   ipywidgetResourceUsagePlugin,
   kernelMemory,

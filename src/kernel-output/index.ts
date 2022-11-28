@@ -23,9 +23,9 @@ namespace CommandIDs {
 }
 
 /**
- * Initialization data for the extension.
+ * Initialization data for the plugin.
  */
-const extension: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'kernel-output',
   autoStart: true,
   optional: [ILauncher],
@@ -111,4 +111,4 @@ function activate(
   }
 }
 
-export default extension;
+export default plugin;

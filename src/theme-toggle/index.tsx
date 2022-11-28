@@ -66,9 +66,9 @@ const Switch = (props: ISwitchProps) => {
 }
 
 /**
- * Initialization data for the jupyterlab-theme-toggle extension.
+ * Initialization data for the jupyterlab-theme-toggle plugin.
  */
-const themeToggle: JupyterFrontEndPlugin<void> = {
+const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlab-theme-toggle:plugin',
   autoStart: true,
   requires: [IThemeManager],
@@ -114,4 +114,4 @@ const themeToggle: JupyterFrontEndPlugin<void> = {
 
 }
 
-export default themeToggle;
+export default plugin;
