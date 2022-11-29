@@ -19,8 +19,8 @@ import CounterWidget from './ReactCounter';
  * The command IDs used by the plugin.
  */
 namespace CommandIDs {
-  export const lumino = 'jupyterlab-examples:open-lumino-tab';
-  export const react = 'jupyterlab-examples:open-react-tab';
+  export const lumino = 'jupyterlabextensions:open-lumino-tab';
+  export const react = 'jupyterlabextensions:open-react-tab';
 }
 
 /**
@@ -43,7 +43,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
       const { commands, shell } = app;
       const menu = new Menu({ commands });  
-      menu.title.label = 'Examples';
+      menu.title.label = 'React';
       mainMenu.addMenu(menu, { rank: 80 });
 
       const sleep = (ms: number) => {
@@ -97,7 +97,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
           app.shell.add(widget, 'main');
         }
       });
-      palette.addItem({ command: CommandIDs.react , category: 'Examples' });
+      palette.addItem({ command: CommandIDs.react , category: 'React' });
       menu.addItem({ command: CommandIDs.react });
 
      // Lumino.
@@ -114,7 +114,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
         shell.add(widget, 'main');
       }
     });
-    palette.addItem({ command: CommandIDs.lumino, category: 'Examples' });
+    palette.addItem({ command: CommandIDs.lumino, category: 'React' });
     menu.addItem({ command: CommandIDs.lumino });
 
   }

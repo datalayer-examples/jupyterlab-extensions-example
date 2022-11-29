@@ -1,7 +1,5 @@
 # Integration Tests
 
-- [ ] TODO Add more integration tests
-
 This extension uses [Playwright](https://playwright.dev/docs/intro) for the integration tests (aka user level tests).
 
 More precisely, the JupyterLab helper [Galata](https://github.com/jupyterlab/jupyterlab/tree/master/galata) is used to handle testing the extension in JupyterLab.
@@ -45,17 +43,13 @@ cd ./ui-tests
 jlpm playwright test
 ```
 
-Test results will be shown in the terminal. In case of any test failures, the test report
-will be opened in your browser at the end of the tests execution; see
-[Playwright documentation](https://playwright.dev/docs/test-reporters#html-reporter)
-for configuring that behavior.
+Test results will be shown in the terminal. In case of any test failures, the test report will be opened in your browser at the end of the tests execution; see [Playwright documentation](https://playwright.dev/docs/test-reporters#html-reporter) for configuring that behavior.
 
-## Update the tests snapshots
+## Update the Tests Snapshots
 
 > All commands are assumed to be executed from the root directory
 
-If you are comparing snapshots to validate your tests, you may need to update
-the reference snapshots stored in the repository. To do that, you need to:
+If you are comparing snapshots to validate your tests, you may need to update the reference snapshots stored in the repository. To do that, you need to:
 
 1. Compile the extension
 
@@ -87,9 +81,11 @@ jlpm playwright test -u
 > type `please update playwright snapshots` to trigger the update by a bot on the CI.
 > Once the bot has computed new snapshots, it will commit them to the PR branch.
 
-## Create tests
+## Create Tests
 
 > All commands are assumed to be executed from the root directory
+
+- [ ] TODO Add more integration tests
 
 To create tests, the easiest way is to use the code generator tool of playwright:
 
@@ -118,7 +114,7 @@ cd ./ui-tests
 jlpm playwright codegen localhost:8888
 ```
 
-## Debug tests
+## Debug Tests
 
 > All commands are assumed to be executed from the root directory
 

@@ -41,7 +41,7 @@ It is composed of a Python package named `jupyterlabextensions` for the server e
 Follow the documentation to use and learn more on the internals of this extension.
 
 - [Setup the Base Environment](./docs/env-base.md)
-- [Setup the Development eEnvironment](./docs/env-dev.md)
+- [Develop the Extensions](./docs/dev.md)
 - [Concepts](./docs/concepts.md)
 - [Application Plugins](./docs/plugins-application.md)
 - [Theme Plugins](./docs/plugins-theme.md)

@@ -6,7 +6,7 @@ Application plugins in core JupyterLab include the main menu system, the file br
 
 ## Apod Main
 
-This example is taken from the [jupyterlab_apod](https://github.com/jupyterlab/jupyterlab_apod) example ([read more](https://jupyterlab.readthedocs.io/en/latest/)extension/extension_tutorial.html) and displays a random image from the NASA API (https://api.nasa.gov https://api.nasa.gov/planetary/apod.
+This extension is taken from the [jupyterlab_apod](https://github.com/jupyterlab/jupyterlab_apod) example ([read more](https://jupyterlab.readthedocs.io/en/latest/extension/extension_tutorial.html) and displays a random image fetched from the public NASA API (https://api.nasa.gov https://api.nasa.gov/planetary/apod.
 
 The image is shown in a main panel.
 
@@ -14,7 +14,7 @@ The image is shown in a main panel.
 
 ## Apod Left
 
-The `Apod Left` plugins implements the same feature as the `Apod Main` but is displayed in a left side panel.
+The `Apod Left` extension implements the same feature as the `Apod Main` but is displayed in a left side panel.
 
 - [ ] TODO `Apod Left` should reuse code from and depend on `Apod Main`.
 
@@ -34,15 +34,17 @@ The `Code Cell Button` adds a `Run` button below each cell. A plugin that provid
 
 ## Context Menu
 
-Context menu.
+This is a example to show how to add a new entry to an existent context menu in the file browser.
+
+![](https://raw.githubusercontent.com/jupyterlab/extension-examples/master/context-menu/preview.gif)
 
 ## Exec Time
 
-This extension displays execution timings under each cell.
+The `Exec Time` extension displays execution timings under each cell.
+
+Before using, activate via `Settings > Advanced Settings Editor > Notebook` {"recordTiming": true}. The executin time is persisted will be persisted as a notebook metadata setting and not a plugin setting. This plugin just displays that data.
 
 ![](https://raw.githubusercontent.com/deshaw/jupyterlab-execute-time/master/docs/execute-time-screenshot.png)
-
-By default, if this extension is enabled, it should automatically change your settings to record timing in the notebook metadata when it is loaded. If this fails, you can do this manually via `Settings -> Advanced Settings Editor -> Notebook` {"recordTiming": true}. This is a notebook metadata setting and not a plugin setting. The plugin just displays that data.
 
 ## Internals
 
@@ -53,19 +55,7 @@ fileType ObjectcontentType: "file"displayName: "Text"extensions: ['.txt']fileFor
 index.js:10 fileType Object Array(1)0: "application/x-ipynb+json"length: 1[[Prototype]]: Array(0) undefined
 index.js:10 fileType Object Array(1) undefined
 index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(2) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
+...
 index.js:10 fileType Object Array(1) undefined
 index.js:10 fileType Object Array(1) undefined
 index.js:15 modelFactory TextModelFactory_isDisposed: falsecontentType: (...)fileFormat: (...)isDisposed: (...)name: (...)[[Prototype]]: Object
@@ -74,35 +64,39 @@ index.js:15 modelFactory Base64ModelFactory_isDisposed: falsecontentType: (...)f
 
 ## IpyWidget Resource Usage
 
-IpyWidget resource usage.
+The `IpyWidget Resource Usage` extension allows ... TODO
 
 ## Kernel Memory
 
-Kernel memory.
+The `Kernel Memory` extension allows ... TODO
 
 ## Kernel Messaging
 
-Kernel messaging.
+The `Kernel Messaging` extension allows to start a kernel and send some code to be executed by it.
+
+![](https://raw.githubusercontent.com/jupyterlab/extension-examples/master/kernel-messaging/preview.gif)
 
 ## Kernel Output
 
-Kernel output.
+The `Kernel Output` extension allows to render kernel messages in an OuputArea.
+
+![](https://raw.githubusercontent.com/jupyterlab/extension-examples/master/kernel-output/preview.gif)
 
 ## Logo
 
-Logo.
+Tbe `Logo` extension allows ... TODO
 
 ## Notebook Auto
 
-Notebook auto.
+The `Notebook Auto` extension allows ... TODO
 
 ## Notebook Metadata
 
-Notebook metadata.
+The `Notebook Metadata` extension allows ... TODO
 
 ## Plugins Graph
 
-Invoke the `Plugin Dependency Graph` via the command palette.
+The `Plugin Dependency Graph` display a graph of the plugins depencies and can be invoked via the command palette.
 
 <div align="center" style="text-align: center">
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-plugins-graph.png" />
@@ -110,32 +104,32 @@ Invoke the `Plugin Dependency Graph` via the command palette.
 
 ## Preview
 
-Preview
+The `Preview` extension allows ... TODO
 
 ## Python File
 
-Python file.
+The `Python File` extension allows ... TODO
 
 ## React.js
 
-React.js
+The `React.js` extension allows ... TODO
 
 ## Recents
 
-Recents.
+The `Recents` extension tracks recent used files and folders and adds a menu in `File > Recents`. You can also clear the recent entries via that menu.
 
 ## Run All
 
-Run all.
+The `Run All` adds a button to the notebook toolbar that allows to run all cells of the notebook.
 
 ## Server
 
-Server
+The `Server` extension connects to a server handler on startup and prints a message in the browser console.
 
 ## Theme Toggle
 
-Theme toggle.
+The `Theme Toggle` extension allows the use to swith from the `Ligth` to the `Dark` theme, and vice-versa. It depends on the `Top Bar` extension to add itself in the main topbar.
 
 ## Top Bar
 
-Top bar.
+The `Top Bar` extension allows ... TODO
