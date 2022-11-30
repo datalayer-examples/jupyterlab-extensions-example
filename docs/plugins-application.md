@@ -20,7 +20,7 @@ The `Apod Left` extension implements the same feature as the `Apod Main` but is 
 
 ## Bokeh Plot
 
-- [ ] TODO Add bokeh plot example
+- [ ] TODO Add `Bokeh Plot` example
 
 ## Cell Flash
 
@@ -40,35 +40,27 @@ This is a example to show how to add a new entry to an existent context menu in 
 
 ## Exec Time
 
-The `Exec Time` extension displays execution timings under each cell.
-
-Before using, activate via `Settings > Advanced Settings Editor > Notebook` {"recordTiming": true}. The executin time is persisted will be persisted as a notebook metadata setting and not a plugin setting. This plugin just displays that data.
+The `Exec Time` extension displays execution timings under each cell. Before using, activate via `Settings > Advanced Settings Editor > Notebook` {"recordTiming": true}. The executin time is persisted will be persisted as a notebook metadata setting and not a plugin setting. This plugin just displays that data.
 
 ![](https://raw.githubusercontent.com/deshaw/jupyterlab-execute-time/master/docs/execute-time-screenshot.png)
 
 ## Internals
 
-The `Ìnternals` extension prints in the browser console the registered `file types` and `model factories`. This illustrates the explanations found in the documentation (https://jupyterlab.readthedocs.io/en/latest/extension/documents.html and https://jupyterlab.readthedocs.io/en/latest/extension/notebook.html).
+The `Ìnternals` extension prints in the browser console the registered `file types`, `model factories` and `widget extensions`. This illustrates the explanations found in the documentation (https://jupyterlab.readthedocs.io/en/latest/extension/documents.html and https://jupyterlab.readthedocs.io/en/latest/extension/notebook.html).
 
 ```
-fileType ObjectcontentType: "file"displayName: "Text"extensions: ['.txt']fileFormat: "text"icon: LabIcon {_props: {…}, _svgReplaced: Signal, _svgElement: undefined, _svgInnerHTML: undefined, _svgReactAttrs: undefined, …}mimeTypes: ['text/plain']name: "text"[[Prototype]]: Object Array(1)0: "text/plain"length: 1[[Prototype]]: Array(0) undefined
-index.js:10 fileType Object Array(1)0: "application/x-ipynb+json"length: 1[[Prototype]]: Array(0) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-...
-index.js:10 fileType Object Array(1) undefined
-index.js:10 fileType Object Array(1) undefined
-index.js:15 modelFactory TextModelFactory_isDisposed: falsecontentType: (...)fileFormat: (...)isDisposed: (...)name: (...)[[Prototype]]: Object
-index.js:15 modelFactory Base64ModelFactory_isDisposed: falsecontentType: (...)fileFormat: (...)isDisposed: (...)name: (...)[[Prototype]]: TextModelFactory
+File Types Array(19)
+lib_extension_js.e2cdfe8216284221c2fe.js:929 Model Factories Array(2)
+lib_extension_js.e2cdfe8216284221c2fe.js:943 Widget Extensions Array(0)
 ```
-
-## IpyWidget Resource Usage
-
-The `IpyWidget Resource Usage` extension allows ... TODO
 
 ## Kernel Memory
 
-The `Kernel Memory` extension allows ... TODO
+The `Kernel Memory` extension displays an indication of how much resources your current notebook server and its children (kernels, terminals, etc) are using. This is displayed in the main toolbar in the notebook itself, refreshing every 5s.
+
+![](https://raw.githubusercontent.com/jtpio/jupyter-resource-usage/master/screenshot.png)
+
+- [ ] TODO Enable back the  `Kernel Memory` extension (disabled for now for CI)
 
 ## Kernel Messaging
 
@@ -84,35 +76,33 @@ The `Kernel Output` extension allows to render kernel messages in an OuputArea.
 
 ## Logo
 
-Tbe `Logo` extension allows ... TODO
+Tbe `Logo` extension allows shows a new top-right logo for JupyterLab. The definition in `package.json` ensures the default logo plugin is disabled (see also [how to disable an extension](./faq.md#how-to-disable-an-extension)).
 
 ## Notebook Auto
 
-The `Notebook Auto` extension allows ... TODO
+The `Notebook Auto` extension creates a new Notebook on JupyterLab startup.
 
 ## Notebook Metadata
 
-The `Notebook Metadata` extension allows ... TODO
+The `Notebook Metadata` extension show in the right panel the current Notebook metadata.
 
 ## Plugins Graph
 
 The `Plugin Dependency Graph` display a graph of the plugins depencies and can be invoked via the command palette.
 
-<div align="center" style="text-align: center">
-  <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-plugins-graph.png" />
-</div>
+![](https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-plugins-graph.png)
 
 ## Preview
 
-The `Preview` extension allows ... TODO
+The `Preview` extension opens a new tab in the main area aside the current Notebook. That new tab is for new empty.
 
 ## Python File
 
-The `Python File` extension allows ... TODO
+The `Python File` extension add a new launcher in the launcher panel to open a Python file.
 
 ## React.js
 
-The `React.js` extension allows ... TODO
+The `React.js` extension show a React.js component into a JupyterLab main area tab. For comparison purposes a Lumino implementation is available.
 
 ## Recents
 
@@ -128,8 +118,12 @@ The `Server` extension connects to a server handler on startup and prints a mess
 
 ## Theme Toggle
 
-The `Theme Toggle` extension allows the use to swith from the `Ligth` to the `Dark` theme, and vice-versa. It depends on the `Top Bar` extension to add itself in the main topbar.
+The `Theme Toggle` extension allows the user to switch from the `Light` to the `Dark` theme, and vice-versa. It depends on the `Top Bar` extension to add itself in the main topbar.
+
+- [ ] TODO Enable back the  `Theme Toggle` extension (disabled for now for CI)
 
 ## Top Bar
 
-The `Top Bar` extension allows ... TODO
+The `Top Bar` extension transforms the existing JupyterLab topbar into a draggable area where third party plugins can add their widgets.
+
+- [ ] TODO Enable back the  `Theme Toggle` extension (disabled for now for CI)

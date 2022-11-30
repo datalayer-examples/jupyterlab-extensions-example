@@ -1,6 +1,6 @@
-# The Development Environement
+# Develop
 
-## Development Install
+## Install Development Environment
 
 Activate your conda environment.
 
@@ -47,6 +47,26 @@ jupyter server extension enable jupyterlabextensions
 
 You will need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
 
+## Troubleshoot
+
+If you are seeing the frontend extension, but it is not working, check that the server extension is enabled.
+
+```bash
+pip list | grep jupyterlabextensions
+```
+
+```bash
+jupyter server extension list
+```
+
+If the server extension is installed and enabled, but you are not seeing the frontend extension, check the frontend extension is installed:
+
+```bash
+jupyter labextension list
+```
+
+## Develop
+
 After these prelimarny steps, you can now effectively develop your extensions. For that, rebuild the extension Typescript source after making changes in `shell 1`.
 
 ```bash
@@ -89,7 +109,7 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
-### Development Uninstall
+## Uninstall Development Environment
 
 ```bash
 # Server extension must be manually disabled in develop mode
@@ -98,21 +118,3 @@ pip uninstall jupyterlabextensions
 ```
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop` command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions` folder is located. Then you can remove the symlink named `jupyterlabextensions` within that folder.
-
-## Troubleshoot
-
-If you are seeing the frontend extension, but it is not working, check that the server extension is enabled.
-
-```bash
-pip list | grep jupyterlabextensions
-```
-
-```bash
-jupyter server extension list
-```
-
-If the server extension is installed and enabled, but you are not seeing the frontend extension, check the frontend extension is installed:
-
-```bash
-jupyter labextension list
-```

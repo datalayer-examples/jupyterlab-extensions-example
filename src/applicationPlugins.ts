@@ -19,8 +19,8 @@ import react from './react';
 import recents from './recents';
 import runAll from './run-all';
 import server from './server';
-import themeToggle from './theme-toggle';
-import topBar from './topbar';
+// import themeToggle from './theme-toggle';
+// import topBar from './topbar';
 
 export default [
   ...codeCellButton,
@@ -44,6 +44,6 @@ export default [
   recents,
   runAll,
   server,
-  themeToggle,
-  topBar,
+//  themeToggle,
+//  topBar,
 ];
