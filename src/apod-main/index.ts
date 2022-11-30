@@ -105,7 +105,7 @@ function activate(
   palette: ICommandPalette,
   restorer: ILayoutRestorer
 ): void {
-  console.log('JupyterLab extension jupyterlab_apod_main is activated!');
+  console.log('jupyterlab_apod_main is activated.');
 
   // Declare a widget variable
   let widget: MainAreaWidget<APODWidget>;

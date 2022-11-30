@@ -17,17 +17,22 @@ const plugin: JupyterFrontEndPlugin<void> = {
   ) => {
     const fileTypes = docManager.registry.fileTypes();
     let ft: DocumentRegistry.IFileType;
+    const fts = [];
     // eslint-disable-next-line no-cond-assign
     while (ft = fileTypes.next()) {
-      console.log('fileType', ft, ft.mimeTypes, docManager.registry.defaultWidgetFactory('test.' + ft.extensions[0]));      
+      fts.push({'ft': ft, 'mimeTypes': ft.mimeTypes, 'widgetFactory': docManager.registry.defaultWidgetFactory('test.' + ft.extensions[0]) });
     }
+    console.log('File Types', fts);
     const modelFactories = docManager.registry.modelFactories();
+    const mfs = [];
     let mf: DocumentRegistry.IModelFactory<any>;
     // eslint-disable-next-line no-cond-assign
     while (mf = modelFactories.next()) {
-      console.log('modelFactory', mf);
+      mfs.push(mf);
     }
+    console.log('Model Factories', mfs);
     const widgetFactories = docManager.registry.widgetFactories();
+    const wes = [];
     let wf: DocumentRegistry.WidgetFactory;
     // eslint-disable-next-line no-cond-assign
     while (wf = widgetFactories.next()) {
@@ -36,9 +41,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
       let we: DocumentRegistry.WidgetExtension;
       // eslint-disable-next-line no-cond-assign
       while (we = widgetExtensions.next()) {
-        console.log('--- widgetExtension', we);
+        wes.push(we);
       }
     }
+    console.log('Widget Extensions', wes);
   }
 
 };

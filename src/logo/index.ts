@@ -13,7 +13,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   requires: [ILabShell],
   activate: (_: JupyterFrontEnd, shell: ILabShell) => {
-    console.log('JupyterLab extension jupyterlabextensions:logo is activated!');
+    console.log('jupyterlabextensions:logo is activated.');
     const logo = new Widget();
     circleIcon.element({
       container: logo.node,

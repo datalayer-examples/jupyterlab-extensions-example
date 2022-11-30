@@ -37,8 +37,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
     ) => {
 
       console.log(
-        '%cjupyterlabextensions:react is activated, Yeah!!!',
-        'font-size: 16px'
+        '%cjupyterlabextensions:react is activated',
+        'font-size: 14px'
       );
 
       const { commands, shell } = app;
