@@ -17,7 +17,7 @@ test('should emit an activation console message', async ({ page }) => {
 
   expect(
     logs.filter(
-      s => s === 'JupyterLab extension jupyterlabextensions is activated!'
+      s => s === 'jupyterlab_apod_left is activated.'
     )
   ).toHaveLength(1);
 });
