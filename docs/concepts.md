@@ -18,7 +18,7 @@ So a single `extension` like the one implemented in this repository ships many `
 
 `JupyterLab` is in fact a `Lumino Application`. The `Lumino Application` is responsible for the dependency injection.
 
-- [ ] TODO Create a simple Lumino application to showcase simple dependency injection.
+- [ ] TODO Create a simple Lumino application to showcase a simple dependency injection.
 
 ## Source vs Prebuilt Extensions
 

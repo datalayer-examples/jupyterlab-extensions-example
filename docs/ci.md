@@ -2,12 +2,6 @@
 
 The CI workflows are listed on https://github.com/datalayer-examples/jupyterlab-extensions-example/tree/main/.github/workflows.
 
-- [ ] TODO Fix CI
-
-## Binder on Pull Request
-
-Binder on Pull Request.
-
 ## Build
 
 This workflow builds JupyterLab, runs a few sanity checks and then packages.
@@ -29,6 +23,12 @@ pip uninstall -y "jupyterlabextensions" jupyterlab
 ## Check Release
 
 Check Release.
+
+- [ ] TODO Fix CI `Check Release` workflow.
+
+## Binder on Pull Request
+
+Binder on Pull Request.
 
 ## Update Integration Tests
 

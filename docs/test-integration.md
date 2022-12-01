@@ -85,7 +85,7 @@ jlpm playwright test -u
 
 > All commands are assumed to be executed from the root directory
 
-- [ ] TODO Add more integration tests
+- [ ] TODO Add more integration tests.
 
 To create tests, the easiest way is to use the code generator tool of playwright:
 
