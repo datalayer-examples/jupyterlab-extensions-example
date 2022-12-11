@@ -33,8 +33,8 @@ const plugin: JupyterFrontEndPlugin<void> = {
       execute: () => {
         const file = factory.tracker.currentWidget.selectedItems().next();
         showDialog({
-          title: file.name,
-          body: 'Path: ' + file.path,
+          title: file.value.name,
+          body: 'Path: ' + file.value.path,
           buttons: [Dialog.okButton()]
         }).catch(e => console.log(e));
       }

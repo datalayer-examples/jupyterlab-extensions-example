@@ -6,7 +6,7 @@ import { IJupyterWidgetRegistry } from '@jupyter-widgets/base';
 
 import * as widgetExports from './ipywidget';
 
-import { MODULE_NAME, MODULE_VERSION } from './version';
+import { MODULE_NAME, MODULE_VERSION } from '../../src/kernel-memory/version';
 
 /**
  * The ipyresuse plugin.

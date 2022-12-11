@@ -79,7 +79,7 @@ export default class ExecuteTimeWidget extends Widget {
     if (!(cellModel.id in this._cellSlotMap)) {
       const fn = () => this._cellMetadataChanged(cellModel);
       this._cellSlotMap[cellModel.id] = fn;
-      cellModel.metadata.changed.connect(fn);
+      cellModel.metadataChanged.connect(fn);
     }
     // Always re-render cells.
     // In case there was already metadata: do not highlight on first load.
@@ -89,7 +89,7 @@ export default class ExecuteTimeWidget extends Widget {
   private _deregisterMetadataChanges(cellModel: ICellModel) {
     const fn = this._cellSlotMap[cellModel.id];
     if (fn) {
-      cellModel.metadata.changed.disconnect(fn);
+      cellModel.metadataChanged.disconnect(fn);
       const codeCell = this._getCodeCell(cellModel);
       if (codeCell) {
         this._removeExecuteNode(codeCell);

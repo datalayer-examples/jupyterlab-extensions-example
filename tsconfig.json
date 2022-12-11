@@ -1,4 +1,7 @@
 {
+  "include": [
+    "src/**/*"
+  ],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "composite": true,
@@ -19,6 +22,5 @@
     "strictNullChecks": false, // TODO Enable strictNullChecks
     "target": "es2017",
     "types": ["jest", "node"]
-  },
-  "include": ["src/**/*"]
+  }
 }

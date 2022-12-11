@@ -19,10 +19,10 @@ conda deactivate && \
 conda create -y \
   -n jupyterlabextensions \
   python=3.9 \
-  twine \
   nodejs=18.7.0 \
   yarn=1.22.19 \
-  jupyter_packaging
+  jupyter_packaging \
+  twine
 conda activate jupyterlabextensions
 ```
 
@@ -31,13 +31,15 @@ conda activate jupyterlabextensions
 Install JupyterLab.
 
 ```bash
-pip install jupyterlab==3.4.7
+pip install \
+  jupyterlab==4.0.0a31 \
+  notebook==7.0.0a9
 ```
 
-...or alternatively, clone and build jupyterlab from source.
+Alternatively, clone and build JupyterLab from source.
 
 ```bash
-git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b 3.4.x && \
+git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b v4.0.0a31 && \
   cd jupyterlab && \
   pip install -e . && \
   jupyter lab build && \
@@ -47,5 +49,5 @@ git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b 3.4.x && \
 Install IpyWidgets, this is needed by some of the extension examples.
 
 ```bash
-pip install ipywidgets==8.0.2
+pip install ipywidgets==8.0.3
 ```

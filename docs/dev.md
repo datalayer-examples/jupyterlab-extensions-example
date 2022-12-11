@@ -24,7 +24,7 @@ List the JupyterLab extensions.
 
 ```bash
 jupyter labextension list
-# JupyterLab v3.4.7
+# JupyterLab v4.0.0a31
 # /Users/echarles/opt/miniconda3/envs/jupyterlabextensions/share/jupyter/labextensions
 #         jupyterlabextensions v0.1.0 enabled OK
 #         jupyterlab_pygments v0.2.2 enabled OK (python, jupyterlab_pygments)
@@ -45,7 +45,7 @@ jupyter server extension enable jupyterlabextensions
 #     - Extension successfully enabled.
 ```
 
-You will need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
+You need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
 
 ## Troubleshoot
 
