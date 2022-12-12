@@ -12,10 +12,11 @@ git clone https://github.com/datalayer-examples/jupyterlab-extensions-example &&
 
 ## Step 2 - Create a conda environment
 
+Create your conda environment.
+
 ```bash
 conda deactivate && \
   conda remove -y --all -n jupyterlabextensions
-# Create your conda environment.
 conda create -y \
   -n jupyterlabextensions \
   python=3.9 \

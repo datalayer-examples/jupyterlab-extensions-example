@@ -9,6 +9,8 @@ node_modules/
 *.tsbuildinfo
 jupyterlabextensions/labextension
 
+yarn.lock
+
 # Integration tests
 ui-tests/test-results/
 ui-tests/playwright-report/

@@ -34,7 +34,7 @@ jupyter labextension list
 #     @jupyterlab/application-extension:logo
 ```
 
-Server extension should be manually enabled in development mode.
+The server extension should be manually enabled in development mode.
 
 ```bash
 jupyter server extension enable jupyterlabextensions
@@ -44,8 +44,6 @@ jupyter server extension enable jupyterlabextensions
 #       jupyterlabextensions 0.1.0 OK
 #     - Extension successfully enabled.
 ```
-
-You need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
 
 ## Troubleshoot
 
@@ -67,7 +65,9 @@ jupyter labextension list
 
 ## Develop
 
-After these prelimarny steps, you can now effectively develop your extensions. For that, rebuild the extension Typescript source after making changes in `shell 1`.
+You need NodeJS to build the extension package. The `jlpm` command is JupyterLab's pinned version of [yarn](https://yarnpkg.com) that is installed with JupyterLab. You may use `yarn` or `npm` in lieu of `jlpm`.
+
+After these preliminary steps, you can now effectively develop your extensions. For that, rebuild the extension Typescript source after making changes in `shell 1`.
 
 ```bash
 jlpm build
