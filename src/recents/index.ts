@@ -229,7 +229,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     const recentsManager = new RecentsManager(
       commands,
       stateDB,
-      serviceManager.contents
+      serviceManager.contents as ContentsManager
     );
 
     docManager.activateRequested.connect(async (_, path) => {

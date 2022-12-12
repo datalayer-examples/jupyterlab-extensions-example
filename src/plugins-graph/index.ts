@@ -15,18 +15,17 @@ import { GraphContainer } from './widget';
  * Initialization data for the jupyterlab-plugin-graph extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab-plugin-graph',
+  id: 'jupyterlabextensions:plugin-graph',
   autoStart: true,
   optional: [ICommandPalette],
   activate: (app: JupyterFrontEnd, palette: ICommandPalette | null) => {
     const { commands, shell } = app;
     app.restored.then(() => {
-      const plugins = app['_pluginMap'];
+      const plugins = app['_plugins'];
       const model = new Model({ plugins });
-
       const command = 'jupyterlab-plugin-graph:open';
       commands.addCommand(command, {
-        label: 'Plugin Dependency Graph',
+        label: 'Dependency Graph Plugin',
         caption: 'Open the plugin dependency graph',
         execute: () => {
           const widget = new GraphContainer({ model });

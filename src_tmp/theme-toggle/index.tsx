@@ -1,9 +1,6 @@
-import { FocusStyleManager } from '@blueprintjs/core';
-
 import {
-  Switch as BPSwitch,
-  SwitchProps as IBPSwitchProps
-} from '@blueprintjs/core/lib/cjs/components/forms/controls';
+  Switch as JLSwitch,
+} from '@jupyterlab/ui-components';
 
 import {
   JupyterFrontEnd,
@@ -16,9 +13,7 @@ import React, { useState, useEffect } from 'react';
 
 import { ITopBar } from '../topbar/topbar';
 
-FocusStyleManager.onlyShowFocusOnTabs();
-
-interface ISwitchProps extends IBPSwitchProps {
+interface ISwitchProps {
   title?: string;
   themeManager: IThemeManager;
   dark?: boolean;
@@ -57,10 +52,10 @@ const Switch = (props: ISwitchProps) => {
   });
 
   return (
-    <BPSwitch
+    <JLSwitch
       {...others}
       checked={dark}
-      className={props.className + ' jp-Switch'}
+//      className={props.className + ' jp-Switch'}
     />
   );
 }

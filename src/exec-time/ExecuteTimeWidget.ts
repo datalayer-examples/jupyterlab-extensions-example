@@ -7,12 +7,13 @@ import { NotebookPanel } from '@jupyterlab/notebook';
 import { ISettingRegistry } from '@jupyterlab/settingregistry';
 
 import {
-  IObservableJSON,
+//  IObservableJSON,
   IObservableList,
-  IObservableUndoableList
 } from '@jupyterlab/observables';
 
 import { Cell, CodeCell, ICellModel } from '@jupyterlab/cells';
+
+import { IMapChange } from '@jupyter-notebook/ydoc';
 
 import { getTimeDiff, getTimeString } from './utils';
 
@@ -37,8 +38,8 @@ export default class ExecuteTimeWidget extends Widget {
 
   private _cellSlotMap: {
     [id: string]: (
-      sender: IObservableJSON,
-      args: IObservableJSON.IChangedArgs
+      sender: ICellModel,
+      args: IMapChange
     ) => void;
   } = {};
 
@@ -66,7 +67,7 @@ export default class ExecuteTimeWidget extends Widget {
   }
 
   private updateConnectedCell(
-    cells: IObservableUndoableList<ICellModel>,
+    cells: any, // TODO should be CellList instead of any
     changed: IObservableList.IChangedArgs<ICellModel>
   ) {
     // While we could look at changed.type, it's easier to just remove all
@@ -149,7 +150,7 @@ export default class ExecuteTimeWidget extends Widget {
    * @private
    */
   private _updateCodeCell(cell: CodeCell, disableHighlight: boolean) {
-    const executionMetadata = cell.model.metadata.get(
+    const executionMetadata = cell.model.getMetadata(
       'execution'
     ) as JSONObject;
     if (executionMetadata && JSONExt.isObject(executionMetadata)) {

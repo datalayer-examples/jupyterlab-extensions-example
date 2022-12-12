@@ -34,4 +34,4 @@ Select the menu `Settings > Theme > Christmas` and enjoy.
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-christmas-theme.png" />
 </div>
 
-- [ ] TODO Strip down the christmas theme variables.css to only the needed CSS.
+- [ ] TODO Strip down the christmas theme variables.css file to only the needed CSS.

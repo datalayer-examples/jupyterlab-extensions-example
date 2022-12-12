@@ -76,7 +76,7 @@ export class Preview extends DocumentWidget<IFrame, INotebookModel> {
     };
 
     this.content.url = getPreviewUrl(context.path);
-    this.content.title.icon = PREVIEW_ICON_CLASS;
+    this.content.title.iconClass = PREVIEW_ICON_CLASS;
 
     this.renderOnSave = renderOnSave;
 

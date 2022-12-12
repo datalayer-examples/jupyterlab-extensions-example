@@ -59,9 +59,12 @@ class MetadataEditorWidget extends Widget {
   onUpdateRequest(msg: Message) {
     const notebook = this.notebookTracker.currentWidget;
     if (notebook !== null && notebook.isAttached) {
+        /*
         const metadata = notebook.content.model.metadata;
-        this.editor.source = metadata; 
-        this.editor.title.label =  'Notebook Metadata (' + notebook.title.label + ')'      
+        // TODO Fix me
+        this.editor.model = metadata;
+        */
+        this.editor.title.label =  'Notebook Metadata (' + notebook.title.label + ')'; 
     }
     return true;
   }

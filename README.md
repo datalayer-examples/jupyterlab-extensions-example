@@ -2,7 +2,7 @@
 
 # JupyterLab Extensions Example
 
-> Extensions example to better understand the options to extend JupyterLab.
+> Extensions example to better understand how to extend JupyterLab.
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/datalayer-examples/jupyterlab-extensions-example/main?urlpath=lab) [![Github Actions Status](https://github.com/datalayer-examples/jupyterlab-extensions-example/workflows/Build/badge.svg)](https://github.com/datalayer-examples/jupyterlab-extensions-example/actions/workflows/build.yml)
 
@@ -36,7 +36,7 @@ cookiecutter \
   --checkout 3.0
 ```
 
-It is composed of a Python package named `jupyterlabextensions` for the server extension and a NPM package named `jupyterlabextensions` for the frontend extension. For now, it runs on JupyterLab >= 3.0 <4.0.0. An update to the major breaking-API 4.0.0 is planned depending on the version 4 release timeline.
+It is composed of a Python package named `jupyterlabextensions` for the server extension and a NPM package named `jupyterlabextensions` for the frontend extension. This repository tracks the latest JupyterLab 4 alpha work and will not work for previous versions.
 
 ## Documentation
 
