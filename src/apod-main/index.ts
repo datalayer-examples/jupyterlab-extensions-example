@@ -24,41 +24,22 @@ interface IPodResponse {
 }
 
 class APODWidget extends Widget {
-  /**
-   * Construct a new APOD widget.
-   */
   constructor() {
     super();
-
     this.addClass('my-ApodWidget');
-
-    // Add an image element to the panel
     this.img = document.createElement('img');
     this.node.appendChild(this.img);
-
-    // Add a summary element to the panel
     this.summary = document.createElement('p');
     this.node.appendChild(this.summary);
   }
 
-  /**
-   * The image element associated with the widget.
-   */
   readonly img: HTMLImageElement;
-
-  /**
-   * The summary text element associated with the widget.
-   */
   readonly summary: HTMLParagraphElement;
 
-  /**
-   * Handle update requests for the widget.
-   */
   async onUpdateRequest(msg: Message): Promise<void> {
     const response = await fetch(
       `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&date=${this.randomDate()}`
     );
-
     if (!response.ok) {
       const data = await response.json();
       if (data.error) {
@@ -68,11 +49,8 @@ class APODWidget extends Widget {
       }
       return;
     }
-
     const data = (await response.json()) as IPodResponse;
-
     if (data.media_type === 'image') {
-      // Populate the image
       this.img.src = data.url;
       this.img.title = data.title;
       this.summary.innerText = data.title;
@@ -84,9 +62,6 @@ class APODWidget extends Widget {
     }
   }
 
-  /**
-   * Get a random date string in YYYY-MM-DD format.
-   */
   randomDate(): string {
     const start = new Date(2010, 1, 1);
     const end = new Date();
@@ -98,67 +73,56 @@ class APODWidget extends Widget {
 }
 
 /**
- * Activate the APOD widget extension.
+ * Activate the widget extension.
  */
 function activate(
   app: JupyterFrontEnd,
   palette: ICommandPalette,
-  restorer: ILayoutRestorer
+  restorer: ILayoutRestorer | null
 ): void {
-  console.log('jupyterlab_apod_main is activated.');
-
-  // Declare a widget variable
+  console.log('JupyterLab extension jupyterlab_apod is activated!');
   let widget: MainAreaWidget<APODWidget>;
-
-  // Add an application command
   const command = 'apod:open';
   app.commands.addCommand(command, {
     label: 'Random Astronomy Picture',
     execute: () => {
       if (!widget || widget.isDisposed) {
-        // Create a new widget if one does not exist
-        // or if the previous one was disposed after closing the panel
         const content = new APODWidget();
-        widget = new MainAreaWidget({ content });
-        widget.id = 'apod-main-jupyterlab';
+        widget = new MainAreaWidget({content});
+        widget.id = 'apod-jupyterlab';
         widget.title.label = 'Astronomy Picture';
         widget.title.closable = true;
       }
       if (!tracker.has(widget)) {
-        // Track the state of the widget for later restoration
         tracker.add(widget);
       }
       if (!widget.isAttached) {
-        // Attach the widget to the main work area if it's not there
         app.shell.add(widget, 'main');
       }
       widget.content.update();
-
-      // Activate the widget
       app.shell.activateById(widget.id);
     }
   });
-
-  // Add the command to the palette.
   palette.addItem({ command, category: 'Tutorial' });
-
-  // Track and restore the widget state
   const tracker = new WidgetTracker<MainAreaWidget<APODWidget>>({
     namespace: 'apod'
   });
-  restorer.restore(tracker, {
-    command,
-    name: () => 'apod'
-  });
+  if (restorer) {
+    restorer.restore(tracker, {
+      command,
+      name: () => 'apod'
+    });
+  }
 }
 
 /**
- * Initialization data for the jupyterlab_apod_main extension.
+ * Initialization data for the extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab_apod_main',
+  id: 'jupyterlabextensions:apod_main',
   autoStart: true,
-  requires: [ICommandPalette, ILayoutRestorer],
+  requires: [ICommandPalette],
+  optional: [ILayoutRestorer],
   activate: activate
 };
 

@@ -90,13 +90,15 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
+PS: You can run both `shell 1` and `shell 2` commands with `yarn dev`.
+
 Open JupyterLab in your browser.
 
 ```bash
 open http://localhost:8888/lab
 ```
 
-If you have built jupyterlab from source, run and watch jupyterlab in `shell 2` and look at the remote entry javascript, a webpack5 feature.
+If you have built JupyterLab from source, run and watch jupyterlab in `shell 2` and look at the remote entry javascript, a webpack5 feature.
 
 ```bash
 conda activate jupyterlabextensions && \

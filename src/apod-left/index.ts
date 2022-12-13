@@ -128,7 +128,7 @@ function activate(
  * Initialization data for the plugin.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jupyterlab_apod_left',
+  id: 'jupyterlabextensions:apod_left',
   autoStart: true,
   requires: [ICommandPalette, ILayoutRestorer],
   activate: activate
