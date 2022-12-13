@@ -374,7 +374,7 @@ all of MD as it is not optimized for dense, information rich UIs.
 
 /* Notebook */
 
-body[data-jp-theme-name='JupyterLab Christmas'] .jp-Notebook {
+body[data-jp-theme-name='Christmas'] .jp-Notebook {
   background-image: url('./stringlights.svg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -383,7 +383,7 @@ body[data-jp-theme-name='JupyterLab Christmas'] .jp-Notebook {
 
 /* DirListing */
 
-body[data-jp-theme-name='JupyterLab Christmas']
+body[data-jp-theme-name='Christmas']
   .jp-DirListing-item.jp-mod-running
   .jp-DirListing-itemIcon::before {
   background-image: url('./ornament.svg');
