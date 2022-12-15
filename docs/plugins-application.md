@@ -12,6 +12,8 @@ The image is shown in a main panel.
 
 ![](https://jupyterlab.readthedocs.io/en/latest/_images/extension_tutorial_complete.png)
 
+- [ ] TODO Replace a core extension (implementing its `Token`).
+
 ## Apod Left
 
 The `Apod Left` extension implements the same feature as the `Apod Main` but is displayed in a left side panel.
