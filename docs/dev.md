@@ -5,7 +5,7 @@
 Activate your conda environment.
 
 ```bash
-conda activate jupyterlabextensions
+conda activate datalayer
 ```
 
 Install the python package in development mode.
@@ -82,7 +82,7 @@ jlpm watch
 You are now ready to run and watch jupyterlab in `shell 2`. This will look at the remote entry javascript, a webpack5 feature
 
 ```bash
-conda activate jupyterlabextensions && \
+conda activate datalayer && \
   jupyter lab \
     --watch \
     --ServerApp.token= \
@@ -101,7 +101,7 @@ open http://localhost:8888/lab
 If you have built JupyterLab from source, run and watch jupyterlab in `shell 2` and look at the remote entry javascript, a webpack5 feature.
 
 ```bash
-conda activate jupyterlabextensions && \
+conda activate datalayer && \
   jupyter lab \
     --watch \
     --dev-mode \

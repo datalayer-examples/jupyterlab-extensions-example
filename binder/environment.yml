@@ -4,7 +4,7 @@
 #   conda env update --file binder/environment.yml
 #   conda activate jupyterlabextension
 #
-name: jupyterlabextensions
+name: datalayer
 channels:
   - conda-forge
 dependencies:
