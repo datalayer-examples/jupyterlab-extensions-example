@@ -141,7 +141,8 @@
     "stylelint-prettier": "^2.0.0",
     "typescript": "5.0.0-dev.20221211",
     "ts-jest": "29.0.5",
-    "whatwg-fetch": "3.6.2"
+    "whatwg-fetch": "3.6.2",
+    "webpack": "5.75.0"
   },
   "resolutions": {
     "**/@jupyter-widgets/base": "6.0.2",

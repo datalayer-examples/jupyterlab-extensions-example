@@ -1,6 +1,10 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
 
+const webpack = require('webpack');
+const Build = require('@jupyterlab/builder').Build;
+const miniSVGDataURI = require('mini-svg-data-uri');
+
 const extensions = [
   "@jupyterlab/application-extension",
   "@jupyterlab/apputils-extension",
@@ -21,10 +25,6 @@ const extensions = [
   "@jupyterlab/translation-extension",
   "@jupyterlab/ui-components-extension"
 ]
-
-const webpack = require('webpack');
-const Build = require('@jupyterlab/builder').Build;
-const miniSVGDataURI = require('mini-svg-data-uri');
 
 // Generate webpack config to copy extension assets to the build directory,
 // such as setting schema files, theme assets, etc.
