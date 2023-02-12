@@ -1,6 +1,27 @@
 // Copyright (c) Jupyter Development Team.
 // Distributed under the terms of the Modified BSD License.
-const data = require('./package.json');
+
+const extensions = [
+  "@jupyterlab/application-extension",
+  "@jupyterlab/apputils-extension",
+  "@jupyterlab/codemirror-extension",
+  "@jupyterlab/completer-extension",
+  "@jupyterlab/console-extension",
+  "@jupyterlab/docmanager-extension",
+  "@jupyterlab/filebrowser-extension",
+  "@jupyterlab/fileeditor-extension",
+  "@jupyterlab/launcher-extension",
+  "@jupyterlab/json-extension",
+  "@jupyterlab/mainmenu-extension",
+  "@jupyterlab/notebook-extension",
+  "@jupyterlab/rendermime-extension",
+  "@jupyterlab/shortcuts-extension",
+  "@jupyterlab/statusbar-extension",
+  "@jupyterlab/theme-light-extension",
+  "@jupyterlab/translation-extension",
+  "@jupyterlab/ui-components-extension"
+]
+
 const webpack = require('webpack');
 const Build = require('@jupyterlab/builder').Build;
 const miniSVGDataURI = require('mini-svg-data-uri');
@@ -8,7 +29,7 @@ const miniSVGDataURI = require('mini-svg-data-uri');
 // Generate webpack config to copy extension assets to the build directory,
 // such as setting schema files, theme assets, etc.
 const extensionAssetConfig = Build.ensureAssets({
-  packageNames: data.jupyterlab.extensions,
+  packageNames: extensions,
   output: './build'
 });
 

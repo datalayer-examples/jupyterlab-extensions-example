@@ -46,6 +46,7 @@ Follow the documentation to use and learn more on the internals of this extensio
 - [Setup the Environment](./docs/env.md)
 - [Develop the Extensions](./docs/dev.md)
 - [Lumino Application](./docs/app-lumino.md)
+- [JupyterLab Application](./docs/app-jupyterlab.md)
 - [Application Plugins](./docs/plugins-application.md)
 - [Theme Plugins](./docs/plugins-theme.md)
 - [Mime Renderer Plugins](./docs/plugins-mime-renderer.md)
@@ -56,7 +57,6 @@ Follow the documentation to use and learn more on the internals of this extensio
 - [Continuous Integration](./docs/ci.md)
 - [Build JupyterLab](./docs/build-jupyterlab.md)
 - [Release](./docs/release.md)
-- [Custom Application](./docs/app.md)
 - [Notebook 7 Compatibility](./docs/notebook7.md)
 - [FAQ](./docs/faq.md)
 

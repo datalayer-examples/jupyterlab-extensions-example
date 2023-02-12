@@ -1,42 +1,26 @@
-const jestJupyterLab = require('@jupyterlab/testutils/lib/jest-config');
+/*
+ * Copyright (c) Jupyter Development Team.
+ * Distributed under the terms of the Modified BSD License.
+ */
+
+const func = require('@jupyterlab/testing/lib/jest-config');
+const jlabConfig = func(__dirname);
 
 const esModules = [
-  '@jupyterlab/',
+  '@codemirror',
+  '@jupyterlab',
+  '@jupyter',
   'lib0',
+  'nanoid',
+  'vscode\\-ws\\-jsonrpc',
   'y\\-protocols',
   'y\\-websocket',
   'yjs'
 ].join('|');
 
-const jlabConfig = jestJupyterLab(__dirname);
-
-const {
-  moduleFileExtensions,
-  moduleNameMapper,
-  preset,
-  setupFilesAfterEnv,
-  setupFiles,
-  testPathIgnorePatterns,
-  transform
-} = jlabConfig;
-
 module.exports = {
-  moduleFileExtensions,
-  moduleNameMapper,
-  preset,
-  setupFilesAfterEnv,
-  setupFiles,
-  testPathIgnorePatterns,
-  transform,
-  automock: false,
-  collectCoverageFrom: ['src/**/*.{ts,tsx}', '!src/**/*.d.ts'],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['lcov', 'text'],
-  globals: {
-    'ts-jest': {
-      tsconfig: 'tsconfig.json'
-    }
-  },
-  testRegex: 'src/.*/.*.spec.ts[x]?$',
+  ...jlabConfig,
+//  testRegex: 'src/.*/.*.spec.ts[x]?$',
   transformIgnorePatterns: [`/node_modules/(?!${esModules}).+`]
-};
+//  transformIgnorePatterns: ['/node_modules/(?!@codemirror|@jupyterlab|@jupyter/ydoc|lib0|nanoid|vscode-ws-jsonrpc|y-protocols|y-websocket|yjs).+' ]
+}

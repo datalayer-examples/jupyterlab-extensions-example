@@ -1,4 +1,4 @@
-# Application
+# JupyerLab Application
 
 ## JupyterLab
 
