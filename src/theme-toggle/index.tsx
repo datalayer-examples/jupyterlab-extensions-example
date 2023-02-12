@@ -37,7 +37,7 @@ const Switch = (props: ISwitchProps) => {
   useEffect(() => {
     let timeout: any = 0;
     if (!themeManager.theme) {
-      // TODO: investigate why the themeManager is undefined
+      // TODO: Investigate why the themeManager is undefined
       timeout = setTimeout(() => {
         updateChecked();
       }, 500);
@@ -82,7 +82,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
 
     const { commands } = app;
 
-    // TODO: make this configurable via the settings?
+    // TODO: Make this configurable via the settings?
     const themes = [
       'JupyterLab Light', // Light Theme goes first
       'JupyterLab Dark'

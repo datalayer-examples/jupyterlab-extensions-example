@@ -1,6 +1,6 @@
 # Release
 
-- [ ] TODO Release manually in NPM.
+- [ ] TODO Release manually in Npm.js.
 - [ ] TODO Release manually in PyPI and fix `the name 'jupyterlabextensions' is too similar to an existing project. See https://pypi.org/help/#project-name for more information`.
 - [ ] TODO Release with jupyter-releaser.
 
