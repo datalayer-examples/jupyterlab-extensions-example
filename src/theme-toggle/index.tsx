@@ -1,6 +1,4 @@
-import {
-  Switch as JLSwitch,
-} from '@jupyterlab/ui-components';
+import ReactSwitch from 'react-switch';
 
 import {
   JupyterFrontEnd,
@@ -16,6 +14,9 @@ import { ITopBar } from '../topbar/topbar';
 interface ISwitchProps {
   title?: string;
   themeManager: IThemeManager;
+  onChange: any;
+  innerLabel: string;
+  innerLabelChecked: string;
   dark?: boolean;
 }
 
@@ -51,9 +52,14 @@ const Switch = (props: ISwitchProps) => {
     }
   });
 
+  const handleChange = (checked: boolean) => {
+    console.log('Switch change checked', checked);
+  }
+
   return (
-    <JLSwitch
+    <ReactSwitch
       {...others}
+      onChange={handleChange}
       checked={dark}
 //      className={props.className + ' jp-Switch'}
     />

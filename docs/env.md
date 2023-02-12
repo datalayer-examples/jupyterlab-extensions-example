@@ -16,15 +16,15 @@ Create your conda environment.
 
 ```bash
 conda deactivate && \
-  conda remove -y --all -n datalayer
+  conda remove -y --all -n jupyterlabextensions
 conda create -y \
-  -n datalayer \
+  -n jupyterlabextensions \
   python=3.9 \
   nodejs=18.7.0 \
   yarn=1.22.19 \
   jupyter_packaging \
   twine
-conda activate datalayer
+conda activate jupyterlabextensions
 ```
 
 ## Step 3 - Add JupyterLab and IpyWidgets to the environement

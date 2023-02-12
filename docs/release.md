@@ -96,7 +96,7 @@ conda create -y \
   -n jupyterlabextensions-user \
   python=3.8 \
   nodejs=14.5.0
-conda activate datalayer-user
+conda activate jupyterlabextensions-user
 pip install --pre jupyterlab==4.0.0a33
 ```
 
