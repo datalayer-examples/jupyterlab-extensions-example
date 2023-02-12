@@ -34,7 +34,7 @@ jupyter labextension list
 #     @jupyterlab/application-extension:logo
 ```
 
-The server extension should be manually enabled in development mode.
+The server extension can be manually enabled or disabled.
 
 ```bash
 jupyter server extension enable jupyterlabextensions

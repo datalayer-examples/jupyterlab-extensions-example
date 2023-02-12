@@ -97,7 +97,7 @@ conda create -y \
   python=3.8 \
   nodejs=14.5.0
 conda activate datalayer-user
-pip install --pre jupyterlab==4.0.0a31
+pip install --pre jupyterlab==4.0.0a33
 ```
 
 ```bash

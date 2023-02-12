@@ -33,7 +33,7 @@ Install JupyterLab.
 
 ```bash
 pip install \
-  jupyterlab==4.0.0a31 \
+  jupyterlab==4.0.0a33 \
   notebook==7.0.0a9
 ```
 

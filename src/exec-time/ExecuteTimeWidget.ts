@@ -13,7 +13,7 @@ import {
 
 import { Cell, CodeCell, ICellModel } from '@jupyterlab/cells';
 
-import { IMapChange } from '@jupyter-notebook/ydoc';
+import { IMapChange } from '@jupyter/ydoc';
 
 import { getTimeDiff, getTimeString } from './utils';
 

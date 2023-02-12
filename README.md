@@ -57,6 +57,14 @@ Follow the documentation to use and learn more on the internals of this extensio
 - [Release](./docs/release.md)
 - [FAQ](./docs/faq.md)
 
+## TODO
+
+- [ ] Notebook 7 compatibility
+- [ ] Lumino App
+- [ ] Jupyterlab App
+- [ ] Provides example
+- [ ] jupyterlab-examples-2 separated repo consuming a plugin
+
 ## ⚖️ License
 
 Copyright (c) 2022 Datalayer, Inc.

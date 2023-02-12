@@ -43,7 +43,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       iconClass: args => (args['isPalette'] ? '' : ICON_CLASS),
       execute: async args => {
         const cwd =
-          args['cwd'] ?? browserFactory?.defaultBrowser.model.path ?? undefined;
+          args['cwd'] ?? browserFactory?.tracker.currentWidget.model.path ?? undefined;
         const model = await commands.execute('docmanager:new-untitled', {
           path: cwd,
           type: 'file',
