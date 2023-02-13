@@ -74,7 +74,7 @@ const extension: JupyterFrontEndPlugin<void> = {
 
 ## Provide and Require combined
 
-This repository contains [an example](./../__provider_consumer__/README.md) of a simple `provider` extension that is consumed by a `consumer` extension.
+This repository contains [an example](./../__provider_consumer__) of a simple `provider` extension that is consumed by a `consumer` extension.
 
 ## Source vs Prebuilt Extensions
 
