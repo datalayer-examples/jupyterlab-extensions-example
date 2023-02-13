@@ -11,14 +11,14 @@ jupyter lab # Have a look at the browser console.
 
 The `consumer` defines in its `package.json` the `sharedPackages` to ensure [Deduplication of Dependencies](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#deduplication-of-dependencies).
 
-````json
+```json
   "jupyterlab": {
     "extension": true,
     "outputDir": "consumer/labextension",
     "sharedPackages": {
        "provider": {"requiredVersion": "0.1.0", "bundled": false, "singleton": true}
     }
-  },
+  }
 ```
 
 The following messages should be printed in the browser console on JupyterLab loading.
