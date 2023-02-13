@@ -30,7 +30,7 @@
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
-    "build:app": "webpack",
+    "build:app": "webpack --config webpack.jupyterlab.config.js",
     "build:prod": "jlpm clean && jlpm build:lib && jlpm build:labextension",
     "build:labextension": "jupyter labextension build .",
     "build:labextension:dev": "jupyter labextension build --development True .",
@@ -56,7 +56,9 @@
     "stylelint": "jlpm stylelint:check --fix",
     "stylelint:check": "stylelint --cache \"style/**/*.css\"",
     "start:app": "python main.py",
-    "test": "jest --coverage",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:lumino-inject": "jest ./test/lumino-inject.spec.ts",
     "watch": "run-p watch:src watch:labextension",
     "watch:src": "tsc -w",
     "watch:labextension": "jupyter labextension watch ."

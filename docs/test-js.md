@@ -7,4 +7,4 @@ jlpm
 jlpm test
 ```
 
-- [ ] TODO Add more JavaScript unit tests.
+- TODO Add more JavaScript unit tests.

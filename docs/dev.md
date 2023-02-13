@@ -1,6 +1,6 @@
 # Develop
 
-## Install Development Environment
+## Prepare for extension development
 
 Activate your conda environment.
 

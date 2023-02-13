@@ -1,16 +1,11 @@
 # Lumino Application
 
-- [ ] TODO Lumino Application
+To get a sense on how you can use the Luminon injection system, have a look at the `lumino-inject.spect.ts` test.
 
-## Token
+You can try it with the following command.
 
-- Token
+```bash
+yarn test:lumino-inject # TODO Fix the lumino-inject test.
+```
 
-## Requires
-
-- Requires
-
-## Provides
-
-- [ ] TODO Provides example
-- [ ] TODO jupyterlab-examples-2 separated repo consuming a plugin
+- TODO Create a Lumino application to showcase a simple dependency injection.

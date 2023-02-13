@@ -1,0 +1,80 @@
+{
+  "name": "@datalayer-examples/ext-consumer",
+  "version": "0.1.0",
+  "description": "A lab extension consuming a string.",
+  "keywords": [
+    "jupyter",
+    "jupyterlab",
+    "jupyterlab-extension"
+  ],
+  "homepage": "https://github.com/my_name/myextension",
+  "bugs": {
+    "url": "https://github.com/my_name/myextension/issues"
+  },
+  "license": "BSD-3-Clause",
+  "author": {
+    "name": "Eric Charles",
+    "email": "eric@datalayer.io"
+  },
+  "files": [
+    "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
+    "style/**/*.{css,eot,gif,html,jpg,json,png,svg,woff2,ttf}"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "style": "style/index.css",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/my_name/myextension.git"
+  },
+  "scripts": {
+    "build": "jlpm run build:lib && jlpm run build:labextension:dev",
+    "build:prod": "jlpm run build:lib && jlpm run build:labextension",
+    "build:labextension": "jupyter labextension build .",
+    "build:labextension:dev": "jupyter labextension build --development True .",
+    "build:lib": "tsc",
+    "clean": "jlpm run clean:lib",
+    "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
+    "clean:labextension": "rimraf consumer/labextension",
+    "clean:all": "jlpm run clean:lib && jlpm run clean:labextension",
+    "dev": "pip install -e . && jupyter labextension develop . --overwrite",
+    "eslint": "eslint . --ext .ts,.tsx --fix",
+    "eslint:check": "eslint . --ext .ts,.tsx",
+    "install:extension": "jupyter labextension develop --overwrite .",
+    "prepare": "jlpm run clean && jlpm run build:prod",
+    "watch": "run-p watch:src watch:labextension",
+    "watch:src": "tsc -w",
+    "watch:labextension": "jupyter labextension watch ."
+  },
+  "dependencies": {
+    "@jupyterlab/application": "4.0.0-alpha.18",
+    "@lumino/coreutils": "2.0.0-beta.0",
+    "@datalayer-examples/ext-provider": "0.1.0"
+  },
+  "devDependencies": {
+    "@jupyterlab/builder": "4.0.0-alpha.18",
+    "@types/react": "18.0.28",
+    "@typescript-eslint/eslint-plugin": "^2.27.0",
+    "@typescript-eslint/parser": "^2.27.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.0",
+    "rimraf": "^3.0.2",
+    "typescript": "~4.0.3"
+  },
+  "sideEffects": [
+    "style/*.css"
+  ],
+  "jupyterlab": {
+    "extension": true,
+    "outputDir": "consumer/labextension",
+    "sharedPackages": {
+       "provider": {"requiredVersion": "0.1.0", "bundled": false, "singleton": true}
+    }
+  },
+  "publishConfig": {
+    "registry": "http://localhost:4873"
+  }
+}

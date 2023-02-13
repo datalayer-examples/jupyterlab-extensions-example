@@ -2,17 +2,14 @@
 
 Before developing, ensure you have an environment with the needed libraries.
 
-## Step 1 - Clone the repository
+## Clone the repository
 
 ```bash
-# If not yet done, clone this repository.
 git clone https://github.com/datalayer-examples/jupyterlab-extensions-example && \
   cd jupyterlab-extensions-example
 ```
 
-## Step 2 - Create a conda environment
-
-Create your conda environment.
+## Create a conda environment
 
 ```bash
 conda deactivate && \
@@ -27,28 +24,27 @@ conda create -y \
 conda activate jupyterlabextensions
 ```
 
-## Step 3 - Add JupyterLab and IpyWidgets to the environement
+## Install the Jupyter packages
 
-Install JupyterLab.
+Install JupyterLab 4 and Notebook 7.
 
 ```bash
 pip install \
   jupyterlab==4.0.0a33 \
-  notebook==7.0.0a9
+  notebook==7.0.0a12
 ```
 
 Alternatively, clone and build JupyterLab from source.
 
 ```bash
-git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b v4.0.0a31 && \
+git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b v4.0.0a33 && \
   cd jupyterlab && \
   pip install -e . && \
-  jupyter lab build && \
-  cd ..
+  jupyter lab build
 ```
 
-Install IpyWidgets, this is needed by some of the extension examples.
+Install IpyWidgets 8, this is needed by some of the extension examples.
 
 ```bash
-pip install ipywidgets==8.0.3
+pip install ipywidgets==8.0.4
 ```

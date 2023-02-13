@@ -10,7 +10,7 @@ import { DocumentRegistry } from '@jupyterlab/docregistry';
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:internals:plugin',
   autoStart: true,
-  requires: [ IDocumentManager],
+  requires: [ IDocumentManager ],
   activate: (
     app: JupyterFrontEnd,
     docManager: IDocumentManager,
@@ -25,10 +25,10 @@ const plugin: JupyterFrontEndPlugin<void> = {
     console.log('File Types', fts);
     const modelFactories = docManager.registry.modelFactories();
     const mfs = [];
-    let mf: DocumentRegistry.IModelFactory<any>;
+    let modelFactory: DocumentRegistry.IModelFactory<any>;
     // eslint-disable-next-line no-cond-assign
-    while (mf = modelFactories.next().value) {
-      mfs.push(mf);
+    while (modelFactory = modelFactories.next().value) {
+      mfs.push(modelFactory);
     }
     console.log('Model Factories', mfs);
     const widgetFactories = docManager.registry.widgetFactories();

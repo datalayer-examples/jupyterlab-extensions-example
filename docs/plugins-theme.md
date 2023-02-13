@@ -2,7 +2,7 @@
 
 Theme plugins provide a way to customize the appearance of JupyterLab by changing themeable values (i.e., CSS variable values) and providing additional fonts and graphics to JupyterLab. JupyterLab comes with light and dark theme plugins.
 
-- [ ] TODO Add one more theme like [jupyterlab_miami_nights](https://github.com/timkpaine/jupyterlab_miami_nights).
+- TODO Add one more theme like [jupyterlab_miami_nights](https://github.com/timkpaine/jupyterlab_miami_nights).
 
 ## Christmas Theme
 
@@ -34,4 +34,4 @@ Select the menu `Settings > Theme > Christmas` and enjoy.
   <img alt="Jupyter Extensions Example" src="https://datalayer-jupyter-examples.s3.amazonaws.com/jupyterlab-extensions-example-christmas-theme.png" />
 </div>
 
-- [ ] TODO Strip down the christmas theme variables.css file to only the needed CSS.
+- TODO Strip down the christmas theme variables.css file to only the needed CSS.

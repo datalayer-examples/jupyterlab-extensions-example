@@ -18,11 +18,11 @@ The image is shown in a main panel.
 
 The `Apod Left` extension implements the same feature as the `Apod Main` but is displayed in a left side panel.
 
-- [ ] TODO `Apod Left` should reuse code from and depend on `Apod Main`.
+- TODO `Apod Left` should reuse code from and depend on `Apod Main`.
 
 ## Bokeh Plot
 
-- [ ] TODO Add a `Bokeh Plot` example.
+- TODO Add a `Bokeh Plot` example.
 
 ## Cell Flash
 
@@ -62,7 +62,7 @@ The `Kernel Memory` extension displays an indication of how much resources your 
 
 ![](https://raw.githubusercontent.com/jtpio/jupyter-resource-usage/master/screenshot.png)
 
-- [ ] TODO Enable back the `Kernel Memory` extension (disabled for now for CI).
+- TODO Enable back the `Kernel Memory` extension (disabled for now for CI).
 
 ## Kernel Messaging
 
@@ -122,10 +122,10 @@ The `Server` extension connects to a server handler on startup and prints a mess
 
 The `Theme Toggle` extension allows the user to switch from the `Light` to the `Dark` theme, and vice-versa. It depends on the `Top Bar` extension to add itself in the main topbar.
 
-- [ ] TODO Enable back the `Theme Toggle` extension (disabled for now for CI).
+- TODO Enable back the `Theme Toggle` extension (disabled for now for CI).
 
 ## Top Bar
 
 The `Top Bar` extension transforms the existing JupyterLab topbar into a draggable area where third party plugins can add their widgets.
 
-- [ ] TODO Enable back the `Theme Toggle` extension (disabled for now for CI).
+- TODO Enable back the `Theme Toggle` extension (disabled for now for CI).

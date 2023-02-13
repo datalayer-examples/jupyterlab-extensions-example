@@ -1,14 +1,10 @@
-# JupyerLab Application
+# JupyterLab Custom Application
 
-## JupyterLab
+You can create a custom JupyterLab application based on a set of chosen extensions.
 
-- [ ] TODO Jupyterlab Application
+Have a look at the `jupyterlab.js` file in the `src` folder and run the following to try it out.
 
 ```bash
 yarn build:app
 yarn start:app
 ```
-
-## Simple
-
-- [ ] TODO Simple Application

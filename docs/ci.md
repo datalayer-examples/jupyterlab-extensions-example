@@ -24,7 +24,7 @@ pip uninstall -y "jupyterlabextensions" jupyterlab
 
 Check Release.
 
-- [ ] TODO Fix CI `Check Release` workflow.
+- TODO Fix CI `Check Release` workflow.
 
 ## Binder on Pull Request
 

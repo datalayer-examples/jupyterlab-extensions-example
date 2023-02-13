@@ -24,7 +24,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
     });
     logo.id = 'jp-MainLogo';
     shell.add(logo, 'top', { rank: 0 });
-    console.log('The new logo is added');
+    console.log('The new logo is added.');
   }
 };
 

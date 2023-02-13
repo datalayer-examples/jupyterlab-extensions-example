@@ -1,6 +1,6 @@
-# Concepts
+# Base Concepts
 
-## Definitions
+## Plugin vs Extension
 
 An [extension](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#overview-of-extensions) is composed of many [plugins](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#plugins).
 
@@ -8,7 +8,7 @@ Each plugin is assigned an `ìd`, for example `@jupyterlab/application-extension
 
 In that case, the `extension` namespace (disclaimer: namespace is not an official JupyterLab term), is `@jupyterlab/application-extension`. The `application-extension` namespace is implemented in its own `npm.js` package that can be published and used by other packages (read also used by other extensions / plugins).
 
-So a single `extension` like the one implemented in this repository ships many `plugins` of different `nature` (disclaimer: nature is not an official JupyterLab term):
+So a single `extension` like the one implemented in this repository ships many `plugins` of different `type`:
 
 - [Application](./plugin-application) plugins.
 - [Theme](./plugin-theme) plugins.
@@ -16,9 +16,65 @@ So a single `extension` like the one implemented in this repository ships many `
 
 ## Plugins Injection
 
-`JupyterLab` is in fact a `Lumino Application`. The `Lumino Application` is responsible for the dependency injection.
+A `JupyterLab` application is built on top of a `Lumino Application`. The `Lumino Application` is responsible for the dependency injection and relies on tokens, provide/require/optional attributes.
 
-- [ ] TODO Create a simple Lumino application to showcase a simple dependency injection.
+## Plugin Token
+
+Read https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#tokens
+
+```ts
+// Token example.
+
+import { Token } from '@lumino/coreutils';
+
+export type IProvider = string;
+
+export const IProvider = new Token<string>(
+  'provider:plugin'
+);
+```
+
+## Provide a Plugin
+
+The `provides` attribute is the token associated with the service your plugin is providing to the system. If your plugin does not provide a service to the system, omit this field and do not return a value from your activate function.
+
+```ts
+/**
+ * Initialization data for the provider extension.
+ */
+const extension: JupyterFrontEndPlugin<IProvider> = {
+  id: 'provider:plugin',
+  provides: IProvider,
+  autoStart: true,
+  activate: (app: JupyterFrontEnd): IProvider => {
+    console.log('JupyterLab extension provider is activated!');
+    return 'PROVIDER_STRING';
+  }
+};
+```
+
+## Require a Plugin
+
+The `requires` and `optional` fields are lists of tokens corresponding to services other plugins provide. These services will be given as arguments to the activate function when the plugin is activated. If a requires service is not registered with JupyterLab, an error will be thrown and the plugin will not be activated.
+
+```ts
+/**
+ * Initialization data for the consumer extension.
+ */
+const extension: JupyterFrontEndPlugin<void> = {
+  id: 'consumer',
+  autoStart: true,
+  requires: [ IProvider ],
+  activate: (app: JupyterFrontEnd, provider: IProvider) => {
+    console.log('JupyterLab extension consumer is activated!');
+    console.log(`Provider token is ${provider}`);
+  }
+};
+```
+
+## Provide and Require combined
+
+This repository contains [an example](./../__provider_consumer__/README.md) of a simple `provider` extension that is consumed by a `consumer` extension.
 
 ## Source vs Prebuilt Extensions
 
@@ -63,9 +119,11 @@ When you implementation extensions, you need to specify important information in
 ...
 ```
 
-## Lumino Signals and Messsages
+## Signals and Messsages
 
-The Lumino [Signals](https://github.com/jupyterlab/lumino/tree/main/packages/signaling) and [Messages](https://github.com/jupyterlab/lumino/tree/main/packages/messaging) are important utilities. You can try the [JupyterLab example for Signals](https://github.com/jupyterlab/extension-examples/tree/master/signals) to know more.
+The Lumino [Signals](https://github.com/jupyterlab/lumino/tree/main/packages/signaling) and [Messages](https://github.com/jupyterlab/lumino/tree/main/packages/messaging) are important utilities.
+
+You can try the [JupyterLab example for Signals](https://github.com/jupyterlab/extension-examples/tree/master/signals) to know more.
 
 ## Widget Restorer
 

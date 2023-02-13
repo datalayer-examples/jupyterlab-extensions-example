@@ -59,7 +59,7 @@ class RecentsManager {
   private stateDB: IStateDB;
   private contentsManager: ContentsManager;
   private _recents: types.Recent[];
-  // Will store a Timemout call that saves recents changes after a delay
+  // Will store a Timeout call that saves recents changes after a delay
   private saveRoutine: any;
   // Will store a Timeout call that periodically runs to validate the recents
   private validator: any;
