@@ -11,6 +11,8 @@ import { IMainMenu } from '@jupyterlab/mainmenu';
 
 import { Menu } from '@lumino/widgets';
 
+import { INotebookShell } from "@jupyter-notebook/application";
+
 import LuminoCounter from './LuminoCounter';
 
 import CounterWidget from './ReactCounter';
@@ -30,11 +32,21 @@ const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jupyterlabextensions:react',
   autoStart: true,
   requires: [ICommandPalette, IMainMenu],
+  optional: [INotebookShell],
   activate: (
     app: JupyterFrontEnd,
     palette: ICommandPalette,
-    mainMenu: IMainMenu
+    mainMenu: IMainMenu,
+    notebookShell?: INotebookShell
     ) => {
+
+      if (notebookShell) {
+        console.log(
+          '%cjupyterlabextensions:react can not run in Notebook and will not be activated',
+          'font-size: 14px'
+        );
+        return;  
+      }
 
       console.log(
         '%cjupyterlabextensions:react is activated',
