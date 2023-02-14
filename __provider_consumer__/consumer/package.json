@@ -73,8 +73,5 @@
     "sharedPackages": {
        "provider": {"requiredVersion": "0.1.0", "bundled": false, "singleton": true}
     }
-  },
-  "publishConfig": {
-    "registry": "http://localhost:4873"
   }
 }

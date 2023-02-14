@@ -69,8 +69,5 @@
   "jupyterlab": {
     "extension": true,
     "outputDir": "provider/labextension"
-  },
-  "publishConfig": {
-    "registry": "http://localhost:4873"
   }
 }
