@@ -1,8 +1,8 @@
 # Release
 
-- TODO Release manually in Npm.js.
-- TODO Release manually in PyPI and fix `the name 'jupyterlabextensions' is too similar to an existing project. See https://pypi.org/help/#project-name for more information`.
-- TODO Release with jupyter-releaser.
+TODO Release manually in Npm.js.
+TODO Release manually in PyPI and fix `the name 'jupyterlabextensions' is too similar to an existing project. See https://pypi.org/help/#project-name for more information`.
+TODO Release with jupyter-releaser.
 
 The extension can be published to `PyPI` and `NPM.js` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
 
@@ -97,7 +97,7 @@ conda create -y \
   python=3.8 \
   nodejs=14.5.0
 conda activate jupyterlabextensions-user
-pip install --pre jupyterlab==4.0.0a33
+pip install --pre jupyterlab==4.0.0a34
 ```
 
 ```bash

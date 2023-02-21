@@ -10,6 +10,7 @@ node_modules/
 jupyterlabextensions/labextension
 
 yarn.lock
+yarn-error.log
 
 # Integration tests
 ui-tests/test-results/
