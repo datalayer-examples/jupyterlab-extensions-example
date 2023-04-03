@@ -1,5 +1,5 @@
 [build-system]
-requires = ["hatchling>=1.4.0", "jupyterlab==4.0.0a34", "hatch-nodejs-version"]
+requires = ["hatchling>=1.4.0", "jupyterlab==4.0.0b0", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
@@ -42,7 +42,7 @@ fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
 artifacts = ["consumer/labextension"]
-exclude = [".github", "binder"]
+exclude = [".github", "binder", ".yarn"]
 
 [tool.hatch.build.targets.wheel.shared-data]
 "consumer/labextension" = "share/jupyter/labextensions/@datalayer-examples/ext-consumer"

@@ -97,7 +97,7 @@ conda create -y \
   python=3.8 \
   nodejs=14.5.0
 conda activate jupyterlabextensions-user
-pip install --pre jupyterlab==4.0.0a34
+pip install --pre jupyterlab==4.0.0b0
 ```
 
 ```bash
