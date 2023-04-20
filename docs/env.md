@@ -30,14 +30,14 @@ Install JupyterLab 4 and Notebook 7.
 
 ```bash
 pip install \
-  jupyterlab==4.0.0b0 \
+  jupyterlab==4.0.0b1 \
   notebook==7.0.0a12
 ```
 
 Alternatively, clone and build JupyterLab from source.
 
 ```bash
-git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b v4.0.0b0 && \
+git clone https://github.com/jupyterlab/jupyterlab --depth 1 -b v4.0.0b1 && \
   cd jupyterlab && \
   pip install -e . && \
   jupyter lab build

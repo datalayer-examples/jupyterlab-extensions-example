@@ -47,12 +47,12 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "4.0.0-beta.0",
-    "@lumino/coreutils": "2.0.0",
+    "@jupyterlab/application": "4.0.0-beta.1",
+    "@lumino/coreutils": "2.1.0",
     "@datalayer-examples/ext-provider": "0.1.0"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "4.0.0-beta.0",
+    "@jupyterlab/builder": "4.0.0-beta.1",
     "@types/react": "18.0.28",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
