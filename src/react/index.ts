@@ -56,7 +56,7 @@ const plugin: JupyterFrontEndPlugin<void> = {
       const { commands, shell } = app;
       const menu = new Menu({ commands });  
       menu.title.label = 'React';
-      mainMenu.addMenu(menu, { rank: 80 });
+      mainMenu.addMenu(menu, true, { rank: 80 });
 
       const sleep = (ms: number) => {
         return new Promise(resolve => setTimeout(resolve, ms));

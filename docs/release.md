@@ -44,8 +44,8 @@ To publish the frontend part of the extension as a `NPM` package, do:
 
 ```bash
 jlpm build:lib
-npm login
-npm publish --access public
+jlpm run login
+jlpm run publish --access public
 ```
 
 ## Automated Releases with the Jupyter Releaser
@@ -97,7 +97,7 @@ conda create -y \
   python=3.8 \
   nodejs=14.5.0
 conda activate jupyterlabextensions-user
-pip install --pre jupyterlab==4.0.0b1
+pip install --pre jupyterlab==4.0.0
 ```
 
 ```bash

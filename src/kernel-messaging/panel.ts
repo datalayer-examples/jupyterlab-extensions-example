@@ -1,7 +1,7 @@
 import {
   SessionContext,
   ISessionContext,
-  sessionContextDialogs,
+  SessionContextDialogs,
 } from '@jupyterlab/apputils';
 
 import {
@@ -48,11 +48,16 @@ export class ExamplePanel extends BoxPanel {
     this._example = new KernelView(this._model);
 
     this.addWidget(this._example);
+
+    this._sessionContextDialogs = new SessionContextDialogs({
+      translator: translator
+    });
+
     void this._sessionContext
       .initialize()
       .then(async (value) => {
         if (value) {
-          await sessionContextDialogs.selectKernel(this._sessionContext);
+          await this._sessionContextDialogs.selectKernel(this._sessionContext);
         }
       })
       .catch((reason) => {
@@ -79,6 +84,7 @@ export class ExamplePanel extends BoxPanel {
   private _model: KernelModel;
   private _sessionContext: SessionContext;
   private _example: KernelView;
+  private _sessionContextDialogs: SessionContextDialogs;
 
   private _translator: ITranslator;
   private _trans: TranslationBundle;

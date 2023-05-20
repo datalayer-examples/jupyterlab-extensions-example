@@ -24,7 +24,7 @@ List the JupyterLab extensions.
 
 ```bash
 jupyter labextension list
-# JupyterLab v4.0.0b1
+# JupyterLab v4.0.0
 # /Users/echarles/opt/miniconda3/envs/jupyterlabextensions/share/jupyter/labextensions
 #         jupyterlabextensions v0.1.0 enabled OK
 #         jupyterlab_pygments v0.2.2 enabled OK (python, jupyterlab_pygments)
@@ -90,7 +90,7 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
-PS: You can run both `shell 1` and `shell 2` commands with `yarn dev`.
+PS: You can run both `shell 1` and `shell 2` commands with `npm run dev`.
 
 Open JupyterLab in your browser.
 

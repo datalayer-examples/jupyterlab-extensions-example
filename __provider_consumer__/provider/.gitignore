@@ -1,20 +1,10 @@
-.*
 *.bundle.*
 lib/
 node_modules/
-.eslintcache
-.stylelintcache
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
-jupyterlabextensions/labextension
-
-yarn.lock
-yarn-error.log
-
-# Integration tests
-ui-tests/test-results/
-ui-tests/playwright-report/
+provider/labextension
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
@@ -70,7 +60,6 @@ coverage.xml
 *.cover
 .hypothesis/
 .pytest_cache/
-coverage
 
 # Translations
 *.mo
@@ -118,22 +107,3 @@ dmypy.json
 .pyre/
 
 # End of https://www.gitignore.io/api/python
-
-# OSX files
-.DS_Store
-
-junit.xml
-
-
-# Include
-!**/.*ignore
-!**/.*cfg
-!**/.*rc
-!**/.*rc.js
-!**/.*rc.json
-!**/.*rc.yml
-!**/.*config
-!**/.datalayer
-!**/.github
-!**/.storybook
-!**/.vscode

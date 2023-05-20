@@ -1,5 +1,5 @@
 {
-  "name": "@datalayer-examples/ext-provider",
+  "name": "@datalayer/example-ext-provider",
   "version": "0.1.0",
   "description": "An extension providing a string.",
   "keywords": [
@@ -14,7 +14,7 @@
   "license": "BSD-3-Clause",
   "author": {
     "name": "Eric Charles",
-    "email": "eric@datalayer.io"
+    "email": "info@datalayer.io"
   },
   "files": [
     "lib/**/*.{d.ts,eot,gif,html,jpg,js,js.map,json,png,svg,woff2,ttf}",
@@ -47,11 +47,11 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
-    "@jupyterlab/application": "4.0.0-beta.1",
-    "@lumino/coreutils": "2.1.0"
+    "@jupyterlab/application": "4.0.0",
+    "@lumino/coreutils": "2.1.1"
   },
   "devDependencies": {
-    "@jupyterlab/builder": "4.0.0-beta.1",
+    "@jupyterlab/builder": "4.0.0",
     "@types/react": "18.0.28",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",

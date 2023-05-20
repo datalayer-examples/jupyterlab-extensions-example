@@ -1,7 +1,7 @@
 import {
   ISessionContext,
   SessionContext,
-  sessionContextDialogs,
+  SessionContextDialogs,
 } from '@jupyterlab/apputils';
 
 import { OutputAreaModel, SimplifiedOutputArea } from '@jupyterlab/outputarea';
@@ -56,11 +56,15 @@ export class ExamplePanel extends BoxPanel {
 
     this.addWidget(this._outputarea);
 
+    this._sessionContextDialogs = new SessionContextDialogs({
+      translator: translator
+    });
+
     void this._sessionContext
       .initialize()
       .then(async (value) => {
         if (value) {
-          await sessionContextDialogs.selectKernel(this._sessionContext);
+          await this._sessionContextDialogs.selectKernel(this._sessionContext);
         }
       })
       .catch((reason) => {
@@ -95,6 +99,7 @@ export class ExamplePanel extends BoxPanel {
   private _sessionContext: SessionContext;
   private _outputarea: SimplifiedOutputArea;
   private _outputareamodel: OutputAreaModel;
+  private _sessionContextDialogs: SessionContextDialogs;
 
   private _translator: ITranslator;
   private _trans: TranslationBundle;
