@@ -4,7 +4,7 @@ import { Widget } from '@lumino/widgets';
 
 import { IJupyterWidgetRegistry } from '@jupyter-widgets/base';
 
-import * as widgetExports from './iPyWidget2';
+import * as widgetExports from './iPyWidget';
 
 import { MODULE_NAME, MODULE_VERSION } from './version';
 
