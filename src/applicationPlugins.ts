@@ -1,6 +1,7 @@
 import apodLeft from './apod-left';
 import apodMain from './apod-main';
 import cellFlash from './cell-flash';
+import cellToolbar from './cell-toolbar';
 import codeCellButton from './code-cell-button';
 import contextMenu from './context-menu';
 import execTime from './exec-time';
@@ -27,6 +28,7 @@ export default [
   apodLeft,
   apodMain,
   cellFlash,
+  cellToolbar,
   contextMenu,
   execTime,
   internals,

@@ -1,0 +1,21 @@
+{
+  "title": "Cell Toolbar",
+  "description": "Settings for the Cell Toolbar extension",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false,
+  "jupyter.lab.toolbars": {
+    "Cell": [
+      {
+        "name": "restart-run-all",
+        "command": "notebook:restart-run-all",
+        "rank": 10
+      },
+      {
+        "name": "duplicate-cell",
+        "command": "notebook:duplicate-cell",
+        "disabled": true
+      }
+    ]
+  }
+}

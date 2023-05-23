@@ -129,3 +129,31 @@ TODO Enable back the `Theme Toggle` extension (disabled for now for CI).
 The `Top Bar` extension transforms the existing JupyterLab topbar into a draggable area where third party plugins can add their widgets.
 
 TODO Enable back the `Theme Toggle` extension (disabled for now for CI).
+
+## Cell Toolbar
+
+This extension removes the `duplicate cell` icon and add a new `restart and run all` icon in the notebook cell toolbar. This is achieved by adding the needed definition in the pluing setting
+
+```json
+{
+  "title": "Cell Toolbar",
+  "description": "Settings for the Cell Toolbar extension",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false,
+  "jupyter.lab.toolbars": {
+    "Cell": [
+      {
+        "name": "restart-run-all",
+        "command": "notebook:restart-run-all",
+        "rank": 10
+      },
+      {
+        "name": "duplicate-cell",
+        "command": "notebook:duplicate-cell",
+        "disabled": true
+      }
+    ]
+  }
+}
+```

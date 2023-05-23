@@ -90,7 +90,7 @@ conda activate jupyterlabextensions && \
     ./content
 ```
 
-PS: You can run both `shell 1` and `shell 2` commands with `npm run dev`.
+PS: You can run both `shell 1` and `shell 2` commands with `yarn run dev`.
 
 Open JupyterLab in your browser.
 

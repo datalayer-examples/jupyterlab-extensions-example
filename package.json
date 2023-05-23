@@ -1,5 +1,5 @@
 {
-  "name": "@datalayer/example-jupyterlab-extensions",
+  "name": "jupyterlabextensions",
   "version": "0.1.0",
   "description": "JupyterLab Extensions Example.",
   "keywords": [

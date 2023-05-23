@@ -130,7 +130,7 @@ export const cellFactoryPlugin: JupyterFrontEndPlugin<NotebookPanel.IContentFact
   provides: NotebookPanel.IContentFactory,
   autoStart: true,
   activate: (app: JupyterFrontEnd, editorServices: IEditorServices) => {
-    console.log('jupyterlabextensions:cellcodebtn overrides default nootebook content factory.');
+    console.log('jupyterlabextensions:cellcodebtn overrides default notebook content factory.');
     const { commands } = app;
     const editorFactory = editorServices.factoryService.newInlineEditor;
     return new ContentFactoryWithFooterButton(commands, { editorFactory });

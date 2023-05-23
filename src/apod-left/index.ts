@@ -113,7 +113,7 @@ function activate(
   palette: ICommandPalette,
   restorer: ILayoutRestorer
 ): void {
-  console.log('jupyterlab_apod_left is activated.');
+  console.log('JupyterLab extension apod_left is activated.');
 
   const content = new APODWidget();
   const widget = new MainAreaWidget({ content });
