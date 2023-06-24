@@ -13,7 +13,7 @@ with (HERE / "labextension" / "package.json").open() as fid:
     data = json.load(fid)
 
 
-def _jupyter_labextension_paths():
+def _jupyter_labextension_paths() -> List[Dict[str, str]]:
     return [{
         "src": "labextension",
         "dest": data["name"]

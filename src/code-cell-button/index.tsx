@@ -2,10 +2,7 @@ import React from 'react';
 
 import { ReactWidget } from '@jupyterlab/apputils';
 
-import {
-  JupyterFrontEnd,
-  JupyterFrontEndPlugin
-} from '@jupyterlab/application';
+import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
 
 import {
   INotebookTracker,

@@ -1,9 +1,6 @@
 import ReactSwitch from 'react-switch';
 
-import {
-  JupyterFrontEnd,
-  JupyterFrontEndPlugin
-} from '@jupyterlab/application';
+import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
 
 import { IThemeManager, ReactWidget } from '@jupyterlab/apputils';
 

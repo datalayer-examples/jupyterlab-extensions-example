@@ -9,7 +9,7 @@ HERE = osp.abspath(osp.dirname(__file__))
 with open(osp.join(HERE, 'labextension', 'package.json')) as fid:
     data = json.load(fid)
 
-def _jupyter_labextension_paths():
+def _jupyter_labextension_paths() -> List[Dict[str, str]]:
     return [{
         'src': 'labextension',
         'dest': data['name']
