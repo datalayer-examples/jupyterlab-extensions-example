@@ -17,7 +17,7 @@ conda deactivate && \
 conda create -y \
   -n jupyterlabextensions \
   python=3.9 \
-  nodejs=18.7.0 \
+  nodejs=18.16.1 \
   jupyter_packaging \
   twine
 conda activate jupyterlabextensions
