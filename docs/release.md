@@ -59,7 +59,7 @@ Check out also the definitions in `package.json``
   "jupyter-releaser": {
     "hooks": {
       "before-build-npm": [
-        "python -m pip install jupyterlab~=3.1",
+        "python -m pip install jupyterlab==4.0.0",
         "jlpm"
       ],
       "before-build-python": [
