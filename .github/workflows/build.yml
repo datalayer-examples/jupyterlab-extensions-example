@@ -16,7 +16,7 @@ jobs:
     - name: Base Setup
       uses: jupyterlab/maintainer-tools/.github/actions/base-setup@v1
     - name: Install dependencies
-      run: python -m pip install -U jupyterlab==4.0.0
+      run: python -m pip install -U jupyterlab==4.0.3
     - name: Install the extension
       run: |
         set -eux
@@ -71,7 +71,7 @@ jobs:
         # Remove NodeJS, twice to take care of system and locally installed node versions.
         sudo rm -rf $(which node)
         sudo rm -rf $(which node)
-        pip install "jupyterlab==4.0.0" jupyterlabextensions*.whl
+        pip install "jupyterlab==4.0.3" jupyterlabextensions*.whl
         jupyter server extension list
         jupyter server extension list 2>&1 | grep -ie "jupyterlabextensions.*OK"
         jupyter labextension list
@@ -95,7 +95,7 @@ jobs:
     - name: Install the extension
       run: |
         set -eux
-        python -m pip install "jupyterlab==4.0.0" jupyterlabextensions*.whl
+        python -m pip install "jupyterlab==4.0.3" jupyterlabextensions*.whl
     - name: Install dependencies
       working-directory: ui-tests
       env:
