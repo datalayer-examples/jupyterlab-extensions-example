@@ -119,7 +119,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
-    "@jupyterlab/builder": "4.0.0",
+    "@jupyterlab/builder": "4.0.3",
     "@jupyterlab/testutils": "4.0.3",
     "@types/cytoscape": "3.19.9",
     "@types/fixed-data-table-2": "0.8.8",
