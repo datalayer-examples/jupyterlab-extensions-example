@@ -6,7 +6,7 @@ import codeCellButton from './code-cell-button';
 import contextMenu from './context-menu';
 import execTime from './exec-time';
 import internals from './internals';
-import ipywidgetResourceUsagePlugin from './kernel-memory/pluginIPyWidget';
+import ipywidgetResourceUsagePlugin from './kernel-memory/pluginIPywidget2';
 import kernelMemory from './kernel-memory/plugin';
 import kernelMessaging from './kernel-messaging';
 import kernelOutput from './kernel-output';
