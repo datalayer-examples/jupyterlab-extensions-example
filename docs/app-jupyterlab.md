@@ -5,8 +5,8 @@ You can create a custom JupyterLab application based on a set of chosen extensio
 We have created in this repository a custom JupyterLab application. Have a look at the `jupyterlab.js` file in the `src` folder and run the following to try it out.
 
 ```bash
-jlpm run build:app
-jlpm run start:app
+jlpm run app:build
+jlpm run app:start
 ```
 
 Such custom `Application`can be found in Notebook 7 and JupyterLite.
