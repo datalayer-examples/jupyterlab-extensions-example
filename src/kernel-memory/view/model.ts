@@ -2,7 +2,7 @@ import { URLExt } from '@jupyterlab/coreutils';
 import { ServerConnection } from '@jupyterlab/services';
 import { Poll } from '@lumino/polling';
 import { ISignal, Signal } from '@lumino/signaling';
-import { KernelMemoryUsageModel } from '../IPyWidget2';
+import { KernelMemoryUsageModel } from '../IPyWidget';
 
 /**
  * Number of values to keep in memory.

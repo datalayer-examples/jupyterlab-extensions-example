@@ -1,11 +1,7 @@
 import { Application, IPlugin } from '@lumino/application';
-
 import { Widget } from '@lumino/widgets';
-
 import { IJupyterWidgetRegistry } from '@jupyter-widgets/base';
-
-import * as widgetExports from './IPyWidget2';
-
+import * as widgetExports from './IPyWidget';
 import { MODULE_NAME, MODULE_VERSION } from './version';
 
 /**
