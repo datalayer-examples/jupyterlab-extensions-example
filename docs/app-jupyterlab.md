@@ -9,4 +9,4 @@ jlpm run build:app
 jlpm run start:app
 ```
 
-Such custom `Application`can be found in Notebook 7 and JupyerLite.
+Such custom `Application`can be found in Notebook 7 and JupyterLite.
