@@ -44,7 +44,7 @@
     "clean:labextension": "rimraf jupyterlabextensions/labextension",
     "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
     "dev": "run-p -c 'dev:*'",
-    "dev:jupyterlab": "jupyter lab --watch --ServerApp.token= --ServerApp.jpserver_extensions=\"{'jupyterlabextensions': True}\" ./content",
+    "dev:jupyterlab": "jupyter lab --watch --IdentityProvider.token= --ServerApp.jpserver_extensions=\"{'jupyterlabextensions': True}\" ./content",
     "dev:watch": "run-p watch:src watch:labextension",
     "eslint": "jlpm eslint:check --fix",
     "eslint:check": "eslint . --cache --ext .ts,.tsx",

@@ -85,7 +85,7 @@ You are now ready to run and watch jupyterlab in `shell 2`. This will look at th
 conda activate jupyterlabextensions && \
   jupyter lab \
     --watch \
-    --ServerApp.token= \
+    --IdentityProvider.token= \
     --ServerApp.jpserver_extensions="{'jupyterlabextensions': True}" \
     ./content
 ```
@@ -105,7 +105,7 @@ conda activate jupyterlabextensions && \
   jupyter lab \
     --watch \
     --dev-mode \
-    --ServerApp.token= \
+    --IdentityProvider.token= \
     --ServerApp.jpserver_extensions="{'jupyterlabextensions': True}" \
     --extensions-in-dev-mode \
     ./content
