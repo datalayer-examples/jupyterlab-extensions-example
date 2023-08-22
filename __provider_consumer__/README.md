@@ -19,7 +19,7 @@ index.js:11 The token instance provided by the provider is PROVIDER_STRING
 
 ## 
 
-The `consumer` can define in its `package.json` the `sharedPackages` to ensure [Deduplication of Dependencies](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#deduplication-of-dependencies).
+The `consumer` should define in its `package.json` the `sharedPackages` to ensure [Deduplication of Dependencies](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#deduplication-of-dependencies).
 
 ```json
   "jupyterlab": {
@@ -27,7 +27,6 @@ The `consumer` can define in its `package.json` the `sharedPackages` to ensure [
     "outputDir": "consumer/labextension",
     "sharedPackages": {
       "@datalayer/example-ext-provider": {
-        "requiredVersion": "0.1.0",
         "bundled": false,
         "singleton": true
       }

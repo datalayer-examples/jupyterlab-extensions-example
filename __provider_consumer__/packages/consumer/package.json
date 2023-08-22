@@ -70,6 +70,12 @@
   ],
   "jupyterlab": {
     "extension": true,
-    "outputDir": "consumer/labextension"
+    "outputDir": "consumer/labextension",
+    "sharedPackages": {
+      "@datalayer/example-ext-provider": {
+        "bundled": false,
+        "singleton": true
+      }
+    }
   }
 }
