@@ -9,14 +9,24 @@ cd consumer && yarn dev && cd ..
 jupyter lab # Have a look at the browser console.
 ```
 
-The `consumer` defines in its `package.json` the `sharedPackages` to ensure [Deduplication of Dependencies](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#deduplication-of-dependencies).
+The following messages should be printed in the browser console on JupyterLab loading.
+
+```
+index.js:11 JupyterLab extension provider is activated!
+index.js:10 JupyterLab extension consumer is activated!
+index.js:11 The token instance provided by the provider is PROVIDER_STRING
+```
+
+## 
+
+The `consumer` can define in its `package.json` the `sharedPackages` to ensure [Deduplication of Dependencies](https://jupyterlab.readthedocs.io/en/latest/extension/extension_dev.html#deduplication-of-dependencies).
 
 ```json
   "jupyterlab": {
     "extension": true,
     "outputDir": "consumer/labextension",
     "sharedPackages": {
-      "provider": {
+      "@datalayer/example-ext-provider": {
         "requiredVersion": "0.1.0",
         "bundled": false,
         "singleton": true
@@ -25,12 +35,8 @@ The `consumer` defines in its `package.json` the `sharedPackages` to ensure [Ded
   }
 ```
 
-The following messages should be printed in the browser console on JupyterLab loading.
-
-```
-index.js:11 JupyterLab extension provider is activated!
-index.js:10 JupyterLab extension consumer is activated!
-index.js:11 Provider token is PROVIDER_STRING
-```
+- https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#deduplication-of-dependencies
+- https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#requiring-a-service
+- https://discourse.jupyter.org/t/minimal-plugin-provides-not-working/13136
 
 TODO Create a `jupyterlab-extensions-example-2` separated repository consuming a plugin of this repository (once released).
