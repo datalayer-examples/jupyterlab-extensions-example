@@ -47,9 +47,9 @@
     "watch:labextension": "jupyter labextension watch ."
   },
   "dependencies": {
+    "@datalayer/example-ext-provider": "0.1.0",
     "@jupyterlab/application": "4.0.3",
-    "@lumino/coreutils": "2.1.1",
-    "@datalayer/example-ext-provider": "0.1.0"
+    "@lumino/coreutils": "2.1.1"
   },
   "devDependencies": {
     "@jupyterlab/builder": "4.0.3",
@@ -65,13 +65,11 @@
     "typescript": "5.0.3"
   },
   "sideEffects": [
-    "style/*.css"
+    "style/*.css",
+    "style/index.js"
   ],
   "jupyterlab": {
     "extension": true,
-    "outputDir": "consumer/labextension",
-    "sharedPackages": {
-       "provider": {"requiredVersion": "0.1.0", "bundled": false, "singleton": true}
-    }
+    "outputDir": "consumer/labextension"
   }
 }

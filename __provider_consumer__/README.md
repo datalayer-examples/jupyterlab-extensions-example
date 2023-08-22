@@ -16,7 +16,11 @@ The `consumer` defines in its `package.json` the `sharedPackages` to ensure [Ded
     "extension": true,
     "outputDir": "consumer/labextension",
     "sharedPackages": {
-       "provider": {"requiredVersion": "0.1.0", "bundled": false, "singleton": true}
+      "provider": {
+        "requiredVersion": "0.1.0",
+        "bundled": false,
+        "singleton": true
+      }
     }
   }
 ```

@@ -64,7 +64,8 @@
     "typescript": "5.0.3"
   },
   "sideEffects": [
-    "style/*.css"
+    "style/*.css",
+    "style/index.js"
   ],
   "jupyterlab": {
     "extension": true,

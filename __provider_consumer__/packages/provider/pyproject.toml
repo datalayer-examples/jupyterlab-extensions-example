@@ -3,7 +3,7 @@ requires = ["hatchling>=1.4.0", "jupyterlab==4.0.3", "hatch-nodejs-version"]
 build-backend = "hatchling.build"
 
 [project]
-name = "consumer"
+name = "provider"
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.11"
@@ -42,26 +42,26 @@ source = "nodejs"
 fields = ["description", "authors", "urls"]
 
 [tool.hatch.build.targets.sdist]
-artifacts = ["consumer/labextension"]
+artifacts = ["provider/labextension"]
 exclude = [".github", "binder", ".yarn"]
 
 [tool.hatch.build.targets.wheel.shared-data]
-"consumer/labextension" = "share/jupyter/labextensions/@datalayer-examples/ext-consumer"
-"install.json" = "share/jupyter/labextensions/@datalayer-examples/ext-consumer/install.json"
+"provider/labextension" = "share/jupyter/labextensions/@datalayer/example-ext-provider"
+"install.json" = "share/jupyter/labextensions/@datalayer/example-ext-provider/install.json"
 "jupyter-config/server-config" = "etc/jupyter/jupyter_server_config.d"
 "jupyter-config/nb-config" = "etc/jupyter/jupyter_notebook_config.d"
 
 [tool.hatch.build.hooks.version]
-path = "consumer/_version.py"
+path = "provider/_version.py"
 
 [tool.hatch.build.hooks.jupyter-builder]
 dependencies = ["hatch-jupyter-builder>=0.5"]
 build-function = "hatch_jupyter_builder.npm_builder"
 ensured-targets = [
-    "consumer/labextension/static/style.js",
-    "consumer/labextension/package.json",
+    "provider/labextension/static/style.js",
+    "provider/labextension/package.json",
 ]
-skip-if-exists = ["consumer/labextension/static/style.js"]
+skip-if-exists = ["provider/labextension/static/style.js"]
 
 [tool.hatch.build.hooks.jupyter-builder.build-kwargs]
 build_cmd = "build:prod"
@@ -71,7 +71,7 @@ npm = ["jlpm"]
 build_cmd = "install:extension"
 npm = ["jlpm"]
 source_dir = "src"
-build_dir = "consumer/labextension"
+build_dir = "provider/labextension"
 
 [tool.jupyter-releaser.options]
 version_cmd = "hatch version"
