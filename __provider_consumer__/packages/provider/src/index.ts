@@ -15,7 +15,7 @@ const providerPlugin: JupyterFrontEndPlugin<IProvider> = {
   provides: IProvider,
   autoStart: true,
   activate: (app: JupyterFrontEnd): IProvider => {
-    console.log('JupyterLab extension provider is activated!');
+    console.log('JupyterLab plugin provider is activated!');
     return 'PROVIDER_STRING';
   }
 };
