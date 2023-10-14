@@ -11,7 +11,7 @@ const cellToolbar: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   optional: [ISettingRegistry],
   activate: async (_: JupyterFrontEnd, settingRegistry: ISettingRegistry) => {
-    console.log('The Cell Toolbar extension is activated.');
+    console.log('The Cell Toolbar extensionis activated.');
     // Nothing is needed, this is done by config.
     // The following is just to show in the browser console the loaded setting.
     if (settingRegistry) {

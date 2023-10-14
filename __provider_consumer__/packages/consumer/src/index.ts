@@ -9,7 +9,7 @@ const consumerPlugin: JupyterFrontEndPlugin<void> = {
   autoStart: true,
   requires: [ IProvider ],
   activate: (app: JupyterFrontEnd, provider: IProvider) => {
-    console.log('JupyterLab plugin consumer is activated!');
+    console.log('JupyterLab plugin consumer:plugin is activated.');
     console.log(`The token instance provided by the provider is ${provider}`);
   }
 };

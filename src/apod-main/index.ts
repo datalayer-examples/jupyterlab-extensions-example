@@ -80,7 +80,7 @@ function activate(
   palette: ICommandPalette,
   restorer: ILayoutRestorer | null
 ): void {
-  console.log('JupyterLab plugin apod_main is activated!');
+  console.log('JupyterLab plugin apod_main:plugin is activated.');
   let widget: MainAreaWidget<APODWidget>;
   const command = 'apod:open';
   app.commands.addCommand(command, {
