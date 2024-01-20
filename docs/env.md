@@ -29,7 +29,7 @@ Install JupyterLab 4 and Notebook 7.
 
 ```bash
 pip install \
-  jupyterlab==4.0.10 \
+  jupyterlab==4.1.0b0 \
   notebook==7.0.0a12
 ```
 
