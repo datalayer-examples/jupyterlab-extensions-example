@@ -1,5 +1,5 @@
 {
-  "name": "@datalayer/example-provider-consumer-extensions-example",
+  "name": "@datalayer/example-provider-consumer-extensions",
   "private": true,
   "scripts": {
     "install": "lerna run install",
