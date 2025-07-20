@@ -1,28 +1,19 @@
 import React from 'react';
-
 import { ReactWidget } from '@jupyterlab/apputils';
-
 import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
-
-import {
-  INotebookTracker,
-  NotebookPanel,
-  NotebookActions
-} from '@jupyterlab/notebook';
-
+import { INotebookTracker, NotebookPanel, NotebookActions } from '@jupyterlab/notebook';
 import { ICellFooter, Cell } from '@jupyterlab/cells';
-
 import { ReadonlyPartialJSONObject } from '@lumino/coreutils';
-
 import { CommandRegistry } from '@lumino/commands';
-
 import { IEditorServices } from '@jupyterlab/codeeditor';
 
 /**
  * The CSS classes added to the cell footer.
  */
 const CELL_FOOTER_CLASS = 'jp-CellFooter';
+
 const CELL_FOOTER_DIV_CLASS = 'ccb-cellFooterContainer';
+
 const CELL_FOOTER_BUTTON_CLASS = 'ccb-cellFooterBtn';
 
 /**

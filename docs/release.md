@@ -59,7 +59,7 @@ Check out also the definitions in `package.json``
   "jupyter-releaser": {
     "hooks": {
       "before-build-npm": [
-        "python -m pip install jupyterlab==4.1.0b0",
+        "python -m pip install jupyterlab==4.1.0",
         "jlpm"
       ],
       "before-build-python": [
@@ -97,7 +97,7 @@ conda create -y \
   python=3.8 \
   nodejs=14.5.0
 conda activate jupyterlabextensions-user
-pip install --pre jupyterlab==4.1.0b0
+pip install --pre jupyterlab==4.1.0
 ```
 
 ```bash

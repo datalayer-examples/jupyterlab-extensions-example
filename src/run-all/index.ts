@@ -1,19 +1,10 @@
 import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
-
-import {
-  NotebookPanel,
-  INotebookModel
-} from '@jupyterlab/notebook';
-
+import { NotebookPanel, INotebookModel } from '@jupyterlab/notebook';
 import { IDisposable } from '@lumino/disposable';
-
 import { ToolbarButton } from '@jupyterlab/apputils';
-
 import { DocumentRegistry } from '@jupyterlab/docregistry';
 
-class RunAllCellsButtonExtension 
-  implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel> {
-
+class RunAllCellsButtonExtension implements DocumentRegistry.IWidgetExtension<NotebookPanel, INotebookModel> {
   private readonly app: JupyterFrontEnd;
 
   constructor(app: JupyterFrontEnd) {

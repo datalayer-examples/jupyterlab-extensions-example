@@ -1,11 +1,11 @@
 # JupyterLab Provider Consumer Extensions
 
 ```bash
-yarn install
-yarn build
-cd provider && yarn dev && cd ..
-cd consumer && yarn dev && cd ..
-# yarn dev
+npm install
+npm run build
+cd provider && npm dev && cd ..
+cd consumer && npm dev && cd ..
+# npm dev
 jupyter lab # Have a look at the browser console.
 ```
 
