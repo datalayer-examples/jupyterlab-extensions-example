@@ -25,7 +25,7 @@ List the JupyterLab extensions.
 ```bash
 jupyter labextension list
 # JupyterLab v4.0.0
-# /Users/echarles/opt/miniconda3/envs/jupyterlabextensions/share/jupyter/labextensions
+# /Users/echarles/opt/conda3/envs/jupyterlabextensions/share/jupyter/labextensions
 #         jupyterlabextensions v0.1.0 enabled OK
 #         jupyterlab_pygments v0.2.2 enabled OK (python, jupyterlab_pygments)
 #         @jupyter-widgets/jupyterlab-manager v5.0.3 enabled OK (python, jupyterlab_widgets)
@@ -39,7 +39,7 @@ The server extension can be manually enabled or disabled.
 ```bash
 jupyter server extension enable jupyterlabextensions
 # Enabling: jupyterlabextensions
-# - Writing config: /Users/echarles/opt/miniconda3/envs/jupyterlabextensions/etc/jupyter
+# - Writing config: /Users/echarles/opt/conda3/envs/jupyterlabextensions/etc/jupyter
 #     - Validating jupyterlabextensions...
 #       jupyterlabextensions 0.1.0 OK
 #     - Extension successfully enabled.
